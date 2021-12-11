@@ -1,9 +1,0 @@
-type=6
-serial_number=17325
-max_processes=64
-features=cuda,map,ddt,perf-report,metrics-pack,arch:x86_64,arch:ppc64le,arch:aarch64,compiler
-expires=2021-11-10 23:59:59
-max_users=5
-support_expires=2021-11-10 23:59:59
-debuggers=gdb
-hash2=5e987ad884fa6405dfcbb46557a3ecea7af24db6

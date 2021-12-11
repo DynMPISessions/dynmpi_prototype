@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <show_source type="bool">1</show_source>
-  <show_module type="bool">1</show_module>
-  <two_line_mode type="bool">0</two_line_mode>
-</root>

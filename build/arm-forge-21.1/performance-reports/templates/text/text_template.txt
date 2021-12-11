@@ -1,5 +1,0 @@
-{{>text_header}}
-
-{{>text_summary}}
-
-{{>text_subsections}}
