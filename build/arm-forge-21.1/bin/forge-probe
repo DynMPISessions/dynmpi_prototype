@@ -1,0 +1,39 @@
+#!/bin/sh
+# Script for gathering information about the current node. Run
+#
+#    ./forge-probe --help
+#
+# for help with running the script.
+set -ue
+
+# First find ALLINEA_TOOLS_PATH
+_CWD=$PWD
+
+# Follow symlinks
+CANONICAL_EXE=$(readlink -f "$0" 2>/dev/null)
+if [ $? -ne 0 ]; then
+        CANONICAL_EXE="$0"
+fi
+
+cd $(dirname $CANONICAL_EXE)/..
+ALLINEA_TOOLS_PATH=$PWD
+cd $_CWD
+
+# Source the user rc script, ensure exit on error is unset when sourcing
+# rc scripts.
+set +ue
+. $ALLINEA_TOOLS_PATH/libexec/rc-common
+
+# Locate python to run script with.
+PYTHON_EXE=$(which python3 2>/dev/null)
+if [ -z "$PYTHON_EXE" ]; then
+        PYTHON_EXE=$(which python 2>/dev/null)
+fi
+set -ue
+
+if [ -n "$PYTHON_EXE" ]; then
+        # Run probe python script
+        $PYTHON_EXE $ALLINEA_TOOLS_PATH/libexec/forge-probe $@
+else
+        echo "$(basename $0): A python interpreter was not detected."
+fi

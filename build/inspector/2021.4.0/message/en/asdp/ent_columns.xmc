@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+    <catalog name='asdp.ent_columns' lang='en'>
+	<msg name='input_filename'>Source</msg>
+	<msg name='diag_id'>ID</msg>
+	<msg name='diag_type'>Type</msg>
+	<msg name='category'>Category</msg>
+	<msg name='severity'>Severity</msg>
+	<msg name='thread_name'>Thread Name</msg>
+	<msg name='thread_id'>Thread ID</msg>
+	<msg name='module_name'>Module</msg>
+	<msg name='found_module_name'>Module</msg>
+	<msg name='fullpath_module_name'>Module</msg>
+	<msg name='filename'>Source</msg>
+	<msg name='fullpath_filename'>Source</msg>
+	<msg name='rva'>RVA</msg>
+	<msg name='sym_name'>Symbol</msg>
+	<msg name='func_name'>Function</msg>
+	<msg name='line'>Line</msg>
+	<msg name='column'>Column</msg>
+	<msg name='func_line'>Function Line</msg>
+	<msg name='instr_address'>Instruction Address</msg>
+	<msg name='process_id'>Process ID</msg>
+	<msg name='loadtype'>Load Type</msg>
+	<msg name='timestamp'>Time Stamp</msg>
+	<msg name='addr_arg'>Argument Address</msg>
+	<msg name='op_addr'>Op Address</msg>
+	<msg name='op_size'>Op Size</msg>
+	<msg name='object_name'>Object</msg>
+	<msg name='object_addr'>Object Address</msg>
+	<msg name='object_size'>Object Size</msg>
+	<msg name='blocks'>Blocks</msg>
+	<msg name='offset'>Offset</msg>
+	<msg name='problem_num'>ID</msg>
+	<msg name='problem_desc'>Problem</msg>
+	<msg name='multi_filenames'>Sources</msg>
+	<msg name='multi_modules'>Modules</msg>
+	<msg name='terse_message'>Description</msg>
+	<msg name='verbose_message'>Description</msg>
+	<msg name='file_and_line'>Source</msg>
+	<msg name='multi_file'>Sources</msg>
+	<msg name='best_location'>Best Location</msg>
+	<msg name='severity_string'>Severity</msg>
+	<msg name='severity_and_type'>Description</msg>
+	<msg name='obs_desc'>Description</msg>
+	<msg name='obs_num'>ID</msg>
+	<msg name='sc_var_name'>Variable Name</msg>
+	<msg name='diag_time'>Time</msg>
+	<msg name='state'>State</msg>
+	<msg name='state_string'>State</msg>
+	<msg name='suppression'>Suppressed</msg>
+	<msg name='suppression_string'>Suppressed</msg>
+	<msg name='investigated_string'>Investigated</msg>
+	<msg name='obs_state_string'>State</msg>
+	<msg name='problem_type'>Problem</msg>
+	<msg name='diff_state'>State</msg>
+	<msg name='diff_state_string'>State</msg>
+	<msg name='stack_frame_type'>Stack Frame Type</msg>
+	<msg name='create_time'>Create Time</msg>
+	<msg name='destroy_time'>Destroy Time</msg>
+	<msg name='marker_comment'>Marker</msg>
+	<msg name='best_thrdata'>Thread Data</msg>
+	<msg name='site_filename'>Site Filename</msg>
+	<msg name='site_line'>Site Line Number</msg>
+	<msg name='site_column'>Site Column</msg>
+	<msg name='site_info'>Site Info</msg>
+	<msg name='site_name'>Site Name</msg>
+	<msg name='site_func'>Site Function</msg>
+	<msg name='site_id'>Site ID</msg>
+	<msg name='stride_value'>Stride</msg>
+	<msg name='stride_count'>Stride count</msg>
+	<msg name='alignment_value'>Alignment</msg>
+	<msg name='access_size'>Workset size</msg>
+	<msg name='access_type'>Access type</msg>
+	<msg name='object_min_addr'>Min access address</msg>
+	<msg name='object_max_addr'>Max access address</msg>
+	<msg name='object_access_distance'>Memory access footprint</msg>
+	<msg name='object_distance_switch'>Memory footprint confidence</msg>
+	<msg name='gather_pattern'>Gather/scatter pattern</msg>
+	<msg name='gather_mask'>Gather/scatter mask</msg>
+	<msg name='gather_mask_changed'>Gather/scatter mask changed</msg>
+	<msg name='gather_vertical_stride'>Gather/scatter vertical stride</msg>
+	<msg name='gather_horizontal_stride'>Gather/scatter horizontal stride</msg>
+	<msg name='gather_vector_length'>Gather/scatter vector length</msg>
+	<msg name='vector_width'>Vector width</msg>
+	<msg name='operand_type'>Operand types</msg>
+	<msg name='variable_name'>Variable references</msg>
+	<msg name='memory_type'>Type of accessed memory</msg>
+	<msg name='nested_function'>Nested Function</msg>
+	<msg name='weight'>Weight</msg>
+	<msg name='best_object_variable'>Variable</msg>
+	<msg name='diag_comment'>Comment</msg>
+	<msg name='sc_loctype_string'>Source Location Type</msg>
+    <msg name='filepath_filter'>Source Search Substring</msg>
+	<msg name='device_attr'>Device Attribute</msg>
+	<msg name='device_value'>Value</msg>
+	<msg name='device_limit'>Limit</msg>
+    </catalog>
+</xmc>

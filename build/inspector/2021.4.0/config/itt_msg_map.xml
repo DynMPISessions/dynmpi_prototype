@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Thread Checker message map -->
+<cs_messages version="3.2">
+	<msg id="0" name="unknown" severity="remark" category="unknown"  type="unknown" debuggable="n" />
+
+
+	<msg id="1" name="txf_race_ww" severity="error" category="race"  type="prob_x_race" debuggable="n" />
+	<msg id="2" name="txf_race_rw" severity="error" category="race"  type="prob_x_race" debuggable="n" />
+	<msg id="3" name="txf_race_wr" severity="error" category="race"  type="prob_x_race" debuggable="n" />
+	<msg id="15" name="txf_mem_invalid" severity="error" category="race"  type="prob_x_mem_invalid" debuggable="n" />
+	<msg id="16" name="txf_leaked" severity="warning" category="misc"  type="prob_x_leaked" debuggable="n" />
+	<msg id="19" name="txf_race_lib" severity="error" category="race"  type="prob_x_race_lib" debuggable="n" />
+	<msg id="21" name="txf_thr_create" severity="remark" category="misc"  type="prob_x_thr_create" debuggable="n" />
+	<msg id="22" name="txf_thr_death" severity="remark" category="misc"  type="prob_x_thr_death" debuggable="n" />
+	<msg id="23" name="txf_thr_terminate_deadlock" severity="error" category="sync"  type="prob_x_thr_terminate_deadlock" debuggable="n" />
+	<msg id="24" name="txf_thr_stall_infinite" severity="warning" category="sync"  type="prob_x_thr_stall_infinite" debuggable="n" />
+	<msg id="25" name="txf_thr_wait_infinite" severity="warning" category="sync"  type="prob_x_thr_wait_infinite" debuggable="n" />
+	<msg id="27" name="txf_sync_notify" severity="warning" category="sync"  type="prob_x_sync_notify" debuggable="n" />
+	<msg id="28" name="txf_sync_dangle" severity="warning" category="sync"  type="prob_x_sync_dangle" debuggable="n" />
+	<msg id="29" name="txf_sync_cycle" severity="warning" category="sync"  type="prob_x_sync_cycle" debuggable="n" />
+	<msg id="60" name="txf_thr_cdecl" severity="error" category="lifetime"  type="prob_x_thr_cdecl" debuggable="n" />
+	<msg id="61" name="txf_thr_stdcall" severity="error" category="lifetime"  type="prob_x_thr_stdcall" debuggable="n" />
+	<msg id="68" name="txf_thr_stall_timed" severity="warning" category="sync"  type="prob_x_thr_stall_timed" debuggable="n" />
+	<msg id="69" name="txf_thr_wait_timed" severity="warning" category="sync"  type="prob_x_thr_wait_timed" debuggable="n" />
+
+
+	<!-- Freshly prepped legacy diags -->
+	<msg id="5" name="txf_race_io" severity="error" category="race"  type="prob_x_race" debuggable="n" /> <!-- I/O Data race -->
+	<msg id="31" name="txf_omp_not_local" severity="warning" category="omp"  type="prob_x_omp_not_local" debuggable="n" />
+	<msg id="32" name="txf_omp_par_undef" severity="warning" category="omp"  type="prob_x_omp_par_undef" debuggable="n" />
+	<msg id="39" name="txf_omp_osec_skip" severity="warning" category="omp"  type="prob_x_omp_osec_skip" debuggable="n" />
+	<msg id="43" name="txf_omp_sync_ws" severity="warning" category="omp"  type="prob_x_omp_sync_ws" debuggable="n" />
+	<msg id="45" name="txf_omp_partial_cmn" severity="remark" category="omp"  type="prob_x_omp_partial_com" debuggable="n" />  <!-- Common var may be undefined-->
+	<msg id="54" name="txf_omp_ser_undef" severity="warning" category="omp"  type="prob_x_omp_ser_undef" debuggable="n" />  <!--"undefined in the serial code/orig program -->
+	<msg id="65" name="txf_sync_obj_use_create" severity="error" category="sync"  type="prob_x_sync_obj_use_create" debuggable="n" />
+	<msg id="66" name="txf_sync_unlock_not_owned_lock" severity="error" category="sync"  type="prob_x_sync_unlock_not_owned_lock" debuggable="n" />
+	<msg id="70" name="txf_api_value_arg" severity="error" category="lifetime"  type="prob_x_api_value_arg" debuggable="n" />
+	<msg id="71" name="txf_api_invalid_arg" severity="error" category="lifetime"  type="prob_x_api_invalid_arg" debuggable="n" />
+	<msg id="72" name="txf_api_null_arg" severity="error" category="lifetime"  type="prob_x_api_null_arg" debuggable="n" />
+	<msg id="74" name="txf_api_mutex_arg" severity="error" category="lifetime"  type="prob_x_api_mutex_arg" debuggable="n" />
+	<msg id="75" name="txf_api_event_arg" severity="error" category="lifetime"  type="prob_x_api_event_arg" debuggable="n" />
+	<msg id="76" name="txf_api_semaphore_arg" severity="error" category="lifetime"  type="prob_x_api_semiphore_arg" debuggable="n" />
+	<msg id="77" name="txf_api_thread_arg" severity="error" category="lifetime"  type="prob_x_api_thread_arg" debuggable="n" />
+	<msg id="78" name="txf_api_comport_arg" severity="error" category="lifetime"  type="prob_x_api_comport_arg" debuggable="n" />
+	<msg id="86" name="txf_omp_no_ordered" severity="error" category="omp"  type="prob_x_omp_no_ordered" debuggable="n" />
+ 	<msg id="87" name="txf_omp_sync_ordered" severity="error" category="omp"  type="prob_x_omp_sync_ordered" debuggable="n" />
+	<msg id="89" name="txf_api_errorcode" severity="warning" category="lifetime"  type="prob_x_omp_errorcode" debuggable="n" />
+	<msg id="90" name="txf_thr_infinite_hold_and_wait" severity="warning" category="sync"  type="prob_x_thr_infinite_hold_and_wait" debuggable="n" />
+	<msg id="91" name="txf_thr_timed_hold_and_wait" severity="warning" category="sync"  type="prob_x_thr_timed_hold_and_wait" debuggable="n" />
+	<msg id="93" name="txf_thr_deadlock_terminate" severity="remark" category="misc"  type="prob_x_thr_deadlock" debuggable="n" />
+	<msg id="94" name="txf_omp_private_not_on_stack" severity="warning" category="omp"  type="prob_x_omp_private_not_on_stack" debuggable="n" />
+
+
+
+	<!-- Legacy Thread Checker message map :: disabled until fixed
+	<msg id="4" name="txf_race_xx" severity="error" category="race"  type="race_xx" debuggable="n" /> 
+	<msg id="6" name="txf_sync_ww" severity="remark" category="race"  type="sync_ww" debuggable="n" />
+	<msg id="7" name="txf_sync_rw" severity="remark" category="race"  type="sync_rw" debuggable="n" />
+	<msg id="8" name="txf_sync_wr" severity="remark" category="race"  type="sync_wr" debuggable="n" />
+	<msg id="9" name="txf_sync_xx" severity="remark" category="race"  type="sync_xx" debuggable="n" />
+	<msg id="10" name="txf_sync_io" severity="remark" category="race"  type="sync_io" debuggable="n" />
+	<msg id="11" name="txf_align_ww" severity="warning" category="race"  type="align_ww" debuggable="n" />
+	<msg id="12" name="txf_align_rw" severity="warning" category="race"  type="align_rw" debuggable="n" />
+	<msg id="13" name="txf_align_wr" severity="warning" category="race"  type="align_wr" debuggable="n" />
+	<msg id="14" name="txf_align_xx" severity="error" category="race"  type="align_xx" debuggable="n" /> 
+	<msg id="17" name="txf_lib_badarg" severity="error" category="lifetime"  type="lib_badarg" debuggable="n" /> 
+	<msg id="20" name="txf_lib_access" severity="remark" category="race"  type="lib_access" debuggable="n" />  
+	<msg id="30" name="txf_omp_firstprivate" severity="warning" category="omp"  type="omp_firstprivate" debuggable="n" />
+	<msg id="33" name="txf_omp_lastprivate" severity="warning" category="omp"  type="omp_lastprivate" debuggable="n" />
+	<msg id="34" name="txf_omp_not_last" severity="warning" category="omp"  type="omp_not_last" debuggable="n" />
+	<msg id="35" name="txf_omp_was_last" severity="warning" category="omp"  type="omp_was_last" debuggable="n" />
+	<msg id="36" name="txf_omp_par_def" severity="warning" category="omp"  type="omp_par_def" debuggable="n" />
+	<msg id="37" name="txf_omp_tsk_def" severity="warning" category="omp"  type="omp_tsk_def" debuggable="n" />
+	<msg id="38" name="txf_omp_osec_many" severity="error" category="omp"  type="omp_osec_many" debuggable="n" /> 
+	<msg id="40" name="txf_omp_nested_ws" severity="error" category="omp"  type="omp_nested_ws" debuggable="n" />  
+	<msg id="41" name="txf_omp_ws_barrier" severity="remark" category="omp"  type="omp_ws_barrier" debuggable="n" />  
+	<msg id="42" name="txf_omp_ws_master" severity="remark" category="omp"  type="omp_ws_master" debuggable="n" />  
+	<msg id="44" name="txf_omp_partial_loc" severity="remark" category="omp"  type="omp_partial_loc" debuggable="n" />  
+	<msg id="46" name="txf_omp_share_first" severity="remark" category="omp"  type="omp_share_first" debuggable="n" />
+	<msg id="47" name="txf_omp_share_last" severity="remark" category="omp"  type="omp_share_last" debuggable="n" />
+	<msg id="48" name="txf_omp_reprivate" severity="remark" category="omp"  type="omp_reprivate" debuggable="n" /> 
+	<msg id="49" name="txf_omp_pdo_shared" severity="warning" category="omp"  type="omp_pdo_shared" debuggable="n" /> 
+	<msg id="50" name="txf_omp_jexit" severity="error" category="omp"  type="omp_jexit" debuggable="n" />   
+	<msg id="51" name="txf_omp_nested_sync" severity="error" category="omp"  type="omp_nested_sync" debuggable="n" />  
+	<msg id="52" name="txf_omp_ws_reduce" severity="remark" category="omp"  type="omp_ws_reduce" debuggable="n" />  
+	<msg id="53" name="txf_omp_par_defval" severity="remark" category="omp"  type="omp_par_defval" debuggable="n" />  
+	<msg id="55" name="txf_omp_tc_default" severity="remark" category="omp"  type="omp_tc_default" debuggable="n" /> 
+	<msg id="56" name="txf_omp_threadshared" severity="remark" category="omp"  type="omp_threadshared" debuggable="n" />  
+	<msg id="57" name="txf_watch_var" severity="remark" category="misc"  type="watch_var" debuggable="n" />  
+	<msg id="58" name="txf_touch_var" severity="remark" category="misc"  type="touch_var" debuggable="n" />  
+	<msg id="59" name="txf_omp_bad_api" severity="error" category="omp"  type="omp_bad_api" debuggable="n" />  
+	<msg id="62" name="txf_sync_obj_close_use" severity="error" category="sync"  type="sync_obj_close_use" debuggable="n" />  
+	<msg id="63" name="txf_sync_obj_create_use" severity="error" category="sync"  type="sync_obj_create_use" debuggable="n" />
+	<msg id="64" name="txf_sync_obj_use_close" severity="error" category="sync"  type="sync_obj_use_close" debuggable="n" />
+	<msg id="67" name="txf_too_many_errors" severity="remark" category="misc"  type="too_many_errors" debuggable="n" />
+	<msg id="73" name="txf_api_critical_arg" severity="error" category="lifetime"  type="api_critical_arg" debuggable="n" />
+	<msg id="79" name="txf_api_cond_arg" severity="error" category="lifetime"  type="api_cond_arg" debuggable="n" />
+	<msg id="80" name="txf_api_rwlock_arg" severity="error" category="lifetime"  type="api_rwlock_arg" debuggable="n" />
+	<msg id="88" name="txf_omp_privlock" severity="warning" category="omp"  type="omp_privlock" debuggable="n" />
+	<msg id="92" name="txf_thr_cross_stack_access" severity="warning" category="race"  type="thr_cross_stack_access" debuggable="n" />
+	<msg id="95" name="txf_thr_memory_collector_triggered" severity="remark" category="misc"  type="thr_memry_collector_triggered" debuggable="n" />
+	<msg id="97" name="txf_thr_current_state" severity="remark" category="misc"  type="thr_current_state" debuggable="n" />
+	<msg id="98" name="txf_omp_sharable_data" severity="error" category="misc"  type="omp_sharable_data" debuggable="n" />
+	<msg id="99" name="txf_lock_double_init" severity="error" category="lifetime"  type="lock_double_init" debuggable="n" />
+	-->
+
+
+</cs_messages>

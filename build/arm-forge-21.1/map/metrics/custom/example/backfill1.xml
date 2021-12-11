@@ -1,0 +1,28 @@
+<metricdefinitions version="1">
+    <metric id="com.allinea.metrics.backfill1.events">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <backfill>true</backfill>
+        <source ref="com.allinea.metrics.backfill_src"
+                functionName="backfilled_metric"/>
+        <display>
+            <displayName>Events</displayName>
+            <description>Total number of events</description>
+            <type>events</type>
+            <colour>red</colour>
+        </display>
+    </metric>
+    <metricGroup id="Backfill1">
+        <displayName>Backfill1</displayName>
+        <description>Number of events</description>
+        <metric ref="com.allinea.metrics.backfill1.events"/>
+    </metricGroup>
+    <source id="com.allinea.metrics.backfill_src">
+        <sharedLibrary>libbackfill1.so</sharedLibrary>
+        <functions>
+            <start>start_profiling</start>
+            <stop>stop_profiling</stop>
+        </functions>
+    </source>
+</metricdefinitions>

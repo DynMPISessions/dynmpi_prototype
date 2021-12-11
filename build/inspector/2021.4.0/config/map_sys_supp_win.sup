@@ -1,0 +1,375 @@
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=RTC_CheckStackVars, src=stack.cpp;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=aclayers.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=clang_compiler.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=cilkrts20.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=clr.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=clrjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=cpu_device.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=culture.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=diasymreader.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=fnp_act_installer.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libguide40.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libguide40_stat.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libicaf.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libifcoremdd.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libittnotify.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=libmm*.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=microsoft.visualstudio.diagnostics.servicemodelsink.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscordbc.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscordbi.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscoree.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscoreei.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscorjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscorlib.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscorlib.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=mscorwks.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=msctfime.ime;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=napinsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=oclcpubackend.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=pgphk.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=pnrpnsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=presentationcore.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=presentationframework.*.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=smdiagnostics.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=system.configuration.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=system.*.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=vcomp.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=wdmaud.drv;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=windowsbase.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=wpfgfx_v0300.dll;
+		}
+	}
+}
+suppression = {
+	type = {uniform_stride}
+	stacks = {
+		{
+			mod=xpsp2res.dll;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=*intel_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=*intel_fast_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=*intel_fast_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=*intel_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=*intel_*_strlen;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {uniform_stride}
+	stacks = {
+		{
+			func=_kmpc_*;
+		}
+	}
+}

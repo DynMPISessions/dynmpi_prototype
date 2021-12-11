@@ -1,0 +1,12 @@
+prefix=/dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/pmix
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: pmix
+Description: Process Management Interface for Exascale (PMIx)
+Version: 4.1.0a1
+URL: https://pmix.org/
+Requires:  hwloc libevent zlib
+Libs: -L${libdir} -lpmix 
+Cflags: -I${includedir}

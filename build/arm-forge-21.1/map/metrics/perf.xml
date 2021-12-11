@@ -1,0 +1,294 @@
+<metricdefinitions version="1">
+<!-- these metrics are only used on supported architectures defined in lib-perf.so -->
+
+<!-- BEGIN HARDWARE METRIC DEFINITIONS -->
+<!-- These metrics make use of a single hardware counter each -->
+
+    <metric id="com.allinea.metrics.perf.cpuFlops">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cpuFlops"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU FLOPS lower bound</displayName>
+            <description>Lower bound of floating point operations finished.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.floating_point_scalar">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_floating_point_scalar"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU FLOPS scalar lower bound</displayName>
+            <description>Lower bound of floating point scalar operations finished.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.cpuMemAccesses">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cpuMemAccesses"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU memory accesses</displayName>
+            <description>Processor's data cache reloads from a memory location, including L4 from local, remote or distant, due to a demand load.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.cpuVectorFlops">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cpuVectorFlops"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU FLOPS vector lower bound</displayName>
+            <description>Lower bound of vector FP instructions completed.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.cpuBranchMisses">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cpuBranchMisses"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU branch mispredictions</displayName>
+            <description>Branch mispredicts.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.aarch64CpuBranchMissesPercentage">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_aarch64CpuBranchMissesPercentage"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>Branch mispredicts</displayName>
+            <description>Proportion of instructions which are mispredicted branch instructions</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+            <displayFactor>0.1</displayFactor>
+            <displayUnits>per 1000 instructions</displayUnits>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.power9CpuBranchMissesPercentage">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_power9CpuBranchMissesPercentage"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>Branch mispredicts</displayName>
+            <description>Proportion of conditional branches that are mispredicted</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+            <displayFactor>0.1</displayFactor>
+            <displayUnits>per 1000 predictions</displayUnits>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.l2CacheRefs">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_l2CacheRefs"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>L2 cache accesses</displayName>
+            <description>Level 2 data cache accesses.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.cycles">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cycles"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>CPU cycles</displayName>
+            <description>Processor cycles.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.instructions">
+        <units>/s</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_instructions"
+            divideBySampleTime="true"/>
+        <display>
+            <displayName>Instructions</displayName>
+            <description>Instructions finished.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+<!-- END HARDWARE METRIC DEFINITIONS -->
+<!-- BEGIN DERIVED METRIC DEFINITIONS -->
+<!-- These metrics are derived from two or more hardware counters -->
+
+    <metric id="com.allinea.metrics.perf.cycles_per_instruction">
+        <units></units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_cycles_per_instruction"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>Cycles per instruction</displayName>
+            <description>Derived CPU cycles per instruction.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.l2_data_cache_misses">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_l2_data_cache_misses"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>L2 Data cache miss</displayName>
+            <description>Percentage of L2 data cache accesses which resulted in a miss.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.l3CacheMissesPercentage">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_l3CacheMisses"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>L3 cache misses</displayName>
+            <description>The ratio of L3 data cache demand loads to instructions completed.</description>
+            <type>other</type>
+            <displayFactor>0.1</displayFactor>
+            <displayUnits>per 1000 instructions</displayUnits>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.stalled_cycles_backend_percentage">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_stalled_cycles_backend_percentage"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>Stalled backend cycles</displayName>
+            <description>Percentage of CPU cycles where no operation was issued due to the backend.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+    <metric id="com.allinea.metrics.perf.stalled_cycles_frontend_percentage">
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>false</onePerNode>
+        <source ref="com.allinea.metrics.allinea_perf_src"
+            functionName="allinea_perf_stalled_cycles_frontend_percentage"
+            divideBySampleTime="false"/>
+        <display>
+            <displayName>Stalled frontend cycles</displayName>
+            <description>Percentage of CPU cycles where no operation was issued due to the frontend.</description>
+            <type>other</type>
+            <colour>SpecialLine6</colour>
+        </display>
+    </metric>
+
+<!-- END DERIVED METRIC DEFINITIONS -->
+<!-- BEGIN OVERVIEW METRIC GROUPS -->
+
+    <metricGroup id="aarch64_perf_overview_metrics">
+        <displayName>CPU Instructions</displayName>
+        <description>CPU Instructions metrics</description>
+        <metric ref="com.allinea.metrics.perf.cycles_per_instruction"/>
+        <metric ref="com.allinea.metrics.perf.l2_data_cache_misses"/>
+        <metric ref="com.allinea.metrics.perf.aarch64CpuBranchMissesPercentage"/>
+        <metric ref="com.allinea.metrics.perf.stalled_cycles_backend_percentage"/>
+        <metric ref="com.allinea.metrics.perf.stalled_cycles_frontend_percentage"/>
+    </metricGroup>
+
+    <metricGroup id="power8_perf_overview_metrics">
+        <displayName>CPU Instructions</displayName>
+        <description>CPU Instructions metrics</description>
+        <metric ref="com.allinea.metrics.perf.cycles_per_instruction"/>
+        <metric ref="com.allinea.metrics.perf.cpuFlops"/>
+        <metric ref="com.allinea.metrics.perf.cpuMemAccesses"/>
+        <metric ref="com.allinea.metrics.perf.cpuVectorFlops"/>
+        <metric ref="com.allinea.metrics.perf.cpuBranchMisses"/>
+    </metricGroup>
+
+    <metricGroup id="power9_perf_overview_metrics">
+        <displayName>CPU Instructions</displayName>
+        <description>CPU Instructions metrics</description>
+        <metric ref="com.allinea.metrics.perf.cycles_per_instruction"/>
+        <metric ref="com.allinea.metrics.perf.l3CacheMissesPercentage"/>
+        <metric ref="com.allinea.metrics.perf.power9CpuBranchMissesPercentage"/>
+        <metric ref="com.allinea.metrics.perf.stalled_cycles_backend_percentage"/>
+    </metricGroup>
+
+<!-- END OVERVIEW METRIC GROUPS -->
+    <source id="com.allinea.metrics.allinea_perf_src">
+        <sharedLibrary>lib-perf.so</sharedLibrary>
+    </source>
+
+</metricdefinitions>

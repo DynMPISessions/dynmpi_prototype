@@ -1,0 +1,75 @@
+<partialReport name="com.allinea.performancereports.papi"
+               xmlns="http://www.allinea.com/2016/AllineaReports">
+    <reportMetrics>
+
+        <reportMetric id="com.allinea.metrics.papi.l1_total_cache_misses" displayName="L1 cache misses" units="/s" colour="hsl(208, 83, 59)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l1_total_cache_misses" sampleValue="mean" aggregation="max"/>
+	</reportMetric>
+     
+        <reportMetric id="com.allinea.metrics.papi.l2_total_cache_misses" displayName="L2 cache misses" units="/s" colour="hsl(208, 57, 43)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l2_total_cache_misses" sampleValue="mean" aggregation="max"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.l3_total_cache_misses" displayName="L3 cache misses" units="/s" colour="hsl(208, 57, 40)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l3_total_cache_misses" sampleValue="mean" aggregation="max"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.l1_data_cache_misses" displayName="Data L1 cache misses" units="/s" colour="hsl(208, 57, 38)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l1_data_cache_misses" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.l2_data_cache_misses" displayName="Data L2 cache misses" units="/s" colour="hsl(208, 57, 34)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l2_data_cache_misses" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.l3_data_cache_misses" displayName="Data L3 cache misses" units="/s" colour="hsl(208, 57, 28)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l3_data_cache_misses" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+    </reportMetrics>
+
+    <subsections>
+        <subsection id="PAPI-Cache-Data"
+                    order="0"
+                    maxAdviceStrings="2"
+                    heading="PAPI Cache Misses"
+                    colour="hsl(208, 83, 59)"
+                    requires="com.allinea.metrics.papi.l1_data_cache_misses"
+                    >
+
+            <text>PAPI data cache misses for all levels (on the main thread only):</text>
+            
+            <entry  reportMetric="com.allinea.metrics.papi.l1_data_cache_misses"
+                    order="-70"
+                    group="mean"/>
+            <entry  reportMetric="com.allinea.metrics.papi.l2_data_cache_misses"
+                    order="-60"
+                    group="mean"/>
+            <entry  reportMetric="com.allinea.metrics.papi.l3_data_cache_misses"
+                    order="-50"
+                    group="mean"/>
+
+        </subsection>
+
+        <subsection id="PAPI-Cache-Total"
+                    order="0"
+                    maxAdviceStrings="2"
+                    heading="PAPI Cache Misses"
+                    colour="hsl(208, 83, 59)"
+                    requires="com.allinea.metrics.papi.l1_total_cache_misses"
+                    >
+
+            <text>PAPI data and instruction cache misses for all levels (on the main thread only):</text>
+
+            <entry  reportMetric="com.allinea.metrics.papi.l1_total_cache_misses"
+                    order="-100"
+                    group="total"/>
+            <entry  reportMetric="com.allinea.metrics.papi.l2_total_cache_misses"
+                    order="-90"
+                    group="total"/>
+            <entry  reportMetric="com.allinea.metrics.papi.l3_total_cache_misses"
+                    order="-80"
+                    group="total"/>
+        </subsection>
+    </subsections>
+</partialReport>

@@ -1,0 +1,51 @@
+# Intel Compiler generated functions.
+
+Filtered = (
+               Module = "*",
+               Function = "init_mem_ops_method",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+
+Filtered = (
+               Module = "*",
+               Function = "__intel_init_mem_ops_method",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+Filtered = (
+               Module = "*",
+               Function = "__libirc_init_mem_ops_method",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+Filtered = (
+               Module = "*",
+               Function = "__itt_init_ittlib",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+Filtered = (
+               Module = "*",
+               Function = "__itt_fini_ittlib",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+Filtered = (
+               Module = "*",
+               Function = "__intel_cpu_indicator_init",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+Filtered = (
+               Module = "*",
+               Function = "__intel_cpu_features_init",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);

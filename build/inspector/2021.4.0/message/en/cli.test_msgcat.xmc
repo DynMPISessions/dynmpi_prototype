@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='cli.mc_test_tool' lang='en'>
+    <msg name="2011_title">2011_message_title_from_message_catalog_cli_tc</msg>
+    <msg name="2011">2011_message_text_cli_mc</msg>
+    <msg name="title_2033">2033_message_title_from_message_catalog_cli_tc</msg>
+    <msg name="2033">2011_message_text_cli_mc</msg>
+  </catalog>
+  <catalog name='cli.tc_test_tool' lang='en'>
+    <msg name="title_2033">2033_message_title_from_message_catalog_cli_mc</msg>
+    <msg name="2033">2011_message_text_cli_mc</msg>
+  </catalog>
+</xmc>

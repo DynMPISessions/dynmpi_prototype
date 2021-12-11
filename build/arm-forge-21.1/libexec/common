@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# DDTPATH is an alias of ALLINEA_TOOLS_PATH for backwards compatibility
+export ALLINEA_TOOLS_PATH="${ALLINEA_FORGE_PATH:-${ALLINEA_REPORTS_PATH}}"
+export DDTPATH="${ALLINEA_TOOLS_PATH}"
+
+# We unset this environment variable because otherwise forge may try to load Qt with the native Wayland
+# compositor where forge currently has many issues, see comments in ticket FORPRDEV-10184.
+unset QT_QPA_PLATFORM
+
+[ -n "$PRODUCT_NAME" ] || PRODUCT_NAME="Arm Forge"
+
+[ -n "$ALLINEA_WORKING_DIRECTORY" ] && cd "$ALLINEA_WORKING_DIRECTORY"
+
+# Architecture check
+TOOLS_RUN_ARCH=`uname -m`
+# Build arch set by maketar build script (do not edit the following line without updating the build script)
+TOOLS_BUILD_ARCH=x86_64
+
+if [ $TOOLS_RUN_ARCH != $TOOLS_BUILD_ARCH ] ; then
+    echo "$0: Your machine uses the $TOOLS_RUN_ARCH architecture but this $PRODUCT_NAME installation is for the $TOOLS_BUILD_ARCH architecture."
+    exit 1
+fi
+
+# Check ssh-agent setup
+TMPDIR_PATH="${TMPDIR:-/tmp}"
+TMPDIR_WRITEABLE=
+if [ -d "${TMPDIR_PATH}" ] && [ -w "${TMPDIR_PATH}" ]; then
+	TMPDIR_WRITEABLE=1
+fi
+
+SSH_AGENT=
+if [ -n "${TMPDIR_WRITEABLE}" ] && [ -z "${SSH_AUTH_SOCK}" ] && type ssh-agent >/dev/null 2>&1 && [ ! -u `which ssh-agent` ] && [ ! -g `which ssh-agent` ]; then
+        SSH_AGENT=ssh-agent
+fi
+
+# Set SSH askpass program
+if [ -z "${SSH_ASKPASS}" ]; then
+        SSH_ASKPASS="$ALLINEA_TOOLS_PATH/libexec/qt-ssh-askpass"
+        export SSH_ASKPASS
+fi
+
+# Set path
+PATH="$ALLINEA_TOOLS_PATH/bin${PATH:+:$PATH}"
+PATH="$ALLINEA_TOOLS_PATH/libexec${PATH:+:$PATH}"
+export PATH
+
+# Set library paths
+for lib_path in lib lib/64 lib/map
+do
+	LD_LIBRARY_PATH="$ALLINEA_TOOLS_PATH/${lib_path}${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+done
+export LD_LIBRARY_PATH
+
+# Source allinearc files
+SITE_RC=$ALLINEA_TOOLS_PATH/allinearc
+if [ -r "$SITE_RC" ]; then
+    . "$SITE_RC"
+fi
+USER_RC=${ALLINEA_CONFIG_DIR:-$HOME/.allinea}/allinearc
+if [ -r "$USER_RC" ]; then
+    . "$USER_RC"
+fi

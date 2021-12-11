@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+<catalog name="dialogs"  lang='en'>
+  <msg name='btn.add'>Add</msg>
+  <msg name='btn.add_file'>Add File</msg>
+  <msg name='btn.add_folder'>Add Folder</msg>
+  <msg name='btn.append'>Append</msg>
+  <msg name='btn.browse'>Browse...</msg>
+  <msg name='btn.cancel'>Cancel</msg>
+  <msg name='btn.clear'>Clear</msg>
+  <msg name='btn.close'>Close</msg>
+  <msg name='btn.create'>Create</msg>
+  <msg name='btn.delete'>Delete</msg>
+  <msg name='btn.help'>Help</msg>
+  <msg name='btn.load'>Load</msg>
+  <msg name='btn.ok'>OK</msg>
+  <msg name='btn.remove'>Remove</msg>
+  <msg name='btn.replace'>Replace</msg>
+  <msg name='btn.save'>Save</msg>
+  <msg name='btn.save_as'>Save As</msg>
+  <msg name='btn.change'>Change</msg>
+  <msg name='btn.copy'>Copy</msg>
+  <msg name='text.unknown'>-</msg>
+  <msg name='space'> </msg>
+  <msg name='slash'>/</msg>
+  <msg name='panel.summary.title'>Summary</msg>
+  <msg name='panel.summary.problem_type'>Problem Type</msg>
+  <msg name='panel.summary.count'>Count</msg>
+  <msg name='panel.summary.total'>Total</msg>
+  <msg name='dlg.collect.title'>Configure Analysis</msg>
+  <msg name='dlg.collect.mc1'>Does my target leak memory?</msg>
+  <msg name='dlg.collect.mc2'>Does my target have memory access problems?</msg>
+  <msg name='dlg.collect.mc3'>Where are the memory access problems?</msg>
+  <msg name='dlg.collect.mc4'>Where are all the memory problems <arg name='product_short_name'/> can find?</msg>
+  <msg name='dlg.collect.tc1'>Does my target have deadlocks?</msg>
+  <msg name='dlg.collect.tc2'>Does my target have deadlocks or data races?</msg>
+  <msg name='dlg.collect.tc3'>Where are the deadlocks or data races?</msg>
+  <msg name='dlg.collect.tc4'>Where are all the threading problems <arg name='product_short_name'/> can find?</msg>
+  <msg name='dlg.collect.ad1'>Where are data sharing issues?</msg>
+  <msg name='dlg.collect.mc1_slowdown'>2x-20x</msg>
+  <msg name='dlg.collect.mc2_slowdown'>10x-40x</msg>
+  <msg name='dlg.collect.mc3_slowdown'>20x-80x</msg>
+  <msg name='dlg.collect.mc4_slowdown'>40x-160x</msg>
+  <msg name='dlg.collect.tc1_slowdown'>10x-40x</msg>
+  <msg name='dlg.collect.tc2_slowdown'>20x-80x</msg>
+  <msg name='dlg.collect.tc3_slowdown'>40x-160x</msg>
+  <msg name='dlg.collect.tc4_slowdown'>80x-320x</msg>
+  <msg name='dlg.collect.default_mark'>(default)</msg>
+  <msg name='dlg.collect.rb1'>Inspect Memory Errors</msg>
+  <msg name='dlg.collect.rb2'>Inspect Threading Errors</msg>
+  <msg name='dlg.collect.picture_note'>Analysis Time Overhead</msg>
+  <msg name='dlg.collect.mem_note'>Memory Overhead</msg>
+  <msg name='dlg.collect.cancel'>Cancel</msg>
+  <msg name='dlg.collect.help'>Help</msg>
+  <msg name='dlg.collect.start_checking_memory_errors'>Run Analysis</msg>
+  <msg name='dlg.collect.start_checking_threading_errors'>Run Analysis</msg>
+  <msg name='dlg.collect.suppressions'>Private suppressions:</msg>
+  <msg name='dlg.collect.suppressions_choice1'>Delete problems</msg>
+  <msg name='dlg.collect.suppressions_choice2'>Mark problems</msg>
+  <msg name='dlg.collect.suppressions_choice3'>Do not use suppressions</msg>
+  <msg name='dlg.collect.analysis_type'>Analysis type:</msg>
+  <msg name='dlg.collect.analysis_type_choice1'>Memory Errors</msg>
+  <msg name='dlg.collect.analysis_type_choice2'>Threading Errors</msg>
+  <msg name='dlg.collect.show_cbox_for_ti'>Always show this dialog box before running threading error analyses</msg>
+  <msg name='dlg.collect.show_cbox_for_mi'>Always show this dialog box before running memory error analyses </msg>
+  <msg name='dlg.collect.set_4_level'>Detect additional problems with stack accesses </msg>
+  <msg name='dlg.collect.set_4_level_tooltip'>At the cost of an additional 10x slowdown: detect additional problems with stack accesses </msg>
+  <msg name='dlg.collect.tc_hint1'>&lt;p&gt;&lt;b&gt;Does my target have deadlocks &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Analysis level: Low (ti1) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 1 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets (the overhead is proportional to the number of locking calls) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.tc_hint2'>&lt;p&gt;&lt;b&gt;Does my target have deadlocks or data races? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Analysis level: Medium (ti2) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 1 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 30 seconds and use <arg name='less'/> 400MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.tc_hint3'>&lt;p&gt;&lt;b&gt;Where are the deadlocks or data races? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: High (ti3) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 12 &lt;/li&gt;
+&lt;li&gt; Previous call stacks capture: Yes &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 20 seconds and use <arg name='less'/> 200MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.tc_hint4'>&lt;p&gt;&lt;b&gt;Where are all the threading problems <arg name='product_short_name'/> can find? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: Extreme (ti4) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 32 &lt;/li&gt;
+&lt;li&gt; Previous call stacks capture: Yes &lt;/li&gt;
+&lt;li&gt; Stack memory check: Yes &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 10 seconds and use <arg name='less'/> 100MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.mc_hint1'>&lt;p&gt;&lt;b&gt;Does my target leak memory? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: Low (mi1) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 7 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets (the overhead is proportional to the number of allocation calls) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.mc_hint2'>&lt;p&gt;&lt;b&gt;Does my target have memory access problems? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: Medium (mi2) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 1 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 90 seconds and use <arg name='less'/> 600MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.mc_hint3'>&lt;p&gt;&lt;b&gt;Where are the memory access problems? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: High (mi3) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 12 &lt;/li&gt;
+&lt;li&gt; Enhanced dangling pointer check: Yes &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 60 seconds and use <arg name='less'/> 400MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+<msg name='dlg.collect.mc_hint4'>&lt;p&gt;&lt;b&gt;Where are all of the memory problems <arg name='product_short_name'/> can find? &lt;/b&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;ul type=circle&gt;
+&lt;li&gt; Analysis level: Extreme (mi4) &lt;/li&gt;
+&lt;li&gt; Call stack depth limit: 32 &lt;/li&gt;
+&lt;li&gt; Enhanced dangling pointer check: Yes &lt;/li&gt;
+&lt;li&gt; System libraries check: Yes &lt;/li&gt;
+&lt;li&gt; Stack memory check: Yes &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+For best results, choose targets: &lt;br&gt;
+&lt;ul&gt;
+&lt;li&gt; Compiled with debug information on, optimization off, and dynamic runtime library selected. &lt;/li&gt;
+&lt;li&gt; With small representative data sets that run <arg name='less'/> 30 seconds and use <arg name='less'/> 200MB of virtual memory. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+Press F1 for Help.
+  </msg>
+  <msg name='dlg.result.title'>Result Summary</msg>
+  <msg name='dlg.result.application'>Application:</msg>
+  <msg name='dlg.result.analysis_type'>Analysis configuration:</msg>
+  <msg name='dlg.result.duration'>Analysis duration:</msg>
+  <msg name='dlg.result.date'>Analysis date:</msg>
+  <msg name='dlg.result.size'>Result file size:</msg>
+  <msg name='dlg.result.dir'>Result directory:</msg>
+  <msg name='dlg.result.processor'>Processor type:</msg>
+  <msg name='dlg.result.cpus'>CPUs:</msg>
+  <msg name='dlg.result.frequency'>Processor frequency:</msg>
+  <msg name='dlg.result.l1'>L1</msg>
+  <msg name='dlg.result.l2'>L2</msg>
+  <msg name='dlg.result.cache_sizes'>Cache sizes:</msg>
+  <msg name='dlg.result.comment'>Save a comment with this result</msg>
+  <msg name='dlg.result.ad1'>Modeling Errors</msg>
+  <msg name='dlg.result.nodata'>No data</msg>
+  <msg name='dlg.result.error_details'>To resolve the problem, click the Copy button again.</msg>
+  <msg name='pref.result.comment'>comment</msg>
+  <msg name='dlg.import.title'>Import Result from Intel(R) Thread Checker</msg>
+  <msg name='dlg.import.thr_file'>Intel(R) Thread Checker file location:</msg>
+  <msg name='dlg.import.result_dir'>Imported result destination directory:</msg>
+  <msg name='dlg.import.product_name.thr'>Intel(R) Thread Checker fully resolved files</msg>
+  <msg name='dlg.import.product_name.txf'>Intel(R) Thread Checker raw data files</msg>
+  <msg name='dlg.import.product_name.insp'>Intel(R) Parallel Inspector files</msg>
+  <msg name='dlg.import.product_name.pdr'>Intel(R) Parallel Inspector raw data files</msg>
+  <msg name='dlg.import.product_name.inspxez'><arg name='product_ascii_name'/> result archives</msg>
+  <msg name='dlg.import.product_name.inspxe'><arg name='product_ascii_name'/> results</msg>
+  <msg name='pref.general.output_title'>Application output destination</msg>
+  <msg name='pref.general.event_log'>Collection Log window</msg>
+  <msg name='pref.general.vs_window'>Microsoft Visual Studio* output window</msg>
+  <msg name='pref.general.console'>Separate console window</msg>
+  <msg name='pref.general.suppressions'>Suppressions</msg>
+  <msg name='pref.general.include_suppr'>Public suppressions folder:</msg>
+  <msg name='pref.general.delete'>Delete problems</msg>
+  <msg name='pref.general.dont_use'>Do not use suppressions</msg>
+  <msg name='pref.general.action'>Public suppressions:</msg>
+  <msg name='pref.general.show_explanation'>Automatically show help snippet when result opens</msg>
+  <msg name='pref.states.location'>Baseline location</msg>
+  <msg name='pref.states.none'>Do not get problem states from another result</msg>
+  <msg name='pref.states.default'>Get problem states from previous result of same analysis type</msg>
+  <msg name='pref.states.specific'>Get problem states from a specific result</msg>
+  <msg name='pref.states.all_descr'>The first time you open a result:</msg>
+  <msg name='pref.states.default_descr'>Example: When opening r004ti2, get problem states from r003ti2. Treat all problems as New if no suitable previous result exists.</msg>
+  <msg name='pref.states.specific_descr'>Choose when source branched from an earlier baseline.</msg>
+  <msg name='pref.states.none_descr'>Treat all problems as New.</msg>
+  <msg name='dlg.suppressions.new.title'>Create Suppression</msg>
+  <msg name='dlg.suppressions.new.name'>Name:</msg>
+  <msg name='dlg.suppressions.new.name_control'>Suppression name</msg>
+  <msg name='dlg.suppressions.new.sample'>Suppression</msg>
+  <msg name='dlg.suppressions.new.save_to'>Save in:</msg>
+  <msg name='dlg.suppressions.new.grid_title'>Rule:</msg>
+  <msg name='dlg.suppressions.new.suppr_effect'>All checked observations must be true for the rule to take effect.</msg>
+  <msg name='dlg.suppressions.new.module_desc'>Suppressing a module [all checkboxes are selected except Any module] may reduce collection time during the next analysis run.</msg>
+  <msg name='dlg.suppressions.new.file_error_title'>Failed to create suppression file.</msg>
+  <msg name='dlg.suppressions.file_error_description'>- Filename contains system reserved characters &lt; &gt; : &quot; / \ | ? *<br/>- Path equals &quot;.&quot; or &quot;..&quot; <br/>- Filename is com1-com9, lpt1-lpt9, con, prn, aux, or nul <br/>- Full path name exceeds 260 characters <br/>- Or there is no available disk space</msg>
+  <msg name='dlg.suppressions.supp_file_exists_title'>Suppression file is not empty</msg>
+  <msg name='dlg.suppressions.supp_file_exists_description'>Do you want to append a new suppression rule to <arg name= 'file_path'/> and add this file (with all its suppression rules) to the project suppression list?</msg>
+  <msg name='dlg.suppressions.new.select'>Select...</msg>
+  <msg name='dlg.suppressions.new.edit'>Edit...</msg>
+  <msg name='dlg.suppressions.new.view'>View...</msg>
+  <msg name='dlg.suppressions.file_rewrite_description'>This suppression file was created using a previous <arg name='prod_short_name'/> version: <arg name='file'/>. The current <arg name='prod_short_name'/> version saves suppression files in a new format that is not backward compatible. If you proceed, <arg name='prod_short_name'/> will convert this suppression file to the new format and delete the selected suppression rule(s). Impact: This suppression file will be unavailable for use by teammates using previous <arg name='prod_short_name'/> versions. If you do not proceed, <arg name='prod_short_name'/> will ignore changes to this suppression file.&#10;&#10;Do you want to proceed?</msg>
+  <msg name='dlg.suppressions.files_rewrite_title'>New suppression file format</msg>
+  <msg name='dlg.suppressions.files_rewrite_description'>These suppression files were created using a previous <arg name='prod_short_name'/> version: <arg name='files'/>. The current <arg name='prod_short_name'/> version saves suppression files in a new format that is not backward compatible. If you proceed, <arg name='prod_short_name'/> will convert these suppression files to the new format and delete the selected suppression rule(s). Impact: These suppression files will be unavailable for use by teammates using previous <arg name='prod_short_name'/> versions. If you do not proceed, <arg name='prod_short_name'/> will ignore changes to these suppression files.&#10;&#10;Do you want to proceed?</msg>
+  <msg name='dlg.suppressions.stack.title.view'>View Stack</msg>
+  <msg name='dlg.suppressions.stack.title.select'>Select Stack Frame(s)</msg>
+  <msg name='dlg.suppressions.edit_stack.descr'>Create suppression rule based on selected call stack frame(s):</msg>
+  <msg name='dlg.suppressions.stack.select'>OK</msg>
+  <msg name='dlg.suppressions.stack.cancel'>Cancel</msg>
+  <msg name='dlg.suppressions.stack.reset'>Reset to Default</msg>
+  <msg name='dlg.suppressions.edit_stack.title'>Edit Stack</msg>
+  <msg name='dlg.suppression_stack_grid.use_in_rule'>Use in Rule</msg>
+  <msg name='dlg.suppressions.view_button.tooltip'>View Stack/Traceback Frames in Rule</msg>
+  <msg name='dlg.suppressions.new.save_in'>Save in:</msg>
+  <msg name='dlg.suppressions.new.apply_on'>Stack frame match</msg>
+  <msg name='dlg.suppressions.new.best'>Best stack frame</msg>
+  <msg name='dlg.suppressions.new.top'>Top stack frame</msg>
+  <msg name='dlg.suppressions.new.any'>Any stack frame</msg>
+  <msg name='dlg.suppressions.new.general'>General</msg>
+  <msg name='dlg.suppressions.new.stack_frame'>Code location</msg>
+  <msg name='dlg.suppression_grid.code_location'>Module/Function/Source/Line</msg>
+  <msg name='dlg.suppression_grid.frames'>Number of Frames in Rule</msg>
+  <msg name='dlg.suppression_grid.stack'>Start Frame in Rule</msg>
+  <msg name='supp.any_problem'>Any problem</msg>
+  <msg name='supp.any_description'>Any description</msg>
+  <msg name='supp.any_code_location'>Any code location</msg>
+  <msg name='supp.any_module'>Any module</msg>
+  <msg name='supp.any_function'>Any function</msg>
+  <msg name='supp.any_source'>Any source</msg>
+  <msg name='supp.any_line'>Any line</msg>
+  <msg name='dlg.suppressions.del.title'>Delete Suppressions</msg>
+  <msg name='dlg.suppressions.del.grid1_title'>Check the rule(s) to delete:</msg>
+  <msg name='dlg.suppressions.del.grid2_title'>Rule description:</msg>
+  <msg name='dlg.suppressions.del.grid2_title_for_single'>Rule description:</msg>
+  <msg name='dlg.suppressions.del.grid2_title_for_none'>No suppression clauses to display</msg>
+  <msg name='dlg.project_properties.title'>Project Properties</msg>
+  <msg name='dlg.project_properties.suppressions'>Suppressions</msg>
+  <msg name='dlg.project_properties.search_dirs'>Search Directories</msg>
+  <msg name='dlg.project_properties.search_dirs_binary'>Binary/Symbol Search</msg>
+  <msg name='dlg.project_properties.search_dirs_source'>Source Search</msg>
+  <msg name='panel.suppressions.grid0_title'>Suppression files:</msg>
+  <msg name='panel.suppressions.grid1_title'>Suppression rule list:</msg>
+  <msg name='panel.suppressions.grid2_title'>Rule description:</msg>
+  <msg name='panel.suppressions.grid2_title_for_none'>No suppression clauses to display</msg>
+  <msg name='panel.suppressions.ext'>Suppression files (*.sup)|*.sup</msg>
+  <msg name='panel.suppressions.default_folder_adding_title'>Suppression file already applied</msg>
+  <msg name='panel.suppressions.default_folder_adding_descritpion'>Cannot add this suppression file because it was already added automatically.</msg>
+  <msg name='panel.suppressions.existing_item_adding_descritpion'>Cannot add this suppression file because it already exists: <arg name='supp_file'/>.</msg>
+  <msg name='panel.suppressions.cannot_load_file_title'>Suppression file failed to load</msg>
+  <msg name='panel.suppressions.cannot_load_file_descritpion'>Cannot load <arg name='supp_file'/> suppression file. Suggestion: check file format for correctness or check that the file extsts and has correct reading permissions.</msg>
+  <msg name='supp_files_problem'>A problem occurred loading the following suppression files: </msg>
+  <msg name='supp_files_line'>error in line </msg>
+  <msg name='supp_files_suggestion'>Suggestion: Check file format for correctness.</msg>
+  <msg name='dlg.suppression_grid.name'>Name</msg>
+  <msg name='dlg.suppression_grid.file'>File</msg>
+  <msg name='dlg.suppression_grid.any_value'>* (any)</msg>
+  <msg name='dlg.suppression_files_grid.name'>File, Folder or Mask</msg>
+  <msg name='dlg.suppression_files_grid.project_default_folder'>Project suppressions folder</msg>
+  <msg name='dlg.suppressions.new.problem_type'>Problem type:</msg>
+  <msg name='dlg.suppression_grid.problem'>Problem</msg>
+  <msg name='dlg.suppression_grid.description'>Code Location Description</msg>
+  <msg name='dlg.suppression_grid.code_location'>Module/Function/Source/Line</msg>
+  <msg name='dlg.suppression_grid.locations'>Code Locations</msg>
+  <msg name='dlg.suppression_grid.any_problem'>Any problem</msg>
+  <msg name='dlg.suppression_grid.any_description'>Any description</msg>
+  <msg name='dlg.suppression_grid.any_module'>Any module</msg>
+  <msg name='dlg.suppression_grid.any_source'>Any source</msg>
+  <msg name='dlg.suppression_grid.any_line'>Any line</msg>
+  <msg name='dlg.suppression_grid.any_function'>Any function</msg>
+  <msg name='inplace.compare.title'>Choose two results of the same analysis type</msg>
+  <msg name='inplace.compare.extensions'><arg name='product_legal_name'/> files and <arg name='product_legal_name'/> link files (*.<arg name='abbr'/>;*.<arg name='linkabbr'/>)|*.<arg name='abbr'/>;*.<arg name='linkabbr'/></msg>
+  <msg name='inplace.compare.note'>Compare two results to identify issues that exist in one but not the other, or that still exist in both.</msg>
+  <msg name='inplace.compare.result1'>Result 1:</msg>
+  <msg name='inplace.compare.result2'>Result 2:</msg>
+  <msg name='inplace.import.title'>Choose a result to import</msg>
+  <msg name='inplace.import.note.insp'>Import a result archive file or a result from another project or Intel error detection product to current project test1. <arg name='prod_short_name'/> will copy the imported result to project folder <arg name='output_folder'/>. Suggestion: refinalize the imported result to apply current project symbol information.</msg>
+  <msg name='inplace.import.note.inspxe'>Import a result archive file or a result from another project or Intel error detection product to current project test1. <arg name='prod_short_name'/> will copy the imported result to project folder <arg name='output_folder'/>. Suggestion: refinalize the imported result to apply current project symbol information.</msg>
+  <msg name='inplace.import.result'>Result:</msg>
+  <msg name='inplace.import.new_location'>Save result in current project folder:</msg>
+  <msg name='pref.source_checker.compiler_path'>Intel(R) Compiler</msg>
+  <msg name='pref.source_checker.compiler_default'>Use default path:</msg>
+  <msg name='pref.source_checker.compiler_user'>Select path:</msg>
+  <msg name='pref.source_checker.compiler_not_found'>Warning: Cannot find an appropriate Intel(R) compiler at this location. You need an Intel compiler that supports static security analysis. Suggestion: Identify another location or install the compiler component using the suite-level product installer.</msg>
+  <msg name='pref.source_checker.compiler_not_found_2013'>Warning: Cannot find an appropriate Intel(R) compiler at this location. You need an Intel compiler that supports static analysis. Suggestion: Identify another location or install the compiler component using the suite-level product installer.</msg>
+  <msg name='pref.source_checker.ssa_complete'>After static security analysis is complete:</msg>
+  <msg name='pref.source_checker.ssa_complete_2013'>After static analysis is complete:</msg>
+  <msg name='pref.source_checker.open'>Open result automatically</msg>
+  <msg name='pref.source_checker.dont_open'>Do not open result</msg>
+  <msg name='perf.source_checker.restart_needed.details'>Restart <arg name='prod_short_name'/> for the change to take effect.</msg>
+  <msg name='perf.source_checker.restart_needed.message'>Intel Compiler setting has changed</msg>
+  <msg name='dlg.inherit.title'>Merge States</msg>
+  <msg name='dlg.inherit.select_result'>Select a result with an overlapping assortment of problems:</msg>
+  <msg name='dlg.inherit.extensions_string'><arg name='product_legal_name'/> files (*.<arg name='abbr'/>)|*.<arg name='abbr'/></msg>
+  <msg name='dlg.inherit.btn.ok'>Merge</msg>
+  <msg name='dlg.notes.btn.clear_note'>Clear Note</msg>
+  <msg name='dlg.clipboard.title'>Problem Report</msg>
+  <msg name='dlg.clipboard.verbose'>Include call stacks and code snippets</msg>
+  <msg name='dlg.clipboard.copy'>Copy to Clipboard</msg>
+  <msg name='dlg.clipboard.save'>Save to File</msg>
+  <msg name='dlg.clipboard.error_main'>Cannot copy to clipboard</msg>
+  <msg name='dlg.clipboard.error_details'>To resolve the problem, click the Copy to Clipboard button again.</msg>
+  <msg name='dlg.clipboard.file_ext'>txt</msg>
+  <msg name='dlg.clipboard.file_filter_pattern'>Text files (*.txt)|*.txt|</msg>
+  <msg name='dlg.clipboard.incomplete_text'>&#10;--- Text limit reached ---</msg>
+  <msg name='dbg.choice.title'>Debugger selection</msg>
+  <msg name='dbg.choice.description'>Select debugger to launch automatically when analysis is configured to run with option &lt;b&gt;Enable debugger when problem detected&lt;/b&gt; or &lt;b&gt;Select analysis start location with debugger&lt;/b&gt;:</msg>
+  <msg name='dbg.choice.1'>GNU gdb* debugger</msg>
+  <msg name='dbg.choice.1.tooltip'>Use GNU command line interface debugger.</msg>
+  <msg name='dbg.choice.2'>Intel(R) idb debugger</msg>
+  <msg name='dbg.choice.2.tooltip'>Use Intel graphical user interface debugger.</msg>
+  <msg name='dbg.choice.3'>Intel(R) idbc debugger</msg>
+  <msg name='dbg.choice.3.tooltip'>Use Intel command line interface debugger.</msg>
+  <msg name='dbg.choice.4'>Do not automatically start debugger</msg>
+  <msg name='dbg.choice.4.tooltip'>Start debugger manually. Connect using the target remote command displayed when analysis waits for connection.</msg>
+  <msg name='dbg.choice.5'>Other supported debugger</msg>
+  <msg name='dbg.choice.5.tooltip'>Use alternative location for a supported debugger or alternative debugger that provides the gdb remote interface.</msg>
+  <msg name='dbg.choice.browse'>Browse...</msg>
+  <msg name='dbg.choice.pattern'>All files (*)|*|</msg>
+  <msg name='dbg.choice.warning'>Cannot find this debugger in system search path.</msg>
+  <msg name='dlg.custom_filter.title'>Refine Source File Set</msg>
+  <msg name='dlg.custom_filter.prefix_label'>Search substring</msg>
+  <msg name='dlg.custom_filter.list_label'>Matching files</msg>
+  <msg name='dlg.export.title'>Export '<arg name='result_name'/>' result</msg>
+  <msg name='dlg.export.title.progress'>Export '<arg name='result_name'/>' result - <arg name='progress'/>%</msg>
+  <msg name='dlg.export.title.done'>Export '<arg name='result_name'/>' result - complete with warnings</msg>
+  <msg name='dlg.export.status.done'>Done</msg>
+  <msg name='dlg.export.save_to'>Save to:</msg>
+  <msg name='dlg.export.options'>Options</msg>
+  <msg name='dlg.export.opt.sources'>Include source files</msg>
+  <msg name='dlg.export.btn.ok'>Export</msg>
+  <msg name='dlg.export.warning.msg'>[Warning] <arg name='message'/></msg>
+  <msg name='dlg.export.warning.canceled'>Export canceled</msg>
+  <msg name='dlg.export.error.msg'>[Error] <arg name='message'/></msg>
+  <msg name='dlg.export.error.general'>Export failed</msg>
+  <msg name='dlg.export.error.nozip'>Failed to create archive file</msg>
+  <msg name='dlg.export.browse_mask'><arg name='prod_name'/> result archive (*.<arg name='ext'/>)|*.<arg name='ext'/></msg>
+  <msg name='dlg.export.loading_result'>Loading result...</msg>
+</catalog>
+</xmc>

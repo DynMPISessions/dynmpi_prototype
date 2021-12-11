@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+
+  <tab_panel_mgr>
+    <theme>
+
+      <clBtnBgNormal type='ui_resource' kind='fixed_color' value='rgb(181,186,193)' />
+
+      <clBtnBgHover type='ui_resource' kind='fixed_color' value='rgb(203,206,211)' />
+      <clBtnBgPressed type='ui_resource' kind='fixed_color' value='rgb(255,255,255)' />
+      <clBtnBgDisabled type='ui_resource' kind='fixed_color' value='rgb(181,186,193)' />
+
+      <clBg type='ui_resource' kind='fixed_color' value='rgb(181,186,193)' />
+
+      <clBorderNormal type='ui_resource' kind='fixed_color' value='rgb(181,186,193)' />
+      <clBorderHover type='ui_resource' kind='fixed_color' value='rgb(250,250,250)' />
+      <clBorderPressed type='ui_resource' kind='fixed_color' value='rgb(255,255,255)' />
+      <clBorderDisabled type='ui_resource' kind='fixed_color' value='rgb(181,186,193)' />
+
+      <clTextNormal type='ui_resource' kind='fixed_color' value='rgb(0,0,0)' />
+      <clTextHover type='ui_resource' kind='fixed_color' value='rgb(255,255,255)' />
+      <clTextPressed type='ui_resource' kind='fixed_color' value='rgb(0,0,0)' />
+      <clTextDisabled type='ui_resource' kind='fixed_color' value='rgb(125,128,133)' />
+
+      <fnNormal type='ui_resource' kind='font' value='fntNormal' />
+      <fnNormalBold type='ui_resource' kind='font' value='fntNormal' />
+      <fnBig type='ui_resource' kind='font' value='fntBig' />
+
+
+      <fnInfoTipTitle type='ui_resource' kind='font' value='fntBig' />
+      <fnInfoTipText type='ui_resource' kind='font' value='fntNormal' />
+
+      <clInfoTipText type='ui_resource' kind='fixed_color' value='rgb(0,0,0)' />
+      <clInfoTipBk type='ui_resource' kind='fixed_color' value='rgb(236,249,255)' />
+
+      <clRoundBtnInnerBorderNormal type='ui_resource' kind='fixed_color' value='rgb(255,255,255)' />
+      <clRoundBtnOuterBorderNormal type='ui_resource' kind='fixed_color' value='rgb(0,0,0)' />
+      <clRoundBtnInnerBorderDisabled type='ui_resource' kind='fixed_color' value='rgb(194,199,207)' />
+      <clRoundBtnOuterBorderDisabled type='ui_resource' kind='fixed_color' value='rgb(144,148,153)' />
+      <clRoundBtnTextDisabled type='ui_resource' kind='fixed_color' value='rgb(92,93,95)' />
+
+    </theme>
+  </tab_panel_mgr>
+
+</root>

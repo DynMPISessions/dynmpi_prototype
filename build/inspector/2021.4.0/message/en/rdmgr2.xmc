@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="rdmgr2" lang="en">
+      <msg name='%OK'>OK</msg>
+      <msg name='%NotImplemented'>Not implemented</msg>
+      <msg name='%InsufficientPermissions'>No permission</msg>
+      <msg name='%AlreadyExists'>Already exists</msg>
+      <msg name='%NotFound'>Not found</msg>
+      <msg name='%ParameterError'>Parameter error</msg>
+      <msg name='%InvalidPath'>Path contains invalid symbols</msg>
+      <msg name='%TooManyPlaceholderGroups'>Result directory pattern cannot contain more than one @@@ group</msg>
+      <msg name='%TooLongPlaceholder'>Result directory pattern cannot contain more than eight @ symbols</msg>
+      <msg name='%ReservedCharacters'>The following reserved characters are not allowed: &lt; &gt; : &quot; / \ | ? *</msg>
+      <msg name='%ReservedDeviceName'>The following reserved device names are not allowed: (com1-com9, lpt1-lpt9, con, prn, aux, nul).</msg>
+      <msg name='%EmptyPattern'>Result directory pattern cannot be empty</msg>
+      <msg name='%InvalidLastCharacter'>Result directory pattern cannot end with a space or a period</msg>
+      <msg meta='unofficial' name='%FileLocked'>File is locked</msg>
+      <msg meta='unofficial' name='%FileError'>Unknown file error</msg>
+      <msg name='%Unknown'>Unknown error</msg>
+    </catalog>
+</xmc>

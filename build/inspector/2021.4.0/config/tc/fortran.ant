@@ -1,0 +1,8 @@
+#Fortran annotations
+
+Filtered = (
+               Module = "*",
+               Function = "for_random_number_single",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="cctrl2.climgr" lang="en">
+        <msg name='%CollectDescription'>Choose an analysis type.</msg>
+        <msg name='%CollectWithDescription'>Choose a collector.</msg>
+        <msg name='%RunPassThruDescription'>Pass the value as an option to the collector using the format &lt;option&gt;=&lt;value&gt;. <br/>
+            For example:<br/>
+            -<arg name="option1"/> bar=foo <br/>
+            -<arg name="option2"/>=bar=foo<br/>
+            -<arg name="option3"/>=-bar=foo
+        </msg>
+        <msg name='%StartCollectionPausedDescription'>Start data collection paused.</msg>
+        <msg name='%ResumeAfterDescription'>Specify time (in seconds, with fractions allowed) to delay data collection after the application starts. For example, 1.56 is 1 sec 560 msec.</msg>
+        <msg name='%SetKnobDescription'>Set knob value for selected analysis type as -knob knobName=knobValue. For a list of knobs available for an analysis, enter: -help collect &lt;analysis_type&gt;.</msg>
+        <msg name='%TargetPIDDescription'>Attach collection to a running process specified by process ID.</msg>
+        <msg name='%TargetProcessDescription'>Attach collection to a running process specified by process name.</msg>
+        <msg name='%CollectionDurationDescription'>Specify a duration for collection (in seconds).  Required for system-wide collection. Can also be 'unlimited'.</msg>
+        <msg name='%AppWorkingDirDescription'>Specify a directory where the application will be run.</msg>
+        <msg name='%CommandDescription'>Issue a command to a running collection.</msg>
+        <msg name='%ReturnAppExitcodeDescription'>Return the target exit code instead of the command line interface exit code.</msg>
+        <msg name='%AllowAutomaticNamingDescription'>Allow use of a patterned name.</msg>
+        <msg name='%KnobUsage'>To modify the analysis type, use the configuration options (knobs) as follows:<br/>
+      -<arg name="action"/> <arg name="analysis_type"/> -knob &lt;knobName&gt;=&lt;knobValue&gt;<br/>
+      Multiple -knob options are allowed and can be followed by additional <arg name="action"/> action options,
+            as well as global options, if needed.
+        </msg>
+        <msg name='%KnobDefaultValue'>Default value: </msg>
+        <msg name='%KnobPossibleValues'>Possible values: </msg>
+        <msg name='%KnobPossibleIntegerValues'>Possible values: numbers between <arg name="knob-minvalue"/> and <arg name="knob-maxvalue"/> </msg>
+        <msg name='%KnobPossibleStringValues'>Knob value example: <arg name="knob-pattern-example"/></msg>
+        <msg name='%SetKnobFormatIncorrect'>Specify knob as knobName=knobValue.</msg>
+        <msg name='%KnobNotFound'>Cannot find knob <arg name="knobname"/>. For a list of available knobs, use -help <arg name="action"/> <arg name="collectorname"/></msg>
+        <msg name='%KnobValueIncorrect'>Cannot set knob <arg name="knobname"/> to <arg name="knobvalue"/>.</msg>
+        <msg name='%KnobNotApplicable'>The knob <arg name="knobname"/> cannot be applied due to a conflict with the knob <arg name="dependentknobname"/> set to <arg name="dependentknobvalue"/>.</msg>
+        <msg name='%ApplyKnobNotFound'>The knob <arg name="knobname"/> cannot be applied due to an incorrect apply_state knob.</msg>
+        <msg name='%NoKnobsForAnalysisType'>There are no knobs available for this analysis type.</msg>
+        <msg name='%AnalysisTypeNotFound'>Cannot find the analysis type. Check input parameters or reinstall the product. Available analysis types:<arg name="analysis-type"/></msg>
+        <msg name='%AmbiguousAnalysisType'>Ambiguous analysis type name. Possible analysis types: <arg name="analysis-type"/>. Please check input parameters.</msg>
+        <msg name='%AnalysisTypeCannotBeCreated'>Cannot create analysis type. Check input parameters or reinstall the product. </msg>
+        <msg name='%AnalysisTypeIsDeprecated'>The analysis type '<arg name="analysis-type"/>' is deprecated.</msg>
+        <msg name='%AnalysisTypeIsDeprecatedAlternative'>The analysis type '<arg name="analysis-type"/>' is deprecated. Use '<arg name="alternative"/>' analysis type instead. See more details with '<arg name="cl-tool-name"/> -help collect <arg name="alternative"/>'.</msg>
+        <msg name='%AnalysisTypeIsDeprecatedAlternativeWithOption'>The analysis type '<arg name="analysis-type"/>' is deprecated. Use '<arg name="alternative"/>' analysis type with <arg name="alternative-option"/>instead. See more details with '<arg name="cl-tool-name"/> -help collect <arg name="alternative"/>'.</msg>
+        <msg name='%AnalysisTypeAlternativeNotFound'>Alternative analysis type '<arg name="alternative"/>' specified instead of the deprecated analysis type '<arg name="analysis-type"/>' was not found.</msg>
+        <msg name='%AnalysisTypeDeprecatedAdvancedHotspotsAlternativeOption'>'-knob sampling-mode=hw' </msg>
+        <msg name='%AnalysisTypeReadFailure'>Cannot read analysis type.</msg>
+        <msg name='%FailureToConnectToRunningCollection'>Cannot detect running collection to deliver command.</msg>
+        <msg name='%CollectorFailed'>Cannot get collector settings for <arg name="collectorname"/>. Collection will not start. Valid collector names are: <arg name="validnames"/>.</msg>
+        <msg name='%MPIResultDirPatterningDisabled'>MPI application analysis is not possible if a result directory name is not provided or contains @ characters.<br/>Please specify a valid result directory name with the -r option.</msg>
+        <msg name='%MPIResultDirNompirank'>The analyzed process has a rank of <arg name="mpirank"/>. This rank will be added to the result path/name.</msg>
+        <msg name='%MPIResultDirNompirankSystem'>Rank <arg name="mpirank"/> has launched system-wide analysis. This rank will be added to the result path/name.</msg>
+        <msg name='%MPIResultDirNompihost'>Analyzing data in the node-wide mode. The hostname (<arg name="mpihost"/>) will be added to the result path/name.</msg>
+        <msg name='%RemoteTarget'>Define target system for remote collection. Supported &lt;string&gt; values:</msg>
+        <msg name='%CannotCreateDefaultConnection'>Cannot start data collection since the mandatory -target-system option is missing. Run "<arg name="cl-tool-name"/> -help collect" to get more help on configuration options.</msg>
+        <msg name='%CannotCreateDefaultConnectionForKnobs'>Cannot process action since -target-system option is missing. Run "<arg name="cl-tool-name"/> -help collect" to get more help on configuration options.</msg>
+        <msg name='%WorkingDirNotAllowed'>The -app-working-dir option is not allowed for this type of connection. You may specify a working directory in a launcher script, if necessary.</msg>
+        <msg name='%CannotCreateGivingConnection'>Value validation problem in argument '-target-system=<arg name="target-string"/>'.<br/>
+Possible values: <arg name="supported"/><br/>
+The mic-native and mic-host-launch values available for Intel Xeon Phi coprocessor targets are no longer supported.</msg>
+        <msg name='%UnsupportedATForSelectedTarget'>The get-perf-cmd target cannot be used with the selected analysis type. Supported analysis types: <arg name="%1"/></msg>
+        <msg name='%UnsupportedPmuTarget'>Unsupported PMU type: <arg name="%1"/></msg>
+    </catalog>
+</xmc>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+    <catalog name='asdp.ent_errors' lang='en'>
+	<msg name='premature_termination'>Run terminated abnormally. Some data may be lost.</msg>
+	<msg name='newer_min_ver'>Input file format is too new for this product version. Some functionality may not be supported.</msg>
+    	<msg name='obsolete_minor_ver'>Input file format is older than expected. Some functionality may not be supported.</msg>
+	<msg name='obsolete_major_ver'>Input file format is obsolete. Some functionality will not be supported.</msg>
+	<msg name='minor_file_corruption'>Input file may be corrupted. Some data may be lost.</msg>
+	<msg name='pin_unknown_module'>Internal error: Cannot analyze one or more modules. Some data may be lost.</msg>
+	<msg name='ism_load_failure'>Could not determine all source file and line information during resolution.</msg>
+	<msg name='empty_input_file'>Input file appears to be empty.</msg>
+	<msg name='reached_load_limit'>Load limit reached.</msg>
+	<msg name='no_suppression_file'>Suppression file not found.</msg>
+	<msg name='suppression_load_failure'>Failed to load suppression file.</msg>
+	<msg name='suppression_export_failure'>Failed to create suppression file.</msg>
+	<msg name='no_frame_filter_file'>Frame filter file not found.</msg>
+	<msg name='frame_filter_load_failure'>Failed to load frame filter file.</msg>
+	<msg name='frame_filter_export_failure'>Failed to create frame filter file.</msg>
+	<msg name='non_fatal_db_failure'>A database query failed.</msg>
+	<msg name='db_export_failure'>Failed to create an output file.</msg>
+	<msg name='breakpoint_export_failure'>Failed to create a breakpoint output file.</msg>
+	<msg name='breakpoint_file_exists'>Breakpoint output filename already exists.</msg>
+	<msg name='fatal_error'>Cannot continue because input file is corrupted.</msg>
+	<msg name='major_file_corruption'>Cannot continue because input file is corrupted.</msg>
+	<msg name='parser_fatal_error'> Cannot continue because input file is corrupted.</msg>
+	<msg name='no_xml_header'>Cannot continue because input file is corrupted.</msg>
+	<msg name='no_root_tag'>Cannot continue because input file is corrupted.</msg>
+	<msg name='newer_maj_ver'>Cannot continue because input file format is too new for this product version.</msg>
+    	<msg name='no_input_file'>Cannot continue because cannot find input file.</msg>
+	<msg name='null_input_file'>Cannot continue because input file is empty.</msg>
+	<msg name='bad_input_file_type'>Cannot continue because input file type is bad.</msg>
+	<msg name='conversion_failure'>Cannot continue because cannot convert an older format file.</msg>
+	<msg name='overloaded_asdp'>Internal error. Please contact Intel customer support.</msg>
+	<msg name='failed_create_db'>Cannot create the database for this file. Please contact Intel customer support.</msg>
+	<msg name='bad_char'>Cannot create the database for this file because the pathname contains a semicolon.</msg>
+	<msg name='path_too_long'>Cannot create the database for this file because the full pathname is too long.</msg>
+	<msg name='not_directory'>Cannot create the database for this file because a pathname segment does not exist.</msg>
+	<msg name='not_writable'>Cannot create the database for this file because you lack permission to write to a pathname segment.</msg>
+	<msg name='name_too_long'>Cannot create the database for this file because a pathname segment is too long.</msg>
+	<msg name='unknown_fopen_err'>Cannot create the database for this file.  Please contact Intel customer support.</msg>
+	<msg name='db_setup_err'>Cannot create the database for this file.  Please contact Intel customer support.</msg>
+	<msg name='db_err'>Cannot create the database for this file.  Please contact Intel customer support.</msg>
+	<msg name='duplicate_file'>Internal error. Please contact Intel customer support.</msg>
+	<msg name='bad_conversion_param'>Input or output suppression filename is missing. Conversion cannot continue.</msg>
+	<msg name='output_file_exists'>Output suppression file already exists. Conversion cannot continue. Choose another conversion destination.</msg>
+	<msg name='input_file_unknown_format'>Input suppression file format is unknown. Conversion cannot continue. Choose a Rational Purify* or Valgrind* suppression file (Linux* OS only) or an Inspector suppression file (Linux* or Windows* OS).</msg>
+	<msg name='incorrect_rule'>Irregularly structured rule - for example: missing Type and Stack data</msg>
+	<msg name='incorrect_syntax'>Incorrect syntax - for example: missing bracket or quotation marks</msg>
+	<msg name='incorrect_suppression_name'>Invalid Rule name</msg>
+	<msg name='incorrect_problem_definition'>Invalid Type data</msg>
+	<msg name='incorrect_observation_type'>Invalid Stack data</msg>
+	<msg name='unknown_keyword'>Unknown keyword</msg>
+	<msg name='db_io_error'>Internal I/O database operations error</msg>
+	<msg name='db_disk_full'>Insufficient disk space for database operations</msg>
+	<msg name='db_out_of_mem'>Insufficient memory for database operations</msg>
+	</catalog>
+</xmc>

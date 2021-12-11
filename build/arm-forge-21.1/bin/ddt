@@ -1,0 +1,58 @@
+#!/bin/sh
+
+PRODUCT_NAME="Arm Forge"
+
+# Don't wipe LD_PRELOAD if script was launched under squish
+[ -z "$SQUISH_PATH" ] && LD_PRELOAD=
+
+# First find ALLINEA_FORGE_PATH. Don't set this is in your environment - this script will
+# find it.
+
+# Follow symlinks to get the canonical path of this script (in case we're symlinked outside the install directory).
+if type readlink >/dev/null 2>&1; then
+   CANONICAL_EXE="`readlink -f "$0"`"
+else
+   CANONICAL_EXE="$0"
+fi
+
+# Set ALLINEA_FORGE_PATH to the parent of this script's directory.
+ALLINEA_FORGE_PATH="$(cd "$(dirname "$CANONICAL_EXE")/.."; pwd)"
+. "$ALLINEA_FORGE_PATH/libexec/common"
+
+for var in "$@"; do
+    if [ ! "${var##--offline=}" = "$var" ]
+    then
+        ALLINEA_OFFLINE_LAUNCHER_USE=on
+        continue
+    fi
+    if [ ! "${var##-offline=}" = "$var" ]
+    then
+        ALLINEA_OFFLINE_LAUNCHER_USE=on
+        continue
+    fi
+    case "$var" in
+        "-offline" | "--offline")
+            ALLINEA_OFFLINE_LAUNCHER_USE=on
+            ;;
+        "-show-the-gui" | "--show-the-gui")
+            ALLINEA_GUI=on
+            ;;
+        "--" | "---") #19544
+            break
+            ;;
+    esac
+done
+
+ALLINEA_INTERNAL_ARGS="--tool=debugger"
+
+if [ -n "${ALLINEA_ENABLE_CORE_DUMP}" ]; then
+    ulimit -c unlimited
+fi
+
+if [ "$ALLINEA_OFFLINE_LAUNCHER_USE" = "on" ] && [ "$ALLINEA_GUI" != "on" ]; then
+    exec $SSH_AGENT "$ALLINEA_FORGE_PATH/libexec/forge-offline" "$ALLINEA_FORGE_PATH/libexec/forge.bin" $ALLINEA_INTERNAL_ARGS "$@"
+elif [ "$ALLINEA_ALLINEA_RUN" = "on" ] && [ "$ALLINEA_GUI" != "on" ]; then
+    exec $SSH_AGENT "$ALLINEA_FORGE_PATH/libexec/forge-offline" "$ALLINEA_FORGE_PATH/libexec/forge.bin" $ALLINEA_INTERNAL_ARGS "$@"
+else
+    exec $SSH_AGENT "$ALLINEA_FORGE_PATH/libexec/forge.bin" $ALLINEA_INTERNAL_ARGS "$@"
+fi

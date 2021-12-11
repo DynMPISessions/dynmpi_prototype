@@ -1,0 +1,76 @@
+#%Module1.0###################################################################
+
+# Copyright (c) Intel Corporation
+# SPDX-License-Identifier: MIT
+# https://opensource.org/licenses/MIT
+
+# This modulefile requires Environment Modules 4.1 or later.
+# Type `module --version` to determine the current installed version.
+
+set min_tcl_ver 8.4
+if { $tcl_version < $min_tcl_ver } {
+    puts stderr " "
+    puts stderr "ERROR: This modulefile requires tcl $min_tcl_ver or greater."
+    puts stderr "Your system reports that tclsh version $tcl_version is installed."
+    exit 1
+}
+
+set scriptpath "${ModulesCurrentModulefile}"
+
+if { "[file type "$scriptpath"]" eq "link" } {
+    set scriptpath "[file readlink "$scriptpath"]"
+}
+
+set scriptpath "[file normalize "$scriptpath"]"
+
+set modulefileroot "[file dirname "$scriptpath"]"
+
+set modulefilename "[file tail "$scriptpath"]"
+
+set modulefilever "[file dirname "$modulefileroot"]"
+set modulefilever "[file tail "$modulefilever"]"
+
+set componentroot "[file dirname "$modulefileroot"]"
+set componentroot "[file dirname "$componentroot"]"
+
+set componentname "[file tail "$componentroot"]"
+
+set oneapiroot "[file dirname "$componentroot"]"
+
+set mname32 $modulefilename
+set mname64 [string trimright $mname32 "32"]
+if { [string equal "$mname32" "$mname64"] } {
+    append mname32 "32"
+}
+conflict $mname32
+conflict $mname64
+
+
+if { [ module-info mode load ] } {
+    puts stderr "Loading $modulefilename version $modulefilever"
+}
+
+if { [ module-info mode ] == "unload" || [ module-info mode ] == "remove" } {
+    puts stderr "Removing $modulefilename version $modulefilever"
+    puts stderr "Use `module list` to view any remaining dependent modules."
+}
+
+module-whatis "Intel(R) Inspector 2021.4"
+
+set PRODUCT_INSTALL_DIR "$componentroot/$modulefilever"
+
+set BIN_DIR ""
+
+if { "Darwin" == [uname sysname] } {
+set BIN_DIR
+} elseif { "x86_64" == [uname machine] } {
+set BIN_DIR bin64
+} else {
+set BIN_DIR bin32
+}
+
+prepend-path PATH "${PRODUCT_INSTALL_DIR}/${BIN_DIR}"
+
+setenv INSPECTOR_2021_DIR "$PRODUCT_INSTALL_DIR"
+
+

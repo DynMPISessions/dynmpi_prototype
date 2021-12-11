@@ -1,0 +1,133 @@
+#
+# Copyright (C) 2012 Intel Corporation.  All Rights Reserved.
+# 
+
+###############################################################################
+#
+# arcola Allocators
+#
+# This files allows arcola to recognize and process application-specific
+# allocation routines.
+#
+###############################################################################
+#
+# Primary required fields:
+#  name: the name of the allocator function
+#  type: a=allocator | r=reallocator | d=deallocator 
+#
+###############################################################################
+#
+# Secondary required fields for allocator:
+#   The number of elements to allocate
+#    nmemb: a<argument num> | c<constant>
+#
+#   The size of each element
+#    size: a<argument num> | c<constant>
+#
+#   Is the newly allocated space initialized?
+#    initialized: a<argument num> | c<constant>
+#
+###############################################################################
+#
+# Secondary required fields for reallocator:
+#   The previous address of allocated space
+#    prev: <argument num>
+#
+#   The number of elements to allocate
+#    nmemb: a<argument num> | c<constant>
+#
+#   The size of each element
+#    size: a<argument num> | c<constant>
+#
+#   Is the newly allocated space initialized?
+#    initialized: a<argument num> | c<constant>
+#
+###############################################################################
+#
+# Secondary required fields for deallocator:
+#   The argument number of the address being deallocated
+#    addr: <argument num>
+#
+###############################################################################
+#
+# Optional fields for allocator:
+#   Are nested allocators allowed?
+#    allownested: 1 | 0    (default: 0)
+#
+#   Enable deferred 'free' logic
+#    deferred: 1 | 0  (default: depends on allocator family)
+#
+###############################################################################
+#
+# Example: ANSI-C Standard routines
+#
+###############################################################################
+#
+# name=calloc type=a nmemb=a0 size=a1 initialized=c1
+# name=malloc type=a nmemb=c1 size=a0 initialized=c0
+# name=realloc type=r prev=0 nmemb=c1 size=a1 initialized=c0
+# name=free type=d addr=0
+#
+###############################################################################
+
+
+# Add your allocator here:
+
+name=calloc type=a fam=c nmemb=a0 size=a1 initialized=c1 guardable=1 nargs=2
+name=malloc type=a fam=c nmemb=c1 size=a0 initialized=c0 guardable=1 nargs=1
+name=realloc type=r fam=c prev=0 nmemb=c1 size=a1 initialized=c0 freePair=free guardable=1 nargs=2
+name=recalloc type=r fam=c prev=0 nmemb=a1 size=a2 initialized=c1 freePair=free guardable=1 nargs=3
+name=_int_malloc type=a fam=c nmemb=c1 size=a1 initialized=c0 freePair=free guardable=1 nargs=2
+name=free type=d fam=c addr=a0 nargs=1
+name=__free type=d fam=c addr=a0 nargs=1
+name=__cfree type=d fam=c addr=a0 nargs=1
+name=memalign type=a fam=c nmemb=c1 size=a1 initialized=c0 nargs=2
+name=__libc_memalign type=a fam=c nmemb=c1 size=a1 initialized=c0 nargs=2
+name=valloc type=a fam=c nmemb=c1 size=a0 initialized=c0 nargs=1
+name=posix_memalign type=a fam=c nmemb=c1 addr=a0 size=a2 initialized=c0 guardable=1 nargs=3
+
+#
+# Standard operators new and delete, 64-bit new* first, then 32-bit
+#
+name=operator new(unsigned long) type=a fam=cpp nmemb=c1 size=a0 initialized=c0 guardable=1 excep=1 nargs=10
+name=operator new[](unsigned long) type=a fam=cppbracket nmemb=c1 size=a0 initialized=c0 guardable=1 excep=1 nargs=10
+name=operator new(unsigned long, std::nothrow_t const&) type=a fam=cpp nmemb=c1 size=a0 initialized=c0 guardable=1 nargs=10
+name=operator new[](unsigned long, std::nothrow_t const&) type=a fam=cppbracket nmemb=c1 size=a0 initialized=c0 guardable=1 nargs=10
+name=operator new(unsigned int) type=a fam=cpp nmemb=c1 size=a0 initialized=c0 guardable=1 excep=1 nargs=10
+name=operator new[](unsigned int) type=a fam=cppbracket nmemb=c1 size=a0 initialized=c0 guardable=1 excep=1 nargs=10
+name=operator new(unsigned int, std::nothrow_t const&) type=a fam=cpp nmemb=c1 size=a0 initialized=c0 guardable=1 nargs=10
+name=operator new[](unsigned int, std::nothrow_t const&) type=a fam=cppbracket nmemb=c1 size=a0 initialized=c0 guardable=1 nargs=10
+name=operator delete(void*) type=d fam=cpp addr=a0 nargs=10
+name=operator delete[](void*) type=d fam=cppbracket addr=a0 nargs=10
+# The nothrow versions of delete exist for a very specific purpose, to match the corresponding versions of new.  delete will not throw an exception, as per section 18.4 from the C++ standard.
+name=operator delete(void*, std::nothrow_t const&) type=d fam=cpp addr=a0 nargs=10
+name=operator delete[](void*, std::nothrow_t const&) type=d fam=cppbracket addr=a0 nargs=10
+
+# standard TBB scalable allocators/deallocators
+name=scalable_malloc type=a fam=tbb nmemb=c1 size=a0 initialized=c0 nargs=1
+name=scalable_calloc type=a fam=tbb nmemb=a0 size=a1 initialized=c1 nargs=2
+name=scalable_realloc type=r fam=tbb prev=0 nmemb=c1 size=a1 initialized=c0 freePair=scalable_free nargs=2
+name=scalable_free type=d fam=tbb addr=a0 nargs=1
+name=scalable_posix_memalign type=a fam=tbb nmemb=c1 addr=a0 size=a2 initialized=c0 guardable=1 nargs=3
+
+# Aligned version of TBB allocator is compatible with 'regular' one. Therefore all of those allocators 
+# have the same family. E.g. pointer allocated by scalable_aligned_malloc can be deallocated by scalable_free
+name=scalable_aligned_malloc type=a fam=tbb nmemb=c1 size=a0 initialized=c0 nargs=2
+name=scalable_aligned_realloc type=r fam=tbb prev=0 nmemb=c1 size=a1 initialized=c0 freePair=scalable_free nargs=3
+name=scalable_aligned_free type=d fam=tbb addr=a0 nargs=1
+
+# Intel Fortran dynamic allocator/deallocator
+name=for_alloc_allocatable type=a fam=f nmemb=c1 size=a0 addr=a1 initialized=c0 guardable=1 nargs=3
+name=for_allocate type=a fam=f nmemb=c1 size=a0 addr=a1 initialized=c0 guardable=1 nargs=3
+name=for_dealloc_allocatable type=d fam=f addr=a0 nargs=2
+name=for_deallocate type=d fam=f addr=a0 nargs=2
+
+name=clCreateBuffer type=a fam=opencl nmemb=c1 size=a2 initialized=c0 guardable=0 freePair=clReleaseMemObject nargs=5 allownested=1 deferred=0
+name=clCreateSubBuffer type=a fam=opencl nmemb=c1 size=c1 initialized=c0 guardable=0 freePair=clReleaseMemObject nargs=5 allownested=1 deferred=0
+name=clRetainMemObject type=a fam=opencl nmemb=c1 size=c1 initialized=c0 guardable=0 freePair=clReleaseMemObject nargs=1 allownested=1 deferred=0
+name=clReleaseMemObject type=d fam=opencl addr=a0 nargs=1 deferred=0 allownested=1
+name=clSVMAlloc type=a fam=opencl nmemb=c1 size=a2 initialized=c0 guardable=0 freePair=clSVMFree nargs=4 allownested=1 deferred=0
+name=clSVMFree type=d fam=opencl addr=a1 nargs=2 deferred=0
+name=cl::sycl::malloc_device type=a fam=opencl nmemb=c1 size=a0 initialized=c0 guardable=0 freePair=cl::sycl::free nargs=3 allownested=1 deferred=0
+name=cl::sycl::malloc_shared type=a fam=opencl nmemb=c1 size=a0 initialized=c0 guardable=0 freePair=cl::sycl::free nargs=3 allownested=1 deferred=0
+name=cl::sycl::free type=d fam=opencl addr=a0 nargs=2 allownested=1 deferred=0

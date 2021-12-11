@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="cfgmgr2" lang="en">
+      <msg name='%UnexpectedTagInRulesSection'>Unexpected tag `<arg name='tag'/>' is found. This section can contain only `rule' tags.</msg>
+      <msg name='%UnexpectedPredicateTypeType'>`predicateType' can only be a string.</msg>
+      <msg name='%UnexpectedExpressionType'>`ruleExpr' can only be a string.</msg>
+      <msg name='%InvalidPredicateTypeValue'>Cannot use `<arg name='tag'/>' as `predicateType'. `predicateType' can only be `orPredicate' or `andPredicate'.</msg>
+      <msg name='%InvalidRuleAction'>Command section must contain `idToAppend' or `idToOverwrite' tags.</msg>
+      <msg name='%InvalidExpression'>Invalid expression: <arg name='expression'/>.</msg>
+      <msg name='%NotImplementedExpressionType'>Not supported expression: <arg name='expression'/> : current implementation supports only expressions of "$variable compareOp value" type.</msg>
+      <msg name='%BoolComparedWithIllegalValue'><arg name='expression'/> : cannot compare boolean values with arguments other then `true' or `false'.</msg>
+      <msg name='%NotSupportedCompareType'><arg name='expression'/> : not supported compare operator.</msg>
+      <msg name='%NotSupportedOperandType'>Invalid value for comparison: <arg name='expression'/>. Current implementation supports only boolean or string values.</msg>
+      <msg name='%ContextValueNotFound'>Cannot find context value: <arg name='expression'/>.</msg>
+      <msg name='%NullComparedWithIllegalValue'>Invalid value for comparison: <arg name='expression'/>. Null type context values can only be compared with `NULL'. Check context value spelling.</msg>
+      <msg name='%InvalidValueTypeForGetContextValue'>Only string value can be used as a context value name for get_context function</msg>
+      <msg name='%OnlyTwoOrOneParameterForGetContextValue'>Invalid numbers of argument for get_context function</msg>
+      <msg name='%NotEnoughtParametersForGetContextValue'>At least one argument should be passed to get_context function</msg>
+    </catalog>
+</xmc>

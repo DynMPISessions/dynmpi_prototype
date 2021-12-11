@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="connection_type" lang="en">
+    <msg name='%LocalhostConnection'>local</msg>
+    <msg name='%LocalhostConnectionShortName'>localhost</msg>
+    <msg name='%LocalhostConnectionDescription'>Collect data on a local host.</msg>
+    <msg name='%LocalhostDeviceAlias'>local machine</msg>
+    <msg name='%device'>Device</msg>
+    </catalog>
+</xmc>

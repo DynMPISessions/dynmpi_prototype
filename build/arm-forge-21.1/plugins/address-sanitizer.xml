@@ -1,0 +1,43 @@
+<plugin name="Address Sanitizer" description = "Integrate with Address Sanitizer (compile with -fsantize=address to enable, not compatible with Memory Debugging)">
+    <environment name="ASAN_OPTIONS" value="abort_on_error=1" />
+    <environment name="LSAN_OPTIONS" value="detect_leaks=0" />
+    <breakpoint location="__asan_report_error" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__sanitizer::Die()" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_present" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load1" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load2" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load4" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load8" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load16" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_load_n" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store1" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store2" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store4" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store8" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store16" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_exp_store_n" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load1" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load1_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load2" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load2_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load4" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load4_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load8" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load8_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load16" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load16_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load_n" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_load_n_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store1" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store1_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store2" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store2_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store4" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store4_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store8" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store8_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store16" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store16_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store_n" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />
+    <breakpoint location="__asan_report_store_n_noabort" action="message_box" message="AddressSanitizer has detected an error. Press continue and look at the Output and the Stacks windows for details." opt_errors="on" />    
+</plugin>

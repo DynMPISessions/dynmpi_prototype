@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+  <catalog name="ccrt" lang="en">
+       <msg name='INTERNAL'> Internal error. Please contact Intel customer support team.  </msg>
+       <msg name='ABNORMAL_TERMINATE'> Analysis terminated abnormally. </msg>
+       <msg name='OUT_OF_MEMORY'> Insufficient memory.  Try using a smaller data set or an analysis type configuration with a narrower scope.</msg>
+       <msg name='COLLECT_MEMORY'> Application uses too much memory to do full analysis.   Continuing analysis; some problems may be missed.   Try analyzing again with a smaller data set or an analysis type configuration with a narrower scope.</msg>
+       <msg name='MEMORY_IS_TIGHT'> Memory is limited and may cause program failure.</msg>
+       <msg name='FREEING_RESERVES'> <arg name='num_bytes' /> bytes from emergency reserves.</msg>
+       <msg name='BAD_OPTION'> Unknown command-line option <arg name='option' />.  Refer to command-line documentation.</msg>
+       <msg name='BAD_ARGUMENT'> Invalid argument for command-line option <arg name='option' />.  Refer to command-line documentation.</msg>
+       <msg name='FAIL_OPEN_FILE'> Cannot open file: <arg name='filename' />. </msg>
+       <msg name='FAIL_SEEK_FILE'> Cannot seek in file: <arg name='filename' />. </msg>
+       <msg name='FAIL_READ_FILE'> Cannot read file: <arg name='filename' />. </msg>
+       <msg name='FAIL_READ_FILE_VERBOSE'> Cannot read file: <arg name='filename' />.  Reason: <arg name='srerror' />. </msg>
+  </catalog>
+</xmc>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <column>
+    <active type="string_vector">
+      <!--Description-->
+      <item>asdpdata_obs_desc</item>
+      <!--Source-->
+      <item>asdpdata_file_and_line</item>
+      <!--Function-->
+      <item>asdpdata_func_name</item>
+      <!--Difference mode column-->
+      <item>asdpdata_diff_state_string</item>
+      <!--Variable name-->
+      <item>asdpdata_best_object_variable</item>
+    </active>
+
+    <default_sortby type="string">asdpdata_obs_desc, asdpdata_obs_class</default_sortby>
+
+    <!--Map of available fields and rules to display it: map<field, rule>
+    rule supports variables: analysis_type, diff_mode
+    empty rule means that the field is always available-->
+    
+    <rules type="string_string_map">
+      <!--Description-->
+      <item key="asdpdata_obs_desc" value=""/>
+      <!--Source-->
+      <item key="asdpdata_file_and_line" value=""/>
+      <!--Function-->
+      <item key="asdpdata_func_name" value=""/>
+      <!--Difference mode column-->
+      <item key="asdpdata_diff_state_string" value="diff_mode == true"/>
+      <!--Variable name-->
+      <item key="asdpdata_best_object_variable" value=""/>
+    </rules>
+
+  </column>
+
+</root>

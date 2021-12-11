@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='panes.common' lang='en'>
+    <msg name="multiple_problems_selected">Multiple Problem Types Selected</msg>
+    <msg name="no_problem_selected">No Problem Types Selected</msg>
+    <msg name="export_text_description">Create Problem Report...</msg>
+    <msg name="copy_to_clipboard">Copy to Clipboard</msg>
+    <msg name="activate_current_item">Activate</msg>
+    <msg name="activate_context_help">Explain Problem</msg>
+    <msg name="suppress">Suppress...</msg>
+    <msg name="unsuppress">Do Not Suppress...</msg>
+    <msg name="mark_fixed">Mark Problem as Fixed</msg>
+    <msg name="mark_unfixed">Mark Problem as Unfixed</msg>
+    <msg name="goto_sources_and_stack">View Source</msg>
+    <msg name="show_column">Show Column</msg>
+    <msg name="show_all_columns">Show All Columns</msg>
+    <msg name="hide_column">Hide Column</msg>
+    <msg name="generate_exception">Generate Exception</msg>
+    <msg name="debug_this">Debug This Problem</msg>
+    <msg name="code_location_column">Code Location</msg>
+    <msg name="show_snippets">Show Source Code Snippets</msg>
+    <msg name="smth_not_found_refinalize"><arg name='something'/> not found. Suggestion: Specify locations in a Project Properties dialog box search tab, then re-resolve the result.</msg>
+    <msg name="smth_not_found"><arg name='something'/> not found. Suggestion: Specify locations in a Project Properties dialog box search tab.</msg>
+    <msg name="binary_file">Binary file</msg>
+    <msg name="source_file">Source file</msg>
+    <msg name="symbol_file">Symbol file</msg>
+    <msg name="symbol_information">Symbol information</msg>
+    <msg name="source_and_disassembly">Source file and disassembly code</msg>
+    <msg name="add_custom_source_filter">Refine Source File Set...</msg>
+    <msg name="remove_custom_source_filter">Clear Source File Filter</msg>
+    <msg name="empty_window_message_template">&lt;p align=center&gt;&lt;b&gt;<arg name='caption'/>&lt;/b&gt;&lt;br&gt;<arg name='message'/>&lt;/p&gt;</msg>
+  </catalog>
+  <catalog name='panes.problems_pane' lang='en'>
+    <msg name="no_problems_detected_caption">No Problems Detected</msg>
+    <msg name="change_to">Change State</msg>
+    <msg name='inherit_states_notes'>Merge States...</msg>
+    <msg name="make_note">Add Note...</msg>
+    <msg name="edit_note">Edit Note...</msg>
+    <msg name="notes_dlg_title">Notes for <arg name='problem_id'/> - <arg name='problem_type'/></msg>
+  </catalog>
+  <catalog name='panes.obs_det_pane' lang='en'>
+    <msg name="change_related_obs">Set as Related Code Location</msg>
+    <msg name="change_focus_obs">Set as Focus Code Location</msg>
+    <msg name="expand_all">Expand All Code Snippets</msg>
+    <msg name="collapse_all">Collapse All Code Snippets</msg>
+    <msg name="collapse_all">Collapse All Code Snippets</msg>
+  </catalog>
+  <catalog name='panes.code_snippets' lang='en'>
+    <msg name="no_stack">[ No Stack ]</msg>
+    <msg name="no_source">[ No Source ]</msg>
+    <msg name="caption_left_label">1</msg>
+    <msg name="caption_left_label_empty"> </msg>
+    <msg name="caption_right_label"><arg name='current'/> of <arg name='total'/></msg>
+    <msg name="caption_right_label_everything">---</msg>
+    <msg name="caption_all_btn">All</msg>
+    <msg name="no_data_caption">No Code Locations</msg>
+    <msg name="no_data_content">Select a problem in the Problems pane to display code locations.</msg>
+  </catalog>
+  <catalog name='panes.filter_pane' lang='en'>
+    <msg name="sort">Sort</msg>
+    <msg name="sort_by_item_name">Sort By Item Name</msg>
+    <msg name="sort_by_item_count">Sort By Item Count</msg>
+    <msg name="items_value"><arg name='count'/> item(s)</msg>
+    <msg name="more">more</msg>
+    <msg name="less">less</msg>
+    <msg name="all">All</msg>
+    <msg name="clear_filters">Deselect All Search Criteria</msg>
+  </catalog>
+  <catalog name='panes.sv_pane' lang='en'>
+    <msg name="goto_editor">Edit Source</msg>
+    <msg name="no_source_caption">No Symbolic Information</msg>
+    <msg name="real_file_not_found">Source file not found. Code from cache is shown instead.</msg>
+    <msg name="real_file_is_different">Source file in cache does not match original source file because original source file was modified.</msg>
+    <msg name="src_file_not_found">Source file not found. Assembly code is shown instead.</msg>
+    <msg name="src_file_not_found_no_disasm">Source file not found.</msg>
+    <msg name="copy_src_file_to_clipboard">Copy Source File to Clipboard</msg>
+    <msg name="src_btn_caption"><arg name='file'/></msg>
+    <msg name="asm_btn_caption">Disassembly (<arg name='module'/>!<arg name='rva' type='hex'/>)</msg>
+  </catalog>
+  <catalog name='panes.stack_pane' lang='en'>
+    <msg name="show_source">Show Sources</msg>
+    <msg name="show_module">Show Module Names</msg>
+    <msg name="two_line_mode">Show Two Lines</msg>
+    <msg name="show_hscrollbar">Show Horizontal Scrollbar</msg>
+    <msg name="copy_stack_to_clipboard">Copy to Clipboard</msg>
+    <msg name="caption_label">Call Stack</msg>
+  </catalog>
+  <catalog name='panes.breakpoint_details_pane' lang='en'>
+    <msg name="go_to_source">Source</msg>
+    <msg name="go_to_source.help_string">Open the Visual Studio* Editor at This Location</msg>
+    <msg name="go_to_summary"><arg name='prod_name'/></msg>
+    <msg name="go_to_summary.help_string">Open the <arg name='prod_name'/> Sources Window at This Location</msg>
+    <msg name="ignore">Disable Breakpoint</msg>
+    <msg name="ignore.help_string">Do Not Break Again For This Problem Type at This Location</msg>
+    <msg name="explain">Explain</msg>
+    <msg name="explain.help_string">Explain This Type of Problem</msg>
+    <msg name="disabled_problems">Re-enable Breakpoints</msg>
+    <msg name="disabled_problems.help_string">View Disabled Problem Breakpoints</msg>
+  </catalog>
+  <catalog name='panes.disabled_problems_pane' lang='en'>
+    <msg name="reenable_problems">Re-enable Breakpoint</msg>
+    <msg name="reenable_problems.help_string">Re-enable Selected Problem Breakpoints</msg>
+  </catalog>
+  <catalog name='panes.captions' lang='en'>
+    <msg name="focused_caption_nosrc">Focus Code Location: Source is not available</msg>
+    <msg name="related_caption_nosrc">Related Code Location: Source is not available</msg>
+    <msg name="focused_caption">Focus Code Location: <arg name='src_file'/>:<arg name='line' type='int'/> - <arg name='obs_desc'/></msg>
+    <msg name="focused_caption_no_sym">Focus Code Location: <arg name='module'/>!<arg name='rva' type='hex'/> - <arg name='obs_desc'/></msg>
+    <msg name="related_caption">Related Code Location: <arg name='src_file'/>:<arg name='line' type='int'/> - <arg name='obs_desc'/></msg>
+    <msg name="related_caption_no_sym">Related Code Location: <arg name='module'/>!<arg name='rva' type='hex'/> - <arg name='obs_desc'/></msg>
+    <msg name="source_band_caption_no_src"><arg name='obs_name'/> - Thread <arg name='thread_name'/></msg>
+    <msg name="source_band_caption"><arg name='obs_name'/> - Thread <arg name='thread_name'/> (<arg name='src_loc'/>)</msg>
+    <msg name="obs_pane">Observations</msg>
+    <msg name="dynamic_pane">Collection Log</msg>
+    <msg name="prob_pane">Problems</msg>
+    <msg name="filter_summary">Filters</msg>
+    <msg name="obs_filter_summary">Filters</msg>
+    <msg name="obs_det_pane">Code Locations</msg>
+    <msg name="prob_det_pane">Code Locations</msg>
+    <msg name="code_locations_pane">Code Locations: <arg name='prob_name'/></msg>
+    <msg name="disabled_problems">View Disabled Breakpoints</msg>
+  </catalog>
+  <catalog name='panes.heartbeat' lang='en'>
+    <msg name="syscall_yes">Yes</msg>
+    <msg name="syscall_no">No</msg>
+    <msg name="show_details">Show details</msg>
+    <msg name="hide_details">Hide details</msg>
+    <msg name="no_details">No details yet</msg>
+    <msg name="mem_used">Current memory usage (updated every second): <arg name='memory_str'/></msg>
+    <msg name="mem_used_after_collection">Last recorded memory usage before collection completed: <arg name='memory_str'/></msg>
+    <msg name="no_data">[no data yet]</msg>
+    <msg name="mem_mb"><arg name='memory'/> MB</msg>
+    <msg name="elapsed_title">Elapsed time since collection start: <arg name='elapsed_str'/></msg>
+    <msg name="memory_stats_caption">Memory Used by Analysis Tool and Target Application</msg>
+    <msg name="heartbeat_stats_caption">Analysis Progress and Thread Activity</msg>
+    <msg name="now">now</msg>
+    <msg name="time"><arg name='time_in_min'/> Min</msg>
+    <msg name="tooltip_reset">Start Point for Tracking Memory Growth (Default is When Analysis Started)</msg>
+    <msg name="tooltip_show">Memory Growth Measurement (Check Summary Window for Memory Growth)</msg>
+    <msg name="name_title">Thread Name / ID</msg>
+    <msg name="sys_call_title">In System Call</msg>
+    <msg name="call_count_title">Call Count&#10;Since Last Check</msg>
+    <msg name="activity_title">Activity</msg>
+  </catalog>
+ <catalog name='panes.suppressions' lang='en'>
+    <msg name="files">Available suppression files: <arg name='files_str'/></msg>
+    <msg name="rules">Applied suppression rules: <arg name='rules_str'/></msg>
+    <msg name="rules_percent">% of available suppression rules</msg>
+    <msg name="issues">Suppressed problem occurrences: <arg name='issues_str'/></msg>
+    <msg name="issues_percent">% of detected problem occurrences</msg>
+    <msg name="show_files">Show available suppression files</msg>
+    <msg name="hide_files">Hide available suppression files</msg>
+    <msg name="no_files">No suppression files available</msg>
+    <msg name="no_data">[no data available yet]</msg>
+    <msg name="title">Suppressions</msg>
+  </catalog>
+</xmc>

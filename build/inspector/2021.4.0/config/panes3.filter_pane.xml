@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	
+  <column>
+    <active type="string_vector">
+      <!--Category-->
+      <item>asdpdata_category_name</item>
+      <!--Count-->
+      <item>asdpdata_category_count</item>              
+    </active>
+
+    <default_sortby type="string">asdpdata_category_name</default_sortby>
+
+    <rules type="string_string_map">
+      <!--Category-->
+      <item key="asdpdata_category_name" value=""/>
+      <!--Count-->
+      <item key="asdpdata_category_count" value=""/>
+    </rules>
+    
+	</column>
+
+</root>

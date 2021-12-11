@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Memory Checker message map -->
+<cs_messages version="1.0">
+    <msg id="1000" name="pdr_mem_uninit_read"               severity="error"   category="memory"     type="prob_mem_uninit"              type_name="uninitialized_memory_access"         debuggable="y"   vl_type="Value1,Value2,Value4,Value8,Value16" pur_type="UMC,UMR"                                                         />
+    <msg id="1001" name="pdr_mem_uninit_partial_read"       severity="error"   category="memory"     type="prob_mem_uninit_partial"      type_name="uninitialized_memory_access_partial" debuggable="y"   />
+    <msg id="1002" name="pdr_mem_invalid_read"              severity="error"   category="memory"     type="prob_mem_invalid"             type_name="invalid_memory_access"               debuggable="y"   vl_type="Addr1,Addr2,Addr4,Addr8,Addr16"      pur_type="ABR,ABW,ABWL,BSR,BSW,FMR,FMW,FMWL,IPR,IPW,MSE,NPR,NPW,ZPR,ZPW"/>
+    <msg id="1003" name="pdr_mem_invalid_partial_read"      severity="error"   category="memory"     type="prob_mem_invalid_partial"     type_name="invalid_memory_access_partial"       debuggable="y"   />
+    <msg id="1004" name="pdr_mem_invalid_write"             severity="error"   category="memory"     type="prob_mem_invalid"             type_name="invalid_memory_access"               debuggable="y"   />
+
+    <msg id="1007" name="pdr_munmap_notmapped"              severity="error"   category="allocation" type="prob_munmap_notmapped"        type_name="invalid_memory_unmap_notmapped"      debuggable="y"   />
+    <msg id="1008" name="pdr_munmap_allocated"              severity="error"   category="allocation" type="prob_munmap_allocated"        type_name="invalid_memory_unmap_allocated"      debuggable="y"   />
+    <msg id="1009" name="pdr_dealloc_mapped"                severity="error"   category="allocation" type="prob_dealloc_mapped"          type_name="invalid_deallocation_mapped"         debuggable="y"   vl_type="Free"                                />
+    <msg id="1010" name="pdr_dealloc_invalid"               severity="error"   category="allocation" type="prob_dealloc_invalid"         type_name="invalid_deallocation"                debuggable="y"   vl_type="Free"                                pur_type="FFM,FIM,FNH,FUM"                                                 />
+    <msg id="1011" name="pdr_dealloc_mismatch"              severity="error"   category="allocation" type="prob_dealloc_mismatch"        type_name="mismatched_deallocation"             debuggable="y"   vl_type="Free"                                pur_type="FMM"                                                             />
+    <msg id="1012" name="pdr_leaked"                        severity="error"   category="allocation" type="prob_leaked"                  type_name="unreachable_memory_leak"             debuggable="n"   vl_type="Leak"                                pur_type="MLK"                                                             />
+    <msg id="1013" name="pdr_call_invalid"                  severity="error"   category="call"       type="prob_call_invalid"            type_name="invalid_call"                        debuggable="y"   vl_type="Param,Overlap"                       />
+    <msg id="1014" name="pdr_dealloc_mismatch_explicitheap" severity="error"   category="allocation" type="prob_dealloc_mismatch"        type_name="mismatched_deallocation"             debuggable="y"   />
+    <msg id="1015" name="pdr_dealloc_mismatch_crtheap"      severity="error"   category="allocation" type="prob_dealloc_mismatch"        type_name="mismatched_deallocation"             debuggable="y"   />
+    <msg id="1016" name="pdr_reachable_leak"                severity="warning" category="allocation" type="prob_reachable_leak"          type_name="reachable_memory_leak"               debuggable="n"   />
+    <msg id="1017" name="pdr_dangerous_mmap"                severity="warning" category="allocation" type="prob_dangerous_mmap"          type_name="mmap"                                debuggable="y"   />
+
+    <msg id="1020" name="pdr_acc_token_leaked"              severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1021" name="pdr_chng_ntfy_leaked"              severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1022" name="pdr_crit_sec_leaked"               severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1023" name="pdr_desktop_leaked"                severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1024" name="pdr_event_log_leaked"              severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1025" name="pdr_file_or_device_leaked"         severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1026" name="pdr_find_leaked"                   severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1027" name="pdr_kernel_obj_leaked"             severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1028" name="pdr_mem_res_ntfy_leaked"           severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1029" name="pdr_module_leaked"                 severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1030" name="pdr_proc_or_thr_leaked"            severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1031" name="pdr_synch_obj_leaked"              severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1032" name="pdr_upd_res_leaked"                severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1033" name="pdr_win_station_leaked"            severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+
+    <msg id="1040" name="pdr_dc_leaked"                     severity="error"   category="allocation" type="prob_gdi_handle_leaked"       type_name="gdi_handle_leak"                     debuggable="n"   />
+    <msg id="1041" name="pdr_drawing_obj_leaked"            severity="error"   category="allocation" type="prob_gdi_handle_leaked"       type_name="gdi_handle_leak"                     debuggable="n"   />
+    <msg id="1042" name="pdr_metafile_leaked"               severity="error"   category="allocation" type="prob_gdi_handle_leaked"       type_name="gdi_handle_leak"                     debuggable="n"   />
+    <msg id="1043" name="pdr_metafile_dc_leaked"            severity="error"   category="allocation" type="prob_gdi_handle_leaked"       type_name="gdi_handle_leak"                     debuggable="n"   />
+
+    <msg id="1050" name="pdr_accel_table_leaked"            severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1051" name="pdr_caret_leaked"                  severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1052" name="pdr_cursor_leaked"                 severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1053" name="pdr_dde_conv_leaked"               severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1054" name="pdr_icon_leaked"                   severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1055" name="pdr_menu_leaked"                   severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1056" name="pdr_window_leaked"                 severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1057" name="pdr_wnd_pos_leaked"                severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1058" name="pdr_wnd_hook_leaked"               severity="error"   category="allocation" type="prob_user_handle_leaked"      type_name="user_handle_leak"                    debuggable="n"   />
+    <msg id="1059" name="pdr_socket_leaked"                 severity="error"   category="allocation" type="prob_kernel_handle_leaked"    type_name="kernel_handle_leak"                  debuggable="n"   />
+    <msg id="1060" name="pdr_invalid_kernel_arg"            severity="error"   category="offload"    type="prob_invalid_kernel_arg"      type_name="invalid_kernel_arg"                  debuggable="y"/>
+    <msg id="1061" name="pdr_host_ptr_on_device"            severity="error"   category="offload"    type="prob_host_ptr_on_device"      type_name="host_ptr_on_device"                  debuggable="y"/>
+    <msg id="1062" name="pdr_ptr_from_other_device"         severity="error"   category="offload"    type="prob_ptr_from_other_device"   type_name="ptr_from_other_device"               debuggable="y"/>
+    <msg id="1063" name="pdr_mismatch_queue"                severity="error"   category="offload"    type="prob_mismatch_queue"          type_name="mismatch_queue"                      debuggable="y"/>
+    <msg id="1064" name="pdr_non_host_ptr"                  severity="error"   category="offload"    type="prob_non_host_ptr"            type_name="non_host_ptr"                        debuggable="y"/>
+    <msg id="1065" name="pdr_async_buffer"                  severity="error"   category="offload"    type="prob_async_buffer"            type_name="async_buffer"                        debuggable="y"/>
+    <msg id="1066" name="pdr_invalid_kernel_arg_size"       severity="error"   category="offload"    type="prob_invalid_kernel_arg_size" type_name="invalid_kernel_arg_size"             debuggable="y"/>
+
+
+    <msg id="1100" name="pdr_int_start"                     severity="warning" category="allocation" type="prob_int_start"               type_name="intermediate_memory_start"           debuggable="n"   />
+    <msg id="1101" name="pdr_int_end"                       severity="warning" category="allocation" type="prob_int_end"                 type_name="intermediate_memory_end"             debuggable="n"   />
+    <msg id="1102" name="pdr_int_leaked"                    severity="warning" category="allocation" type="prob_int_leak"                type_name="intermediate_memory_leak"            debuggable="n"   />
+
+</cs_messages>

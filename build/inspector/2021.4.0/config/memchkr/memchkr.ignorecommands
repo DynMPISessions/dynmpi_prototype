@@ -1,0 +1,7 @@
+#
+# Copyright (C) 2012 Intel Corporation.  All Rights Reserved.
+# 
+
+# List of executables that should not be analyzed if the application runs
+# them with exec().  Specify any substring contained in the file names 
+# (ignoring any directory path).

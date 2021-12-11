@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='window_manager.snippets' lang='en'>
+    <msg name='generic.title'><arg name='product_nopostfix_name'/></msg>
+    <msg name='generic.content'>
+      &lt;p align='left'&gt;
+      Use the &lt;b&gt;Target&lt;/b&gt; window to review the project properties in place when the result was created.
+      For more information, see &lt;a href='intel.che.nem.launch_application_pane_f3010'&gt;Pane: Launch Application&lt;/a&gt;.
+      Use the &lt;b&gt;Analysis Type&lt;/b&gt; window to configure analyses to influence analysis scope and running time,
+      or review the analysis type settings in place when the result was created. For more information,
+      see &lt;a href='intel.che.nem.analysis_type_custom_pane_f3130'&gt;Pane: Analysis Type-Custom&lt;/a&gt;,
+      &lt;a href='intel.che.nem.analysis_type_memory_pane_f3110'&gt;Pane: Analysis Type-Memory Errors&lt;/a&gt;,
+      or &lt;a href='intel.che.nem.analysis_type_threading_pane_f3120'&gt;Pane: Analysis Type-Threading Errors&lt;/a&gt;.
+      Use the &lt;b&gt;Collection Log&lt;/b&gt; window to examine status messages during analysis, or review status messages after analysis is
+      complete. For more information, see &lt;a href='intel.che.nem.collection_log_pane_f4000'&gt;Pane: Collection Log&lt;/a&gt; or
+      &lt;a href='intel.che.nem.application_collector_logs_pane_f1980'&gt;Pane: Collector Messages&lt;/a&gt;. Use the &lt;b&gt;Summary&lt;/b&gt; window to examine problems of interest.
+      Think of the &lt;b&gt;Problems&lt;/b&gt; pane at the top of the &lt;b&gt;Summary&lt;/b&gt; window as a to-do list: start at the top and work your way down.
+      For more information, see &lt;a href='intel.che.nem.problem_set_window_f1500'&gt;Window: Summary&lt;/a&gt;.
+      Use the &lt;b&gt;Sources&lt;/b&gt; window to explore the relationship among code locations in problem(s) and resolve issues.
+      For more information, see &lt;a href='intel.che.nem.problem_window_f1700'&gt;Window: Sources&lt;/a&gt;.
+      &lt;/p&gt;
+    </msg>
+    <msg name='tabs.event_log.title'>Collection Log Window</msg>
+    <msg name='tabs.event_log.content'>
+    &lt;p align='left'&gt;
+    The &lt;b&gt;Collection Log&lt;/b&gt; window shows an analysis progress indicator and analysis milestones, such as when application execution ends,
+    finalization begins and ends, and analysis is complete. It also shows analysis warnings and
+    suggestions on how to address those warnings. For more information, see
+    &lt;a href='intel.che.nem.collection_log_pane_f4000'&gt;Pane: Collection Log&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+    During analysis, use this window to:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+        Confirm the application is still executing properly.
+        &lt;/li&gt;
+    &lt;li&gt;
+        Track milestones and address analysis warnings.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Mark a time period for examining memory growth in transactional applications.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Stop inspecting the application for issues, and finalize and display the result collected thus far.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Stop inspecting the application for issues and close the new result tab.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    &lt;p align='left'&gt;
+    After analysis is complete, use this window to ensure analysis milestones completed successfully.
+    &lt;/p&gt;
+    </msg>
+    <msg name='tabs.ssa_cc.summary.title'>Cyclomatic Complexity Metrics Window</msg>
+    <msg name='tabs.ssa_cc.summary.content'>
+    &lt;p align='left'&gt;
+    Cyclomatic Complexity is a software metric that measures the number of independent paths through a subroutine.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Use Cyclomatic Complexity data to:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            Limit the complexity of subroutines during development.
+        &lt;/li&gt;
+    &lt;li&gt;
+        Decide how to allocate testing resources.
+    &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    </msg>
+    <msg name='tabs.summary.title'>Summary Window</msg>
+    <msg name='tabs.summary.content'>
+    &lt;p align='left'&gt;
+    The &lt;b&gt;Summary&lt;/b&gt; window shows application issues detected during analysis, issue severity,
+    and associated code locations. It also provides access to generic explanations of the
+    errors associated with detected issues and corresponding source code in your default
+    editor. For more information, see
+    &lt;a href='intel.che.nem.summary_during_collection_window_f5000'&gt;Window: Summary During Analysis&lt;/a&gt;
+    and &lt;a href='intel.che.nem.problem_set_window_f1500'&gt;Window: Summary After Analysis Is Complete&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p align='left'&gt;
+    During analysis, use this window to view issues displayed in the order detected.
+    After analysis is complete, use this window to:&lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+        View prioritized issues.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Temporarily limit the issue list to only those that meet specific criteria.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Graphically visualize the relationships among dynamic events and threads.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Change issue state to help you focus
+                on only those issues that require your attention during this and future analysis runs.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Merge state information from another result to facilitate collaboration.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Annotate a result as well as report result data in plain text to facilitate collaboration.
+        &lt;/li&gt;
+        &lt;li&gt;
+        Launch a new analysis in conjunction with a debugger to stop at a problem(s) of interest.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    </msg>
+    <msg name='tabs.sources.title'>Sources Window</msg>
+    <msg name='tabs.sources.content'>
+    &lt;p align='left'&gt;
+    The &lt;b&gt;Sources &lt;/b&gt; window shows a snapshot of source code for code
+    locations and parent code locations associated with a detected application issue.
+    It also provides access to generic explanations of the errors associated with detected
+    issues and corresponding source code in your default editor.
+    For more information, see &lt;a href='intel.che.nem.problem_window_f1700'&gt;Window: Sources&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Use this window to:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            Explore the relationship among code locations associated with an issue.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Examine a snapshot of the relevant source code.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Start resolving issues.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    </msg>
+    <msg name='import.title'>Import Window</msg>
+    <msg name='import.content'>
+    &lt;p align='left'&gt;
+    Use the &lt;b&gt;Import&lt;/b&gt; window to import:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            Result archive files
+        &lt;/li&gt;
+        &lt;li&gt;
+            Results from other Intel error detection products
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    &lt;p align='left'&gt;
+    For more information, see &lt;a href='intel.che.nem.import_legacy_result_window_f3400'&gt;Window: Import Result&lt;/a&gt;.
+    &lt;/p&gt;
+    </msg>
+    <msg name='tabs.analysis_type.title'>Analysis Type Window</msg>
+    <msg name='tabs.analysis_type.content'>
+    &lt;p align='left'&gt;
+    The &lt;b&gt;Analysis Type&lt;/b&gt; window shows preset and custom analysis types available to help you control analysis scope and cost,
+    and options available to investigate problems in conjunction with a debugger.
+    For more information, see
+    &lt;a href='intel.che.nem.analysis_type_custom_pane_f3130'&gt;Pane: Analysis Type-Custom&lt;/a&gt;,
+    &lt;a href='intel.che.nem.analysis_type_memory_pane_f3110'&gt;Pane: Analysis Type-Memory&lt;/a&gt;, and
+    &lt;a href='intel.che.nem.analysis_type_threading_pane_f3120'&gt;Pane: Analysis Type-Threading&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;p&gt;
+    Use this window to:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+        Choose and, if necessary, fine-tune preset analysis types.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Manage and choose custom analysis types.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Configure an analysis to investigate problems in conjunction with a debugger.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Start an analysis.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    &lt;p align='left'&gt;
+    After analysis is complete, use this window to review the analysis settings in place when the result was created.
+    &lt;/p&gt;
+    </msg>
+    <msg name='compare.title'>Compare Window</msg>
+    <msg name='compare.content'>
+    &lt;p align='left'&gt;
+    Use the &lt;b&gt;Compare&lt;/b&gt; window to:
+    &lt;/p&gt;
+    &lt;p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;
+        Choose two results of the same analysis type.
+        &lt;/li&gt;
+        &lt;li&gt;
+            Compare them to identify issues that exist in one but not the other, or that exist in both.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/p&gt;
+    &lt;p align='left'&gt;
+    For more information, see
+    &lt;a href='intel.che.nem.compare_results_window_f3300'&gt;Window: Compare Results&lt;/a&gt;.
+    &lt;/p&gt;
+    </msg>
+    <msg name='tabs.target.title'>Target Window</msg>
+    <msg name='tabs.target.content'>
+    &lt;p align='left'&gt;
+    The &lt;b&gt;Target&lt;/b&gt; window shows the project properties in place when the result was created.
+    Use this window to review those properties. For more information, see
+    &lt;a href='intel.che.nem.launch_application_pane_f3010'&gt;Pane: Launch Application&lt;/a&gt;.
+    &lt;/p&gt;
+    </msg>
+  </catalog>
+</xmc>

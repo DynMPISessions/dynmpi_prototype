@@ -1,0 +1,127 @@
+<metricdefinitions version="1">
+
+    <metric id="rocm.gpu_utilization">
+        <enabled>default_yes</enabled>
+        <units>%</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getGpuUsage" initFunctionName="allinea_rocm_initGpuUsage"/>
+        <display>
+            <description>Percent of GPUs that were being used per node</description>
+            <displayName>GPU utilization</displayName>
+            <type>cpu_time</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metric id="rocm.gpu_memory_used_percent">
+        <enabled>default_yes</enabled>
+        <units>%</units>
+        <dataType>double</dataType>
+        <domain>time</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getMemoryUsagePercent"/>
+        <display>
+            <description>Allocated graphics translation table (GTT) memory used per node percentage</description>
+            <displayName>GPU memory usage</displayName>
+            <type>memory</type>
+            <colour>SpecialLine9</colour>
+            <decimalPlaces>3</decimalPlaces>
+        </display>
+    </metric>
+
+    <metric id="rocm.memory_utilization">
+        <enabled>default_yes</enabled>
+        <units>%</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getMemoryUtilization" initFunctionName="allinea_rocm_initMemoryUtilization"/>
+        <display>
+            <description>Percent of GPUs Memory being used per node</description>
+            <displayName>GPU memory utilization</displayName>
+            <type>cpu_time</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metric id="rocm.gpu_memory_used">
+        <enabled>default_yes</enabled>
+        <units>B</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getMemoryUsage" initFunctionName="allinea_rocm_initMemoryUsage"/>
+        <display>
+            <description>Allocated graphics translation table (GTT) memory used per node</description>
+            <displayName>GPU memory usage</displayName>
+            <type>memory</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metric id="rocm.gpu_total_memory">
+        <enabled>default_yes</enabled>
+        <units>B</units>
+        <dataType>uint64_t</dataType>
+        <domain>single_value</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getTotalMemory" initFunctionName="allinea_rocm_initTotalMemory"/>
+        <display>
+            <description>Graphics translation table (GTT) memory size per node</description>
+            <displayName>GPU total memory</displayName>
+            <type>memory</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metric id="rocm.gpus_count">
+        <enabled>default_yes</enabled>
+        <units>u</units>
+        <dataType>uint64_t</dataType>
+        <domain>single_value</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getNumberOfGPUs"/>
+        <display>
+            <description>Number of GPUs per node</description>
+            <displayName>Number of GPUs</displayName>
+            <type>other</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metric id="rocm.gpu_power">
+        <enabled>default_yes</enabled>
+        <units>(mu)W/node</units>
+        <dataType>uint64_t</dataType>
+        <domain>time</domain>
+        <onePerNode>true</onePerNode>
+        <source ref="rocm_src" functionName="allinea_rocm_getPower" initFunctionName="allinea_rocm_initPower"/>
+        <display>
+            <description>Average GPU power consumption per node</description>
+            <displayName>GPU power usage</displayName>
+            <type>energy</type>
+            <colour>SpecialLine9</colour>
+        </display>
+    </metric>
+
+    <metricGroup id="rocm_group">
+        <displayName>AMD ROCm</displayName>
+        <description>AMD ROCm GPU metrics</description>
+        <metric ref="rocm.gpu_utilization"/>
+        <metric ref="rocm.gpu_memory_used_percent"/>
+        <metric ref="rocm.memory_utilization"/>
+    </metricGroup>
+
+    <metricGroup id="power">
+        <displayName>Energy</displayName>
+        <description>Energy usage metrics</description>
+        <metric ref="rocm.gpu_power"/>
+    </metricGroup>
+
+    <source id="rocm_src">
+        <sharedLibrary>lib-rocm.so</sharedLibrary>
+    </source>
+
+</metricdefinitions>

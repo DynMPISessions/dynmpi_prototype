@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='gui.client.core.xe' lang='en'>
+    <msg name="binary_check_progress.title">Searching and validating module checksums</msg>
+    <msg name="binary_check_progress">Please wait...</msg>
+    <msg name="binary_check_searching_file">Searching file: '<arg name='filename'/>'.</msg>
+    <msg name="binary_check_no_module.title">Module not found</msg>
+    <msg name="binary_check_no_module">Cannot find module: '<arg name='filename'/>'.</msg>
+    <msg name="binary_check_validating_file">Validating file: <arg name='filename'/></msg>
+    <msg name="binary_check_mismatch.title">Module not matched</msg>
+    <msg name="binary_check_mismatch">The checksum of module '<arg name='filename'/>' does not match the original checksum.</msg>
+    <msg name="binary_check_complete_warning.title">Modules validation complete</msg>
+    <msg name="binary_check_complete_warning.content">Cannot find some requested modules, or some requested modules do not match original checksums. Problem breakpoints for these modules will not be set. Do you want to continue?</msg>
+    <msg name="binary_check_complete_error.title">Modules validation failed</msg>
+    <msg name="binary_check_complete_error.content">Internal error performing module checksum validation. Cannot continue.</msg>
+    <msg name="binary_check_complete_canceled.title">Modules validation canceled</msg>
+    <msg name="binary_check_complete_canceled.content">Modules validation was canceled. Problem breakpoints for modified modules might not work correctly. Do you want to continue?</msg>
+    <msg name="binary_check_complete_ignored.title">Some modules might be invalid</msg>
+    <msg name="binary_check_complete_ignored.content">Problem breakpoints for modified modules might not work correctly.</msg>
+    <msg name="cc_open.title">Cyclomatic Complexity Report</msg>
+    <msg name="cc_open">The Cyclomatic Complexity report will open in your default browser.</msg>
+    <msg name="cc_reopen.title">Cyclomatic Complexity Report</msg>
+    <msg name="cc_reopen">Click the button to reopen the Cyclomatic Complexity report.</msg>
+  </catalog>
+</xmc>

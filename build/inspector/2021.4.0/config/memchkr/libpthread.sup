@@ -1,0 +1,24 @@
+# See rules syntax in suppression_rules_format.sup file
+
+{
+    pthread lib leak
+    Memchkr:Leak
+    fun:*allocate_stack
+}
+{
+    mutex_unlock invalid
+    Memchkr:Invalid16
+    fun:*__lll_mutex_unlock_wake
+}
+{
+    partially initialized sigaction structure
+    Memchkr:PartialUninit1
+    fun:*
+    fun:__libc_sigaction
+    fun:__pthread_initialize_minimal
+}
+{
+    Uninitialized memory access in libpthread.so in __libc_sigaction function
+    Memchkr:Uninit0
+    fun:__libc_sigaction
+}

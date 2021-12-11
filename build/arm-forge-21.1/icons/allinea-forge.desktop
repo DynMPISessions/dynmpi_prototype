@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Exec=/home/dominik/master-thesis/docker-cluster/build/arm-forge-21.1/bin/allinea-forge -gui
+Icon=allinea-forge
+Name=Arm Forge 21.1
+Terminal=false
+Categories=Development;Debugger;Profiling

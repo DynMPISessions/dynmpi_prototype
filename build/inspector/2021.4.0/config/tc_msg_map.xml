@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Thread Checker message map -->
+<cs_messages version="3.2">
+
+    <!-- TC message map starts here-->
+    <msg id="201" name="pdr_thr_create"    severity="remark"  category="misc" type="prob_thr_create"    debuggable="n" />
+    <msg id="202" name="pdr_race_ww"       severity="error"   category="race" type="prob_race"          type_name="datarace"                  debuggable="y" />
+    <msg id="203" name="pdr_race_rw"       severity="error"   category="race" type="prob_race"          type_name="datarace"                  debuggable="y" />
+    <msg id="204" name="pdr_race_wr"       severity="error"   category="race" type="prob_race"          type_name="datarace"                  debuggable="y" />
+    <msg id="205" name="pdr_mem_sharable"  severity="error"   category="omp"  type="prob_mem_sharable"  type_name="shared_data"               debuggable="n" />
+    <msg id="206" name="pdr_sync_deadlock" severity="error"   category="sync" type="prob_sync_deadlock" type_name="deadlock"                  debuggable="y"/>
+    <msg id="207" name="pdr_sync_cycle"    severity="warning" category="sync" type="prob_sync_cycle"    type_name="potential_deadlock"        debuggable="y" />
+    <msg id="208" name="pdr_sync_order"    severity="warning" category="sync" type="prob_sync_order"    type_name="lock_hierarchy_violation"  debuggable="n" />
+    <msg id="209" name="pdr_thr_terminate_deadlock" severity="remark" category="misc" type="prob_thr_terminate_deadlock" type_name="terminate_on_deadlock" debuggable="n" />
+    <msg id="210" name="pdr_mem_ctsa"      severity="warning" category="race" type="prob_mem_ctsa"      type_name="cross_thread_stack_access" debuggable="n" />
+
+    <!-- Adv only messages, no observation remark associated -->
+    <msg id="211" name="pdr_lock_dangling" severity="error" category="sync" type="prob_lock_dangling" debuggable="n" />
+    <msg id="212" name="pdr_lock_uninit" severity="error" category="sync" type= "prob_lock_uninit" debuggable="n" />
+    <msg id="213" name="pdr_task_orphaned" severity="error" category="misc" type="prob_task_orphaned" debuggable="n" />
+    <msg id="214" name="pdr_task_dangling" severity="error" category="misc" type="prob_task_dangling" debuggable="n" />
+    <msg id="215" name="pdr_task_nobegin" severity="error" category="misc" type="prob_task_nobegin" debuggable="n" />
+    <msg id="216" name="pdr_site_dangling" severity="error" category="misc" type="prob_site_dangling" debuggable="n" />
+    <msg id="217" name="pdr_site_nobegin" severity="error" category="misc" type="prob_site_nobegin" debuggable="n" />
+    <msg id="218" name="pdr_dependence_flow" severity="error" category="race" type="prob_storage_flow" debuggable="n" />
+    <msg id="219" name="pdr_dependence_anti" severity="error" category="race" type="prob_storage_reuse" debuggable="n" />
+    <msg id="220" name="pdr_dependence_output" severity="error" category="race" type="prob_storage_output" debuggable="n" />
+    <msg id="221" name="pdr_lock_inconsistent_rw" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="222" name="pdr_lock_inconsistent_ww" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="223" name="pdr_lock_inconsistent_wr" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="224" name="pdr_lock_inconsistent_rr" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="225" name="pdr_observe_read" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="226" name="pdr_observe_write" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="227" name="pdr_observe_update" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="228" name="pdr_sync_cycle_whatif" severity="warning" category="sync" type="prob_sync_cycle_whatif" debuggable="n" />
+    <msg id="229" name="pdr_thr_create_whatif" severity="remark" category="misc" type="prob_thr_create_whatif" debuggable="n"/>
+    <msg id="230" name="pdr_site_create" severity="remark" category="misc" type="prob_site_create" debuggable="n" />
+
+
+    <!--  Continue TC message map -->
+    <msg id="231" name="pdr_thr_death" severity="remark" category="misc" type="prob_thr_death" debuggable="n" />
+    <msg id="232" name="pdr_app_exception" severity="critical" category="misc" type="prob_app_exception" debuggable="n" />
+    <msg id="233" name="pdr_thr_start" severity="remark" category="misc" type="prob_thr_start" type_name="thread_start" debuggable="n" />
+
+    <!--  Adv message map -->
+    <msg id="600" name="pdr_thr_create_whatif" severity="remark" category="misc" type="prob_thr_create_whatif" debuggable="n" />
+    <msg id="601" name="pdr_thr_death_whatif" severity="remark" category="misc" type="prob_thr_death_whatif" debuggable="n" />
+    <msg id="602" name="pdr_site_create" severity="information" category="misc" type="prob_site_create" debuggable="n" />
+    <msg id="603" name="pdr_dependence_flow" severity="error" category="race" type="prob_storage_flow" debuggable="n" />
+    <msg id="604" name="pdr_dependence_anti" severity="error" category="race" type="prob_storage_reuse" debuggable="n" />
+    <msg id="605" name="pdr_dependence_output" severity="error" category="race" type="prob_storage_output" debuggable="n" />
+    <msg id="606" name="pdr_lock_inconsistent_rw" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="607" name="pdr_lock_inconsistent_ww" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="608" name="pdr_lock_inconsistent_wr" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="609" name="pdr_lock_inconsistent_rr" severity="warning" category="sync" type="prob_lock_inconsistent" debuggable="n" />
+    <msg id="610" name="pdr_lock_uninit" severity="error" category="sync" type="prob_lock_uninit" debuggable="n" />
+    <msg id="611" name="pdr_task_orphaned" severity="error" category="misc" type="prob_task_orphaned" debuggable="n" />
+    <msg id="612" name="pdr_task_dangling" severity="error" category="misc" type="prob_task_dangling" debuggable="n" />
+    <msg id="613" name="pdr_task_nobegin" severity="error" category="misc" type="prob_task_nobegin" debuggable="n" />
+    <msg id="614" name="pdr_site_dangling" severity="error" category="misc" type="prob_site_dangling" debuggable="n" />
+    <msg id="615" name="pdr_site_nobegin" severity="error" category="misc" type="prob_site_nobegin" debuggable="n" />
+    <msg id="616" name="pdr_lock_dangling" severity="error" category="sync" type="prob_lock_dangling" debuggable="n" />
+    <msg id="617" name="pdr_sync_cycle_whatif" severity="warning" category="sync" type="prob_sync_cycle_whatif" debuggable="n" />
+    <msg id="618" name="pdr_sync_deadlock_whatif" severity="error" category="sync" type="prob_sync_deadlock_whatif" debuggable="n" />
+    <msg id="619" name="pdr_thr_terminate_deadlock_whatif" severity="remark" category="misc" type="prob_thr_terminate_deadlock_whatif" debuggable="n" />
+    <msg id="620" name="pdr_observe_read" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="621" name="pdr_observe_write" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="622" name="pdr_observe_update" severity="remark" category="misc" type="prob_observe_use" debuggable="n" />
+    <msg id="623" name="pdr_app_exception_whatif" severity="critical" category="misc" type="prob_app_exception_whatif" debuggable="n" />
+    <msg id="624" name="pdr_thr_start_whatif" severity="remark" category="misc" type="prob_thr_start_whatif" debuggable="n" />
+    <msg id="625" name="pdr_dependence_flow_child" severity="error" category="race" type="prob_data_serial" debuggable="n" />
+    <msg id="626" name="pdr_dependence_anti_child" severity="error" category="race" type="prob_data_capture" debuggable="n" />
+    <msg id="627" name="pdr_dependence_output_child" severity="error" category="race" type="prob_storage_reuse" debuggable="n" />
+    <msg id="628" name="pdr_task_none" severity="warning" category="misc" type="prob_task_none" debuggable="n" />
+    <msg id="629" name="pdr_task_one" severity="warning" category="misc" type="prob_task_one" debuggable="n" />
+    <msg id="630" name="pdr_site_end" severity="information" category="misc" type="prob_site_end" type_name="site_end" debuggable="n" />
+    <msg id="631" name="pdr_dependence_potential_anti" severity="warning" category="race" type="prob_potential_reuse" debuggable="n" />
+    <msg id="632" name="pdr_dependence_potential_output" severity="warning" category="race" type="prob_potential_output" debuggable="n" />
+    <msg id="633" name="pdr_reduction" severity="warning" category="race" type="prob_reduction" debuggable="n" />
+
+    <!--  Persistent Inspector message map -->
+    <msg id="3000" name="pdr_missing_clflush" severity="error" category="misc" type="prob_missing_clflush" debuggable="n" />
+    <msg id="3001" name="pdr_missing_clflush_on_unmap" severity="warning" category="misc" type="prob_missing_clflush_on_unmap" debuggable="n" />
+    <msg id="3002" name="pdr_missing_clflush_on_exit" severity="warning" category="misc" type="prob_missing_clflush_on_exit" debuggable="n" />
+    <msg id="3003" name="pdr_redundant_clflush" severity="warning" category="misc" type="prob_redundant_clflush" debuggable="n" />
+    <msg id="3004" name="pdr_redundant_clflush_on_mem_update" severity="warning" category="misc" type="prob_redundant_clflush_on_mem_update" debuggable="n" />
+    <msg id="3005" name="pdr_transaction_required" severity="error" category="misc" type="prob_transaction_required" debuggable="n" />
+    <msg id="3006" name="pdr_store_without_undo" severity="error" category="misc" type="prob_store_without_undo" debuggable="n" />
+    <msg id="3007" name="pdr_snapshot_without_updates" severity="warning" category="misc" type="prob_snapshot_without_updates" debuggable="n" />
+    <msg id="3008" name="pdr_incomplete_transaction" severity="error" category="misc" type="prob_incomplete_transaction" debuggable="n" />
+    <msg id="3009" name="pdr_missing_transaction_start" severity="error" category="misc" type="prob_missing_transaction_start" debuggable="n" />
+    <msg id="3010" name="pdr_out_of_order_store" severity="warning" category="misc" type="prob_out_of_order_store" debuggable="n" />
+    <msg id="3011" name="pdr_missing_mfence" severity="error" category="misc" type="prob_missing_mfence" debuggable="n" />
+    <msg id="3012" name="pdr_redundant_sfence" severity="warning" category="misc" type="prob_redundant_sfence" debuggable="n" />
+    <msg id="3013" name="pdr_concurrent_snapshot" severity="error" category="misc" type="prob_concurrent_snapshot" debuggable="n" />
+</cs_messages>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="asdp.progress" lang=".">
+      <msg name="Loading_result">Loading result...</msg>
+      <msg name="Finalizing_db" >Finalizing database...</msg>
+      <msg name="Updating_db"   >Updating database...</msg>
+      <msg name="Resolving_syms">Resolving symbols...</msg>
+      <msg name="Resync_supps"  >Resynchronizing suppressions...</msg>
+      <msg name="Finding_slocs" >Finding source/stack locations...</msg>
+      <msg name="Bringing_states_forward">Bringing forward baseline result states...</msg>
+    </catalog>
+</xmc>

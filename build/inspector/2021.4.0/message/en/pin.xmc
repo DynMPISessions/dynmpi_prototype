@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="pin" lang="en">
+        <msg name="0">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="1">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="2">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="3">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="4">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="5">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="6">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="7">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="8">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="9">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="10">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="11">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="12">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="13">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="14">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="15">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="16">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="17">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="18">This operating system is not supported. Suggestion: Check the Release Notes for a list of supported operating systems. </msg>
+        <msg name="19">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="20">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="21">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="22">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="23">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="24">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="25">Failed to start the analysis because the scope of ptrace() system call application is limited. Suggestion: To enable profiling, please set /proc/sys/kernel/yama/ptrace_scope to 0. See the Release Notes for instructions on enabling it permanently.</msg>
+        <msg name="26">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="27">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="28">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="29">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="30">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="31">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="32">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="33">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="34">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="35">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="36">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="37">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="38">16-bit applications are not supported. </msg>
+        <msg name="39">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="40">Cannot run the program <arg name="arg1"/></msg>
+        <msg name="41">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="42">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="43">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="44">Insufficient memory. Suggestion: Try using a smaller data set or an analysis type with a narrower scope.</msg>
+        <msg name="45">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="46">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="47">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="48">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="49">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="50">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="51">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="52">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="53">An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.</msg>
+        <msg name="54"><arg name="prod_name"/> detected an attempt to suspend an internal thread. Suggestion: See release notes or help for how to avoid this error.</msg>
+        <msg name="55">Internal error related to the debugger integration has occurred. Suggestion: See product Release notes for instructions on preventing this error.</msg>
+    </catalog>
+</xmc>

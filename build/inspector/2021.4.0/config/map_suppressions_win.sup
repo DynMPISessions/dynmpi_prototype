@@ -1,0 +1,1920 @@
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=RTC_CheckStackVars, src=stack.cpp;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Wrap_alloc, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=allocator, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=max_size, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Allocate, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Destroy_range, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*allocate, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=construct, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=destroy, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=select_on_container_copy_construction, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator==, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=addressof, src=xstddef;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator()*, src=xstddef;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=copy, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=assign, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=compare, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=length, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=move, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=eq, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=size, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator[], src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Myptr, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=find, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=assign, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Eos, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Grow, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Tidy, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_String_*, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*_proxy, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Assign_rv, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=size, src=vector;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=max_size, src=vector;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*capacity, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=push_back, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Getal, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Orphan_range, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Umove, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Reserve, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Reallocate, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Inside, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Grow_to, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Destroy, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator[], src=vector;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=type_traits, src=forward;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Uninit*, src=xmemory;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Adopt, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Orphan_me, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Ptr_cat, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Debug_range, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Fill<*, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=fill<*, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=transform, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Transform, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_Max_element<*, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator()<*, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=memcpy, src=memcpy.asm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=security_check_cookie, src=secchk.c;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=operator()<*, src=numeric;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=memchr, src=memchr.asm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=chkstk, src=chkstk.asm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=aulldiv, src=ulldiv.asm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=allmul, src=llmul.asm;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=aclayers.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=clang_compiler.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=cilkrts20.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=clr.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=clrjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=cpu_device.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=culture.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=diasymreader.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=fnp_act_installer.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libguide40.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libguide40_stat.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libicaf.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libifcoremdd.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libifcoremd.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libiomp5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libiompprof5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libiompstubs5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libittnotify.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libmm*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=libompstub40*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=microsoft.visualstudio.diagnostics.servicemodelsink.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mkl_core.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mkl_mc.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscordbc.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscordbi.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscoree.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscoreei.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscorjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscorlib.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscorlib.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=mscorwks.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=msctfime.ime;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=napinsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=oclcpubackend.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=pgphk.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=pnrpnsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=presentationcore.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=presentationframework.*.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=smdiagnostics.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=system.configuration.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=system.*.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=vcomp.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=wdmaud.drv;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=windowsbase.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=wpfgfx_v0300.dll;
+		}
+	}
+}
+suppression = {
+	type = {const_unit_stride}
+	stacks = {
+		{
+			mod=xpsp2res.dll;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*intel_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*intel_fast_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*intel_fast_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*intel_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=*intel_*_strlen;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=_kmpc_*;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {const_unit_stride}
+	stacks = {
+		{
+			func=run$omp$parallel@*;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=RTC_CheckStackVars, src=stack.cpp;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Wrap_alloc, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=allocator, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=max_size, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Allocate, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Destroy_range, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*allocate, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=construct, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=destroy, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=select_on_container_copy_construction, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator==, src=xmemory0;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=addressof, src=xstddef;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator()*, src=xstddef;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=copy, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=assign, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=compare, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=length, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=move, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=eq, src=iosfwd;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=size, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator[], src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Myptr, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=find, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=assign, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Eos, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Grow, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Tidy, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_String_*, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*_proxy, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Assign_rv, src=xstring;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=size, src=vector;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=max_size, src=vector;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*capacity, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=push_back, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Getal, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Orphan_range, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Umove, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Reserve, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Reallocate, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Inside, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Grow_to, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Destroy, src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator[], src=vector;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=type_traits, src=forward;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Uninit*, src=xmemory;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Adopt, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Orphan_me, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Ptr_cat, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Debug_range, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Fill<*, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=fill<*, src=xutility;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=transform, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Transform, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_Max_element<*, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator()<*, src=algorithm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=memcpy, src=memcpy.asm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=security_check_cookie, src=secchk.c;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=operator()<*, src=numeric;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=memchr, src=memchr.asm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=chkstk, src=chkstk.asm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=aulldiv, src=ulldiv.asm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			func=allmul, src=llmul.asm;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=aclayers.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=clang_compiler.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=cilkrts20.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=clr.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=clrjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=cpu_device.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=culture.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=diasymreader.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=fnp_act_installer.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libguide40.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libguide40_stat.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libicaf.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libifcoremdd.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libifcoremd.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libiomp5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libiompprof5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libiompstubs5m*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libittnotify.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libmm*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=libompstub40*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=microsoft.visualstudio.diagnostics.servicemodelsink.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mkl_core.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mkl_mc.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscordbc.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscordbi.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscoree.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscoreei.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscorjit.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscorlib.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscorlib.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=mscorwks.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=msctfime.ime;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=napinsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=oclcpubackend.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=pgphk.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=pnrpnsp.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=presentationcore.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=presentationframework.*.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=smdiagnostics.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=system.configuration.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=system.*.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=vcomp.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=wdmaud.drv;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=windowsbase.ni.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=wpfgfx_v0300.dll;
+		}
+	}
+}
+suppression = {
+	type = {variable_stride}
+	stacks = {
+		{
+			mod=xpsp2res.dll;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*intel_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*intel_fast_memset;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*intel_fast_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*intel_memcpy;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=*intel_*_strlen;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=_kmpc_*;
+		}
+	}
+}
+suppression = {
+	name = "Suppression"
+	type = {variable_stride}
+	stacks = {
+		{
+			func=run$omp$parallel@*;
+		}
+	}
+}

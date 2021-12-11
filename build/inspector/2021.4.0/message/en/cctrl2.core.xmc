@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="cctrl2.core" lang="en">
+        <msg name='%NoAppSpecified'>No application executable (target) file specified.</msg>
+        <msg name='%ApplicationFileNotFound'>Cannot find application file &quot;<arg name='filename'/>&quot;.</msg>
+        <msg name='%ApplicationGFlags'>Cannot start analysis because Image File Execution Options (IFEO) are enabled for this application. Suggestion: Use the Global Flags Editor (GFlags) to disable IFEO for this application. </msg>
+        <msg name='%ApplicationIsNotExecutable'>File &quot;<arg name='filename'/>&quot; is not an executable binary.</msg>
+        <msg name='%ApplicationIsMpiRunner'>Command line syntax is incorrect. <br/>
+        See &quot;Collecting MPI Performance/Correctness Data&quot; Help topic to learn how to analyze MPI applications.<br/>
+        </msg>
+        <msg name='%ApplicationInsufficientPermission'>Insufficient permissions to execute &quot;<arg name='filename'/>&quot;.</msg>
+        <msg name='%InvalidWorkingDirectory'>Directory &quot;<arg name='dirname'/>&quot; is invalid. Specify a valid directory.</msg>
+        <msg name='%InaccessibleWorkingDirectory'>Not enough permissions to access the &quot;<arg name='dirname'/>&quot; directory. Please specify another directory or change the permissions.</msg>
+        <msg name='%ReadonlyResultDirectory'>Directory &quot;<arg name='dirname'/>&quot; is protected. Specify a writable directory. </msg>
+        <msg name='%InvalidResultDirectory'>Directory &quot;<arg name='dirname'/>&quot; is not writable. Specify a writable directory for storing the results.</msg>
+        <msg name='%CompileWorkloadDescription'></msg>
+        <msg name='%PidDoesNotExists'>Cannot find a running process with the specified ID or there are no permissions to access it. Provide a valid PID.</msg>
+        <msg name='%ProcessWithNameDoesNotExists'>Cannot find a running process with the specified name. Provide a valid process name.</msg>
+        <msg name='%EmptyProcessNameSpecified'>Process name is not specified. Provide a valid process name.</msg>
+        <msg name='%EmptyPidSpecified'>PID is not specified. Provide a valid PID.</msg>
+        <msg name='%ResumeAfterBiggerThenDuration'>The &quot;Resume collection after&quot; option value is bigger than the &quot;Stop collection after&quot; option value.</msg>
+        <msg name='%StdInFileError'>Cannot open the file for standard input: <arg name='filename'/>. Suggestion: Make sure the file exists and has read permissions.</msg>
+        <msg name='%StdOutFileError'>Cannot open the file for standard output: <arg name='filename'/>. Suggestion: Make sure the file path is valid and has write permissions.</msg>
+        <msg name='%StdErrFileError'>Cannot open the file for redirected standard error: <arg name='filename'/>. Suggestion: Make sure the file path is valid and has write permissions.</msg>
+        <msg name='%BinaryNotFoundError'>Cannot start collection because the collector executable <arg name='filename'/> is missing. Suggestion: Reinstall the <arg name='product'/>.</msg>
+        <msg name='%CreateProcessError'>Cannot start collection: (error <arg name='errorcode'/>)</msg>
+        <msg name='%FailedToCreateResultDirectory'>Cannot start collection because the <arg name='product'/> failed to create a result directory. <arg name='error'/>. </msg>
+        <msg name='%FailedToSaveCollectionSettings'>Cannot start collection because the <arg name='product'/> failed to save collection settings. Suggestion: Make sure the directory &quot;<arg name='directory'/>&quot; is not write protected and has enough free space to save result data (~100 MB).</msg>
+        <msg name='%FailedToSaveCollectionOptions'>Cannot start collection because the <arg name='product'/> failed to save collection options. Suggestion: Make sure the directory &quot;<arg name='directory'/>&quot; is not write protected and has enough free space to save result data (~100 MB).</msg>
+        <msg name='%CannotCollectIntoFinalizedDirectory'>The specified result directory already contains result data. Provide another result directory.</msg>
+        <msg name='%RunnerThreadFailed'>Cannot start collection because the <arg name='product'/> failed to create a worker thread. Suggestion: Restart the GUI and try again.</msg>
+        <msg name='%ExplainConnectionType'>Using target: <arg name='target'/></msg>
+        <msg name='%InvalidEmulatorValue'>The vale &quot;<arg name='value'/>&quot; is not valid. Please specifay valid value. List of applicable values is: <arg name='applicable'/></msg>
+        <msg name='%NeedPMU'>Please specify mandatory paramater PMU name. Example -target-system = emulator:core2</msg>
+        <msg name='%FailedToFindCollectorConfigFile'>The configuration file for <arg name='collector'/> collector is missing or corrupted. Suggestion: Reinstall the <arg name='product'/>.</msg>
+        <msg name='%FailedCollectorQueryLaunch'>Cannot request <arg name='collector'/> collector information because the collector launch failed. Suggestion: Reinstall the <arg name='product'/>.</msg>
+        <msg name='%UnknownCollectorKnob'>The &quot;<arg name='knob'/>&quot; knob is not applicable to this analysis type.</msg>
+        <msg name='%NullCollectorOption'>The &quot;<arg name='knob'/>&quot; knob has a null value.</msg>
+        <msg name='%NullCollectorKnob'>The &quot;<arg name='knob'/>&quot; knob has a null value.</msg>
+        <msg name='%InvalidKnobValueType'>The &quot;<arg name='knob'/>&quot; knob value cannot be applied.</msg>
+        <msg name='%KnobCliNameMissing'>Knob with id <arg name='%1'/> does not contain cliName property. Cannot construct command line.</msg>
+        <msg name='%InvalidATCliName'>Cannot construct command line for <arg name='%1'/>. Suggestion: Make sure the analysis type name is valid.</msg>
+        <msg name='%InvalidCollectorCliName'>Cannot construct command line for <arg name='%1'/>. Suggestion: Make sure the analysis type refers to a valid collector name.</msg>
+        <msg name='%MultipleCollectors'>Cannot construct command line for <arg name='%1'/>. Suggestion: Make sure the analysis type refers to a single collector instead of multiple collectors.</msg>
+        <msg name='%FailedToOpenResultDirrectoryToSentCommand'>Cannot open the result directory "<arg name="path"/>". Please specify a valid path.</msg>
+        <msg name='%GivenDirrectoryIsNotRunningDirrectory'>The specified result directory "<arg name="path"/>" does not provide a path to the running collection. Please specify a valid path.</msg>
+       <msg name='%CollectionStarted'>Collection started. To stop the collection, either press CTRL-C or enter from another console window: <arg name="cl-tool-name"/> -r <arg name="path"/> -command stop.</msg>
+       <msg name='%CollectionStartedMPI'>Collection started.</msg>
+       <msg name='%CollectionStopped'>Collection stopped.</msg>
+       <msg name='%CollectionPaused'>Collection paused.</msg>
+       <msg name='%CollectionResumed'>Collection resumed.</msg>
+       <msg name='%CollectionCancelled'>Collection cancelled.</msg>
+       <msg name='%CollectionFailed'>Collection failed.</msg>
+       <msg name='%CollectionDetached'>Collection detached.</msg>
+       <msg name='%CanNotGetContextValues'><arg name='product'/> cannot detect <arg name='device'/> configuration.</msg>
+       <msg name='%DeployStarted'>PRODUCT_LEGAL_SHORT_NAME could not detect <arg name='device'/> configuration. This may be caused by the target package missing on the target system. The target package was deployed to the remote machine automatically.</msg>
+       <msg name='%DeploySuccessfully'>Package deployed successfully.</msg>
+       <msg name='%DeployFailed'>Package deploy failed. Please attempt a manual installation as described in 'Set Up Linux* System for Remote Analysis' topic of the User Guide.</msg>
+      <msg name='%mpi_ranks.error.invalid_range_definition.no_left_boundary'>Invalid MPI rank definition: "<arg name='text'/>". No lower limit is defined for the MPI range.</msg>
+      <msg name='%mpi_ranks.error.invalid_range_definition.no_right_boundary'>Invalid MPI rank definition: "<arg name='text'/>". No upper limit is defined for the MPI range.</msg>
+      <msg name='%mpi_ranks.error.invalid_range_definition.multiply_dash'>Invalid MPI rank definition: "<arg name='text'/>". Only one dash is possible.</msg>
+      <msg name='%mpi_ranks.error.invalid_range_definition.reverse_range'>Invalid MPI rank definition: "<arg name='text'/>". The upper limit is less than the lower limit.</msg>
+      <msg name='%mpi_ranks.error.value_too_big'>Invalid MPI rank definition: "<arg name='text'/>". The specified upper rank limit is higher than the available maximum of MPI ranks.</msg>
+      <msg name='%mpi_ranks.error.invalid_symbol'>Invalid symbol "<arg name='symbol'/>" is used in the MPI rank definition. Only digits [0-9], a comma, or a dash are allowed.</msg>
+      <msg name='%mpi_ranks.error.rank_empty'>Invalid MPI rank definition. Empty rank is defined.</msg>
+      <msg name='%mpi_ranks.error.ranks_empty'>There is no MPI rank defined.</msg>
+      <msg name='%mpi_ranks.error.max_rank_empty'>Specify number of ranks for MPI launch configuration.</msg>
+      <msg name='%mpi_ranks.error.max_rank_less_then_1'>The number of ranks must be bigger then 0.</msg>
+      <msg name='%mpi_ranks.error.max_rank_too_big'>The number of ranks must be less then 100000.</msg>
+      <msg name='%mpi_launcher.error.empty'>MPI launcher cannot be empty.</msg>
+      <msg name='%mpi_launcher.error.resultPathEmpty'>Result directory cannot be empty. Please enter an expected directory to the Result Location field.</msg>
+      <msg name='%mpi_launcher.error.resultPathHasAt'>MPI result directory cannot contain '@' character.</msg>
+      <msg name='%mpi_launcher.error.resultPathHasAnalysisType'>MPI result directory cannot contain '{at}' characters.</msg>
+      <msg name='%cache_config.error.invalidString'>Invalid cache simulator configuration string. Suggestion: Follow directions in the Cache Simulator Configuration dialog box to create a valid string. For example: 4:8w:32k:64l/4:4w:256k:64l/1:16w:6m:64l</msg>
+      <msg name="%SoCWatchWasNotFound">Intel SoC Watch collector used for Energy Analysis was not found. Specify a correct Intel SoC Watch directory on the WHAT pane.</msg>
+      <msg name='%GettingRemoteFile'>
+          Locating file `<arg name='%1'/>' on the remote system
+      </msg>
+    </catalog>
+</xmc>

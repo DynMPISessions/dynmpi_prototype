@@ -1,0 +1,20 @@
+============================
+ ttsafe  Test Log
+============================
+
+For help use: /opt/hpc/build/hdf5-1.8.13/test/.libs/lt-ttsafe -help
+Linked with hdf5 version 1.8 release 13
+Testing  -- multi-dataset creation (dcreate) 
+Testing  -- per-thread error stacks (error) 
+Testing  -- thread cancellation safety test (cancel) 
+Testing  -- multi-attribute creation (acreate) 
+
+
+All tests were successful. 
+
+
+Cleaning Up temp files...
+
+
+Finished testing ttsafe 
+============================

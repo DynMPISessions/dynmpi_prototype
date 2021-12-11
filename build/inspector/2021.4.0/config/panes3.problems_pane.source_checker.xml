@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	
+  <column>
+    <active type="string_vector">
+      <!--Problem ID-->
+      <item>asdpdata_problem_num</item>
+      <!--Severity-->
+      <item>asdpdata_severity</item>
+      <!--Description-->
+      <item>asdpdata_diag_type</item>        
+      <!--Sources-->
+      <item>asdpdata_multi_filenames</item>      
+
+      <!--User comments-->
+      <item>asdpdata_diag_comment</item>
+
+      <!--Observation state-->
+      <item>asdpdata_state_string</item>
+      
+      <!--Difference mode column-->
+      <item>asdpdata_diff_state_string</item>
+
+      <!--Weight SC column-->
+      <item>asdpdata_weight</item>
+	  
+	  <!--Category SC column-->
+	  <item>asdpdata_category</item>
+    </active>
+
+    <default_sortby type="string">asdpdata_weight</default_sortby>
+    <default_sort_ascending_order>
+      <asdpdata_weight type="bool">0</asdpdata_weight>
+    </default_sort_ascending_order>
+
+    <!--Map of available fields and rules to display it: map<field, rule>
+    rule supports variables: analysis_type, diff_mode
+    empty rule means that the field is always available-->
+
+    <rules type="string_string_map">
+      <!--Problem ID-->
+      <item key="asdpdata_problem_num" value=""/>
+      <!--Severity-->
+      <item key="asdpdata_severity" value=""/>
+      <!--Description-->
+      <item key="asdpdata_diag_type" value=""/>
+      <!--Sources-->
+      <item key="asdpdata_multi_filenames" value=""/>      
+      <!--Observation state-->
+      <item key="asdpdata_state_string" value="diff_mode == false"/>
+
+      <!--User comments-->
+      <item key="asdpdata_diag_comment" value="diff_mode == false"/>
+
+      <!--Difference mode column-->
+      <item key="asdpdata_diff_state_string" value="diff_mode == true"/>
+
+      <!--Weight SC column-->
+      <item key="asdpdata_weight" value=""/>
+
+      <!--Category SC column-->
+      <item key="asdpdata_category" value=""/>
+    </rules>
+    
+	</column>
+
+</root>

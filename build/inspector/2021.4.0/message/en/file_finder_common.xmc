@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="file_finder_common" lang="en">
+        <msg name='BinChecksumMismatch'>`<arg name='arg1'/>' has unexpected checksum. The binary file may have been recompiled.</msg>
+        <msg name='SymChecksumMismatch'>`<arg name='arg1'/>' has unexpected checksum. The symbol file does not correspond to the binary.</msg>
+        <msg name='SrcChecksumMismatch'>`<arg name='arg1'/>' has unexpected checksum. The source file may have been modified.</msg>
+        <msg name='ModificationTimeMismatch'>Mismatch of the latest modification time stamp<arg name='arg1'/>'. The source file may have been modified.</msg>
+        <msg name='SizeMismatch'>File size mismatch `<arg name='arg1'/>. The source file may have been modified.</msg>
+        <msg name='SourceFileUpToDate'>The source file was modified later than the binary file `<arg name='arg1'/>'.</msg>
+        <msg name='FileIsDirectory'>This is a directory. Choose a file instead.</msg>
+        <msg name='FileIsNotReadable'>`<arg name='arg1'/>' is not readable. Check file permissions and re-resolve the result.</msg>
+        <msg name='FileDoesNotExist'>File does not exist `<arg name='arg1'/>'.</msg>
+        <msg name='FileIsNotRegular'>File is not a regular file: `<arg name='arg1'/>'.</msg>
+        <msg name='InvalidSymbolFile'>Invalid symbol file `<arg name='arg1'/>'.</msg>
+        <msg name='FileArchMismatch'>`<arg name='arg1'/>' does not have code of the expected architecture. Make sure to specify the correct path to the file in the Binary/Symbol Search list of directories.</msg>
+        <msg name='FileIsNotABinaryModule'>`<arg name='arg1'/>' is missing the .text section with code. The file may be a symbol file and not a binary module.</msg>
+        <msg name='BinFileReadingError'>`<arg name='arg1'/>': An internal error occurred while reading the file. Contact Intel Technical Support.</msg>
+        <msg name='BinFileUnsupportedFormat'>`<arg name='arg1'/>' has an unsupported or invalid file format. Contact Intel Technical Support.</msg>
+        <msg name='NoDataForSourceFileValidation'>Cannot check modified data for the source file. The source analysis may be inaccurate.</msg>
+    </catalog>
+</xmc>

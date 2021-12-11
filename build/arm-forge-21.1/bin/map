@@ -1,0 +1,64 @@
+#!/bin/sh
+
+PRODUCT_NAME="Arm Forge"
+
+# Don't wipe LD_PRELOAD if script was launched under squish
+[ -z "$SQUISH_PATH" ] && LD_PRELOAD=
+
+# First find ALLINEA_FORGE_PATH. Don't set this is in your environment - this script will
+# find it.
+
+# Follow symlinks to get the canonical path of this script (in case we're symlinked outside the install directory).
+if type readlink >/dev/null 2>&1; then
+	CANONICAL_EXE="`readlink -f "$0"`"
+else
+	CANONICAL_EXE="$0"
+fi
+
+# Set ALLINEA_FORGE_PATH to the parent of this script's directory.
+ALLINEA_FORGE_PATH="$(cd "$(dirname "$CANONICAL_EXE")/.."; pwd)"
+. "$ALLINEA_FORGE_PATH/libexec/common"
+
+ALLINEA_INTERNAL_ARGS_ACCUMULATOR=""
+for var in "$@"; do
+    ALLINEA_INTERNAL_ARGS_ACCUMULATOR="$ALLINEA_INTERNAL_ARGS_ACCUMULATOR$var"
+
+    case "$var" in
+        "-offline" | "--offline" | "-profile" | "--profile")
+            ALLINEA_OFFLINE_LAUNCHER_USE=on
+            ;;
+        "-show-the-gui" | "--show-the-gui")
+            ALLINEA_GUI=on
+            ;;
+        "--" | "---") #19544
+            break
+            ;;
+    esac
+done
+
+# --export option in offline mode: make sure not to catch any arguments for mpirun
+case $ALLINEA_INTERNAL_ARGS_ACCUMULATOR in
+    --export*.json*.map | -export*.json*.map)
+        ALLINEA_OFFLINE_LAUNCHER_USE=on
+        ;;
+esac
+
+MAP_ARGS="--tool=profiler"
+if [ -n "${FLUENT_MPI_PRE}" ]; then
+    echo "MAP: Running in ANSYS Fluent compatibility mode."
+    if [ -w /dev/tty -a -z "${ALLINEA_NO_DEV_TTY_FOR_FLUENT}" ]; then
+        log=/dev/tty
+    else
+        log="map$(date +'%Y%m%d%H%M%S').log"
+        echo "MAP: Logging to ${log}."
+    fi
+    exec >${log} 2>&1
+fi
+if [ -n "${ALLINEA_ENABLE_CORE_DUMP}" ]; then
+    ulimit -c unlimited
+fi
+if [ "$ALLINEA_OFFLINE_LAUNCHER_USE" = "on" ] && [ "$ALLINEA_GUI" != "on" ]; then
+    exec $SSH_AGENT "$ALLINEA_FORGE_PATH/libexec/forge-offline" "$ALLINEA_FORGE_PATH/libexec/forge.bin" $MAP_ARGS "$@"
+else
+    exec $SSH_AGENT "$ALLINEA_FORGE_PATH/libexec/forge.bin" $MAP_ARGS "$@"
+fi

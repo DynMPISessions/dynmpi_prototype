@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='clienthelpers.core' lang='en'>
+    <msg name='wait_dlg.closing'>Closing...</msg>
+    <msg name='wait_dlg.text'>Please wait until the operation is complete.</msg>
+    <msg name="project_read_only_caption">Cannot access the project</msg>
+    <msg name="project_read_only_explain">The project is in use by another instance of <arg name='prod_short_name'/>.<br/>Suggestion: Close other product instances or choose a different project.</msg>
+  </catalog>
+</xmc>

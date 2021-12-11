@@ -1,0 +1,473 @@
+# Annotation rules for c++11 threading APIs
+
+
+###############################################################################
+
+
+##mutex
+CreateMutex = (
+               Module = "*",
+               Function = "std::mutex::mutex",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyMutex = (
+               Module = "*",
+               Function = "std::mutex::~mutex",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "std::mutex::lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+       
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::mutex::try_lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "std::mutex::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+
+###############################################################################
+
+
+##Timed mutex
+CreateMutex = (
+               Module = "*",
+               Function = "std::timed_mutex::timed_mutex",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyMutex = (
+               Module = "*",
+               Function = "std::timed_mutex::~timed_mutex",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "std::timed_mutex::lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::timed_mutex::try_lock_for<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::timed_mutex::try_lock_until<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+        
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::timed_mutex::try_lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "std::timed_mutex::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+
+###############################################################################
+
+
+##Recursive mutex
+CreateRecursiveMutex = (
+               Module = "*",
+               Function = "std::recursive_mutex::recursive_mutex",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyRecursiveMutex = (
+               Module = "*",
+               Function = "std::recursive_mutex::~recursive_mutex",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_mutex::lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+       
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_mutex::try_lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "std::recursive_mutex::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+
+###############################################################################
+
+
+##Recursive timed mutex
+CreateRecursiveMutex = (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::recursive_timed_mutex",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyRecursiveMutex = (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::~recursive_timed_mutex",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::try_lock_for<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::try_lock_until<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+      
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::try_lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==1),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "std::recursive_timed_mutex::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+
+###############################################################################
+
+
+#condition_variable
+CreateCondition = (
+               Module = "*",
+               Function = "std::condition_variable::condition_variable",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyCondition = (
+               Module = "*",
+               Function = "std::condition_variable::~condition_variable",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable::wait",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (always),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable::wait_until",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable::wait_until<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==0),
+);
+
+# wait_for calls wait_until
+
+SignalCondition = (
+               Module = "*",
+               Function = "std::condition_variable::notify_one",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+BroadcastCondition = (
+               Module = "*",
+               Function = "std::condition_variable::notify_all",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+
+###############################################################################
+
+
+#condition_variable_any
+CreateCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::condition_variable_any",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::~condition_variable_any",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::wait<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (always),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::wait_for<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::wait_until<%",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (*1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (==0),
+);
+
+SignalCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::notify_one",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+BroadcastCondition = (
+               Module = "*",
+               Function = "std::condition_variable_any::notify_all",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+SuppressStart =  (
+               Module = "*",
+               Function = "__cxa_guard_acquire",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+SuppressEnd = (
+               Module = "*",
+               Function = "__cxa_guard_release",
+               CallingConvention = cdecl,
+               Succeed = (always),
+);
+
+
+###############################################################################
+## syncronization inside of std::future class
+
+OrderedLoad = (
+               Module = "*",
+               Function = "std::__future_base::_State_baseV2::wait",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Object = (this, pointer),
+                              Order = (constant_int, 5),  # Assume 'Order' argument is always std::memory_order_seq_cst
+               ),
+               Succeed = (always),
+);
+
+OrderedStore = (
+               Module = "*",
+               Function = "std::__future_base::_State_baseV2::_M_set_result",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Object = (this, pointer),
+                              Order = (constant_int, 5),  # Assume 'Order' argument is always std::memory_order_seq_cst
+               ),
+               Succeed = (always),
+);

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='panes.problems_pane' lang='en'>
+    <msg name="no_problems_detected"><arg name='prod_name'/> detected no problems at this analysis scope. If this result is unexpected, try rerunning the target using an analysis type with a wider scope. Press F1 for more information.</msg>
+  </catalog>
+  <catalog name='panes.sv_pane' lang='en'>
+    <msg name="no_source_message"><arg name='prod_name'/> cannot show source code for this location. Press F1 for more information.</msg>
+  </catalog>
+  <catalog name='panes.timeline_pane' lang='en'>
+    <msg name="no_timeline_data_caption">No Timeline Data Available</msg>
+    <msg name="no_timeline_data">Timeline data is unavailable for an imported result, this analysis type, or this selection.</msg>
+    <msg name="no_timeline_in_diffing_mode">Timeline data is unavailable for compared results.</msg>
+    <msg name="best_thread_name"><arg name='thread_name'/> (<arg name='thread_id'/>)</msg>
+    <msg name="thread_tooltip">Thread&#10; Name: <arg name='thread_name'/>&#10; ID: <arg name='thread_id'/></msg>
+    <msg name="auto_zoom">Zoom Automatically</msg>
+  </catalog>
+  <catalog name='panes.event_log' lang='en'>
+    <msg name="msg.btn.close">Close</msg>
+    <msg name="msg.btn.yes">Yes</msg>
+    <msg name="msg.btn.no">No</msg>
+    <msg name="msg.btn.ok">OK</msg>
+    <msg name="msg.btn.cancel">Cancel</msg>
+    <msg name="msg.btn.retry">Retry</msg>
+    <msg name="log_realtime_caption">Please wait while result data is collected...</msg>
+    <msg name="log_realtime_text">Estimated collection time may be 2 to 320 times normal target execution time. Data set size and workload have a direct impact on target execution time and analysis speed. If possible, choose small, representative data sets with runs in the seconds time range.</msg>
+  </catalog>
+  <catalog name='panes.captions' lang='en'>
+    <msg name="timeline_pane">Timeline</msg>
+  </catalog>
+</xmc>

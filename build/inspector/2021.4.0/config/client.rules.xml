@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <rules>
+    <bookmark_availability type="string">(collector == runmc) and ((cknob_interactive_memory_growth == true) or (cknob_detect_leaks_on_demand == true) or(cknob_enable_memory_growth_detection==true))</bookmark_availability>
+    <growth_availability type="string">(collector == runmc) and ((cknob_interactive_memory_growth == true) or (cknob_enable_memory_growth_detection==true))</growth_availability>
+    <leaks_availability type="string">(collector == runmc) and (cknob_detect_leaks_on_demand == true)</leaks_availability>
+
+    <cmdline_availability type="string">(collector == runmc) or (collector == runtc)</cmdline_availability>
+  </rules>
+</root>

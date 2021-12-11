@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='engine.conversion' lang='en'>
+    <msg name="cannot_convert_file_caption">Failed to import result</msg>
+    <msg name="failed_to_open_legacy_result">Cannot open existing result: file is missing or corrupted. Try to import related .pdr file, but in this case some information may be lost.</msg>
+    <msg name="unknown_result_format">Cannot open existing result: unknown file format. Select .txf or .thr file for Intel(R) Thread Checker results, .insp file for Intel Parallel Inspector results, and .pdr file for Intel Inspector XE 2011 or Intel Parallel Inspector raw data.</msg>
+    <msg name="failed_to_copy_result">Cannot copy existing result: file is either read-only or file with the same name already exists in target location. Check your access permissions and file attributes.</msg>
+    <msg name="failed_to_initialize_target_folder">Failed to initialize target folder.</msg>
+    <msg name="failed_to_read_configuration">Cannot open configuration file: it is missing or corrupted. Try to import related .pdr file, but in this case some information may be lost.</msg>
+    <msg name="failed_to_open_archive">Failed to open archive file.</msg>
+    <msg name="failed_to_decompress">Failed to extract data from archive file.</msg>
+    <msg name="failed_to_create_target_folder">Failed to create target folder <arg name='target_folder'/>. Check your permissions on the parent folder and ensure that this folder does not exist on the system already.</msg>
+    <msg name="failed_to_find_data_directory">Failed to find data directory. Please make sure that the result folder has data directory inside.</msg>
+    <msg name="failed_to_find_pdr_file">Failed to find data directory. Please make sure that the result folder has data directory inside.</msg>
+  </catalog>
+  <catalog name='engine.errors' lang='en'>
+    <msg name="data_model_initialization_failed">Initialization failed
+    &#10;Some configuration files are missing or corrupted. Suggestion: Reinstall the product.</msg>
+    <msg name="source_cache_initialization_failed">Initialization failed
+    &#10;Source cache index is corrupted. Suggestion: Delete source_cache subfolder and repeat the procedure.</msg>
+    <msg name="composer_not_found_ent">Cannot find an appropriate Intel compiler. You need an Intel compiler available in various suite products to optimally view static analysis results. Suggestion: If your Intel compiler is installed in a non-default location, specify that location in the Static Analysis page of the Options dialog box.</msg>
+    <msg name="result_is_already_opened">The result <arg name='result_path'/> is in use. Suggestion: Close the result.</msg>
+    <msg name="collection_already_started">Internal error: Cannot initiate a new analysis for the result <arg name='result_path'/> because another analysis is already in progress.</msg>
+    <msg name="result_location_readonly">Cannot open the result <arg name='result_path'/> because the file is read-only. Suggestion: Check your access permissions and file attributes.</msg>
+    <msg name="cc_file_load_failed">Complexity metric initialization failed.
+    &#10;Some configuration files are missing or the result location is readonly. Suggestion: Check your access permissions. If you have write permissions then reinstall the product.</msg>
+    <msg name='could_not_create_temporary_directory'>Cannot create a temporary result at <arg name='temp_path'/>.
+    &#10;The disk is full or you lack write permission to create a directory at <arg name='temp_path'/>. Suggestion: Make sure you have enough disk space to create a temporary result (~200 MB) or check your access permission to <arg name='temp_path'/>.</msg>
+    <msg name='suppression_files_load_fail'>Cannot apply suppressions from the following files: <arg name='supp_paths'/>.
+    &#10;Suggestion: Check file format for correctness.</msg>
+  </catalog>
+  <catalog name='engine.common' lang='en'>
+    <msg name="diff_result_caption">Results Comparison: '<arg name='res1.name'/>' - '<arg name='res2.name'/>'</msg>
+    <msg name="unknown_result_name">Unknown result</msg>
+    <msg name="add_file_into_zip_task">Adding file into archive: '<arg name='filename'/>'</msg>
+    <msg name="extract_all_from_zip_task">Extracting files from archive...</msg>
+    <msg name="extract_file_from_zip_task">Extracting '<arg name='filename'/>'</msg>
+    <msg name="pack_result">Creating result archive...</msg>
+    <msg name="pack_result_tmp_copy">Creating temporary copy of the result...</msg>
+    <msg name="pack_result_search_files">Resolving source files...</msg>
+    <msg name="pack_result_prepare_files">Preparing files...</msg>
+    <msg name="pack_result_compress_files">Compressing files...</msg>
+    <msg name="pack_result_no_source">Cannot find source file: '<arg name='filename'/>'</msg>
+    <msg name="pack_result_no_snippet">Cannot find source snippet: '<arg name='filename'/>'</msg>
+    <msg name="load_result_task">Loading result...</msg>
+    <msg name="reresolve_task">Finalizing result...</msg>
+    <msg name="load_result_search_pdr">Searching data files...</msg>
+    <msg name="load_result_load_data">Loading data files...</msg>
+    <msg name="load_result_apply_states">Processing result states...</msg>
+    <msg name="load_result_create_summary">Creating summary...</msg>
+    <msg name="load_result_done">Complete</msg>
+    <msg name="frame_format_jit_code">[Dynamic code]</msg>
+  </catalog>
+</xmc>

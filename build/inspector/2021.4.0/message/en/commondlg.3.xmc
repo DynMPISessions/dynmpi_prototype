@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+<catalog name="commondlg"  lang='en'>
+  <msg name='btn.add'>Add</msg>
+  <msg name='btn.append'>Append</msg>
+  <msg name='btn.browse'>Browse...</msg>
+  <msg name='btn.cancel'>Cancel</msg>
+  <msg name='btn.clear'>Clear</msg>
+  <msg name='btn.close'>Close</msg>
+  <msg name='btn.delete'>Delete</msg>
+  <msg name='btn.help'>Help</msg>
+  <msg name='btn.load'>Load</msg>
+  <msg name='btn.ok'>OK</msg>
+  <msg name='btn.remove'>Remove</msg>
+  <msg name='btn.replace'>Replace</msg>
+  <msg name='btn.save'>Save</msg>
+  <msg name='btn.save_as'>Save As</msg>
+  <msg name='btn.change'>Change</msg>
+  <msg name='btn.yes'>Yes</msg>
+  <msg name='btn.no'>No</msg>
+  <msg name='btn.retry'>Retry</msg>
+  <msg name='btn.back'>Back</msg>
+  <msg name='btn.next'>Next</msg>
+  <msg name='btn.finish'>Finish</msg>
+  <msg name='dlg.browse_file.name'>Choose a file</msg>
+  <msg name='dlg.browse_folder.name'>Choose a directory</msg>
+  <msg name='text'>text</msg>
+  <msg name='text.unknown'>-</msg>
+  <msg name='space'> </msg>
+  <msg name='slash'>/</msg>
+  <msg name='reserved_filename'>Cannot be system reserved name: com1-com9, lpt1-lpt9, nul, aux, con, prn.</msg>
+  <msg name='dots_filename'>Cannot be '.' or '..'.</msg>
+  <msg name='restricted_symbols_message'>Cannot contain the following characters:</msg>
+  <msg name='directory_symbols_message'>The directory name cannot contain the following characters:</msg>
+  <msg name='filename_bad_lenght'>Full path name cannot exceed 260 characters.</msg>
+  <msg name='filename_empty'>Cannot be empty.</msg>
+  <msg name='path.nonexisting'>File does not exist.</msg>
+  <msg name='path.nonexisting_parent_dir'>Parent directory does not exist.</msg>
+  <msg name='path.empty_relative'>File path is relative or not specified.</msg>
+  <msg name='path.enter_valid_path'>Enter valid file path.</msg>
+  <msg name='path.invalid_file'>File does not exist. Enter valid file path.</msg>
+  <msg name='path.invalid_directory'>Directory does not exist. Enter valid directory.</msg>
+  <msg name='path.wrong_ext'>Unsupported format. Please choose <arg name='extensions'/> file.</msg>
+  <msg name='max_len'><arg name='field_name'/> is too long</msg>
+  <msg name='max_len_details'><arg name='product_name'/> truncates <arg name='field_name'/> exceeding <arg name='max_len'/> characters. Please edit accordingly.</msg>
+  <msg name='pref.ff.show_dir_text'>Search directories for:</msg>
+  <msg name='pref.ff.bin'>Binary files</msg>
+  <msg name='pref.ff.sym'>Symbol files</msg>
+  <msg name='pref.ff.src'>Source files</msg>
+  <msg name='pref.ff.all'>All files</msg>
+  <msg name='pref.result_saving.result_name_label'>Result name template:</msg>
+  <msg name='pref.result_saving.resultnametmpl'>result-@@@.perf</msg>
+  <msg name='pref.result_saving.example'>For example, <arg name='default_dir'/> stores result in an r001<arg name='analysis_type'/>.<arg name='extension'/> file in an r001<arg name='analysis_type'/> directory. @@@ represents the next available number.</msg>
+  <msg name='pref.result_saving.at_example_insp'>ti1</msg>
+  <msg name='pref.result_saving.at_example_inspxe'>ti1</msg>
+  <msg name='pref.result_saving.at_example_ampl'>hs</msg>
+  <msg name='pref.result_saving.at_example_amplxe'>hs</msg>
+  <msg name='pref.result_saving.at_explanation_insp'>{at} represents the selected result type (memory or threading) and scope (1, 2, 3, or 4).</msg>
+  <msg name='pref.result_saving.at_explanation_inspxe_2011'>{at} represents the selected analysis type (ti for threading analysis, mi for memory analysis, sc for static security analysis) and scope (1, 2, or 3).</msg>
+  <msg name='pref.result_saving.at_explanation_inspxe'>{at} represents the selected analysis type (ti for threading analysis, mi for memory analysis, sc for static analysis) and scope (1, 2, or 3).</msg>
+  <msg name='pref.result_saving.at_explanation_ampl'>{at} represents the selected analysis type (hs for Hotspots, cc for Concurrency and lw for Locks and Waits).</msg>
+  <msg name='pref.result_saving.at_explanation_amplxe'>{at} represents the selected analysis type (hs for Hotspots, cc for Concurrency and lw for Locks and Waits).</msg>
+  <msg name='pref.result_saving.default'>Save results in each Visual Studio project directory</msg>
+  <msg name='pref.result_saving.disk'>Save all results in this directory:</msg>
+  <msg name='pref.result_saving.make'>Display results in the Visual Studio* Solution Explorer</msg>
+  <msg name='pref.result_saving.location'>Results location:</msg>
+  <msg name='pref.result_saving.group'>Settings</msg>
+  <msg name='pref.result_saving.restricted_ats_message'>Cannot contain more than one group of @ symbols</msg>
+  <msg name='pref.result_saving.undefined_tooltip_text'>Nonexistent or relative pathname instead of absolute pathname. Specify full path to directory.</msg>
+  <msg name='pref.result_saving.wrong_input'>Invalid data</msg>
+  <msg name='pref.result_saving.wrong_result_templ'>Invalid result name template</msg>
+  <msg name='pref.result_saving.wrong_result_templ_details'>Result name template cannot be empty and must contain at least one but no more than eight @ symbols.</msg>
+  <msg name='pref.result_saving.wrong_result_dir'>Invalid result directory</msg>
+  <msg name='pref.result_saving.wrong_result_dir_details'>Nonexistent or relative pathname instead of absolute pathname.</msg>
+  <msg name='pref.result_saving.wrong_input_advice'><arg name='product_name'/> reset to default settings. Try again.</msg>
+  <msg name='pref.result_saving.curr_project_dir'>Save results in each Intel Advisor GUI project directory</msg>
+  <msg name='pref.result_saving.templ'>result name template</msg>
+  <msg name='pref.result_saving.dir'>directory name</msg>
+  <msg name='pref.editor.open_editor_dlg'>Choose External Editor</msg>
+  <msg name='pref.editor.pick_editor_msg'>Please choose external editor for this language:</msg>
+  <msg name='pref.editor.set_as_default'>Set as default</msg>
+  <msg name='pref.editor.env_var_editor'>Text editor set in the EDITOR or VISUAL environment variable</msg>
+  <msg name='pref.editor.browse'>&lt;Add custom editor...&gt;</msg>
+  <msg name='pref.editor.system_default_suffix'>(system default)</msg>
+  <msg name='pref.editor.warning'>Warning</msg>
+  <msg name='pref.editor.custom_editors_limit_exceeded'>Maximum limit of identical custom editors exceeded.</msg>
+  <msg name='pref.editor.editor_not_found_system'>Warning: editor name is empty. Suggestion: check if the System editor is appropriately registered in system.</msg>
+  <msg name='pref.editor.editor_not_found_env_var'>Warning: editor name is empty. Suggestion: check the EDITOR or VISUAL environment variable.</msg>
+  <msg name='pref.editor.editor_not_found_custom'>Warning: editor name is empty. Suggestion: check Custom editor definition.</msg>
+  <msg name='pref.editor.language_cpp'>C/C++</msg>
+  <msg name='pref.editor.language_csharp'>C#</msg>
+  <msg name='pref.editor.language_fortran'>Fortran</msg>
+  <msg name='pref.editor.language_other'>Other</msg>
+  <msg meta='unofficial' name='pref.editor.command_line_msg'>Command line arguments:</msg>
+  <msg name='result_saving.location_folder'>result_saving.location_folder</msg>
+  <msg name='dlg.clipboard.title'>Export Text Description</msg>
+  <msg name='dlg.clipboard.include'>Include text from related code location(s)</msg>
+  <msg name='dlg.clipboard.copy'>Copy to Clipboard</msg>
+  <msg name='dlg.clipboard.error_main'>Cannot copy to clipboard</msg>
+  <msg name='dlg.clipboard.error_details'>To resolve the problem, click the Copy to Clipboard button again.</msg>
+  <msg name='panel.search_dirs.dirs'>Search Directories</msg>
+  <msg name='panel.search_dirs.resursive'>Search Subdirectories</msg>
+  <msg name='panel.search_dirs.last_line'>Add new line</msg>
+  <msg name='panel.search_dirs.last_line_tab'>Add new search location</msg>
+  <msg name='panel.search_dirs.main_not_a_dir'>Invalid directory</msg>
+  <msg name='panel.search_dirs.details_not_a_dir'>At least one directory (noted below) is invalid. All invalid directories will be removed. Please try again.</msg>
+  <msg name='panel.search_dirs.error_dir_nonexistent'>Local search directory <arg name='dir'/> does not exist.</msg>
+  <msg name='panel.search_dirs.error_not_a_dir'>Local search path <arg name='dir'/> is not a directory.</msg>
+  <msg name='panel.search_dirs.cannot_save'>Cannot save search directories</msg>
+  <msg name='panel.search_dirs.cannot_save_details'>Failed to write search directories to disk. Suggestion: Check your access permissions or project directory attributes.</msg>
+  <msg name='dlg.ask.title'>Locate Executable File</msg>
+  <msg name='dlg.ask.filename_header'>Path:</msg>
+  <msg name='dlg.ask.default_ext'>exe</msg>
+  <msg name='dlg.ask.extensions'>Executable files (*.exe)|*.exe|All files (*.*)|*.*</msg>
+  <msg name='dlg.ask.extensions_lin'>All files (*.*)|*.*</msg>
+  <msg name='dlg.ask.text'>Select an executable file. Use Visual Studio* Project Properties or <arg name='product_name'/> Analysis Target tab to save the location of this file.</msg>
+  <msg name='caption_panel.search_dirs.title'>Additional Binary and Symbol File Locations</msg>
+  <msg name='caption_panel.search_dirs.text_win'>Specify the possible locations of binary and symbol files. These can be local directories, or symbol server paths using the form srv*local_cache_directory*http://address/. Press F1 for more details.</msg>
+  <msg name='caption_panel.search_dirs.text'>Specify the possible locations of binary and symbol files. These can be local directories. Press F1 for more details.</msg>
+  <msg name='caption_panel.search_dirs.error_dir_'>Nonexistent search directories:</msg>
+  <msg name='caption_panel.search_dirs.src.title'>Additional Source File Locations</msg>
+  <msg name='caption_panel.search_dirs.src.text'>Specify local directories to include in the search. Press F1 for more details.</msg>
+  <msg meta='unofficial' name='panel.experimental.description'>Here goes the description of what are experimental features.</msg>
+  <msg meta='unofficial' name='panel.experimental.status.off'>OFF</msg>
+  <msg meta='unofficial' name='panel.experimental.status.on'>ON</msg>
+  <msg name='inplace_ctrl.progressed'>Progressed <arg name='cur_progress'/>%</msg>
+  <msg name='dlg.optin.title.mac'>Intel (R) Software Improvement Program</msg>
+  <msg name='dlg.optin.text.mac'>
+    To improve our software and customer experience, Intel would like to collect technical information about your software installation and runtime status (such as installation metrics, license/support types, software SKU/serial, counters, flags, and timestamps) and development environment (such as operating system, CPU architecture, last 4-digits of the MAC address and other Intel products installed). ("Information").&#10;&#10;
+    Intel may collect this Information directly or optionally through the use of Google Analytics. If Google Analytics is used to collect the Information, Google will aggregate the Information with that of other users and present the aggregated results to Intel without any personal identifiers. Information collected by Google will be retained by Google under its own data collection policies (https://www.google.com/policies/privacy/partners/).&#10;&#10;
+    The Information collected under this notice directly by Intel through its Intel (R) Software Improvement Program may be retained indefinitely but it will not be shared outside of Intel or its wholly-owned subsidiaries.&#10;&#10;
+    The aggregated Information provided to Intel by Google through its Software Improvement Program may be retained by Intel indefinitely but it will not be shared outside of Intel or its wholly-owned subsidiaries.&#10;&#10;
+    You can revoke your consent at any time by choosing "Improvement Program Options" in the "Settings" tab of the Intel (R) Software Manager and selecting the "I do NOT consent to the collection of my Information" option. For more details please refer to this article. (https://software.intel.com/en-us/articles/software-improvement-program).
+  </msg>
+  <msg name='dlg.optin.title'>Intel® Software Improvement Program</msg>
+  <msg name='dlg.optin.text'>
+    To improve our software and customer experience, Intel would like to collect technical information about your software installation and runtime status (such as installation metrics, license/support types, software SKU/serial, counters, flags, and timestamps) and development environment (such as operating system, CPU architecture, last 4-digits of the MAC address and other Intel products installed). ("Information").&#10;&#10;
+    Intel may collect this Information directly or optionally through the use of Google Analytics. If Google Analytics is used to collect the Information, Google will aggregate the Information with that of other users and present the aggregated results to Intel without any personal identifiers. Information collected by Google will be retained by Google under its own data collection policies (https://www.google.com/policies/privacy/partners/).&#10;&#10;
+    The Information collected under this notice directly by Intel through its Intel® Software Improvement Program may be retained indefinitely but it will not be shared outside of Intel or its wholly-owned subsidiaries.&#10;&#10;
+    The aggregated Information provided to Intel by Google through its Software Improvement Program may be retained by Intel indefinitely but it will not be shared outside of Intel or its wholly-owned subsidiaries.&#10;&#10;
+    You can revoke your consent at any time by choosing "Improvement Program Options" in the "Settings" tab of the Intel® Software Manager and selecting the "I do NOT consent to the collection of my Information" option. For more details please refer to this article. (https://software.intel.com/en-us/articles/software-improvement-program).
+  </msg>
+  <msg name='dlg.optin.consent'>I consent to the collection of my Information</msg>
+  <msg name='dlg.optin.notconsent'>I do NOT consent to the collection of my Information</msg>
+</catalog>
+</xmc>

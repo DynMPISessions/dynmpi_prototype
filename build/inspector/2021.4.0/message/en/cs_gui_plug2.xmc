@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="cs_gui_plug2" lang="en">
+        <msg name='COMBO_TOOLTIP_MSG'>Choose Analysis Type</msg>
+        <msg name='GENERAL_PAGE_MSG'>General</msg>
+        <msg name='RESULT_LOCATION_PAGE_MSG'>Result Location</msg>
+        <msg name='SEARCH_DIRECTORIES_PAGE_MSG'>Search Directories</msg>
+        <msg name='SOURCE_STATE_MANAGEMENT_PAGE_MSG'>State Management</msg>
+        <msg name='DEBUGGER_PAGE_MSG'>Debugger</msg>
+        <msg name='PRIVACY_PAGE_MSG'>Privacy</msg>
+        <msg name='MENU_INSPECT_MSG'>Inspect</msg>
+        <msg name='CONFIGURE_AND_START_ANALYSIS_MSG'>Analysis...</msg>
+        <msg name='CONFIGURE_AND_START_TOOLTIP_MSG'>New Analysis</msg>
+        <msg name='IMPORT_RESULT_MSG'>Import Result...</msg>
+        <msg name='USER_HELP_MSG'>Help</msg>
+        <msg name='START_USING_MSG'>Getting Started with</msg>
+        <msg name='VIDEO_ARTICLES_MSG'>Video and Articles</msg>
+        <msg name='SUPPORT_RESOURCES_MSG'>Support Resources</msg>
+        <msg name='COMPARE_RESULTS_MSG'>Results Comparison...</msg>
+        <msg name='COMPARE_RESULTS_TOOLTIP_MSG'>Compare Results</msg>
+        <msg name='PROJECT_PROPERTIES_MSG'>Project Properties</msg>
+        <msg name='CTX_NEW_ANALYSIS_MSG'>New Analysis...</msg>
+        <msg name='CTX_RE_CHECK_MSG'>Re-inspect</msg>
+        <msg name='CTX_PROJECT_PROPERTIES_MSG'>Project Properties...</msg>
+        <msg name='CTX_EXPORT_RESULT_MSG'>Export Result...</msg>
+        <msg name='WELCOME_TITLE_NO_PROJECT_MSG'>Welcome to <arg name="%1" /></msg>
+        <msg name='WELCOME_TITLE_PROJECT_OPEN_MSG'><arg name="%3" /> project is open</msg>
+        <msg name='PROJECT_WELCOME_PANE_MSG'>
+          At any time, you can:
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* Choose an analysis type and collect a new result:
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; New &gt; Analysis...
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; New &gt; [Analysis Type]
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* View a previously collected result (which opens the corresponding project):
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Open &gt; Result...
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Recent Results
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* Compare results: File &gt; Open &gt; Results Comparison...
+          &#10;
+          &#10;
+          &#10;In addition, you can still create or open another project.
+          &#10;
+          &#10;
+          &#10;* * Tip: Start with the narrowest scope analysis type to verify correct application setup and set expectations for collection duration. Widen the scope only if you need more answers and can tolerate the increased cost.
+        </msg>
+        <msg name='NO_PROJECT_WELCOME_PANE_MSG'>
+          Create or open an <arg name="%1" /> project that specifies a target application:
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* Create a project: File &gt; New &gt; Project...
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* Open an existing project:
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Open &gt; Project...
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Recent Projects
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;* View a previously collected result (which opens the corresponding project):
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Open &gt; Result...
+          &#10;
+          &#10;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;-- File &gt; Recent Results
+          &#10;
+          &#10;
+          &#10;Tip: Create or open a project if you plan to run a memory error or threading error analysis. Open a result if you plan to visualize the result of a static security analysis.
+        </msg>
+    </catalog>
+</xmc>

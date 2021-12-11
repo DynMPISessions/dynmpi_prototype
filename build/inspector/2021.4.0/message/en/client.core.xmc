@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='client.common.core' lang='en'>
+    <msg name="unknown">Unknown</msg>
+    <msg name="at_quick_start_prefix">Quick: </msg>
+    <msg name="result_folder_name">My <arg name='prod_name'/> Results</msg>
+    <msg name="console_panel_name"><arg name='prod_nopostfix_name'/> Messages</msg>
+    <msg name="import_result_mask">import@@@</msg>
+    <msg name='wait_dlg.closing'>Closing...</msg>
+    <msg name='wait_dlg.text'>Please wait until the operation is complete.</msg>
+    <msg name="cannot_run_activity_unsupported_type">Select a valid project to analyze it using selected analysis type configuration.</msg>
+    <msg name="cannot_run_activity_unknown">Cannot start analysis.</msg>
+    <msg name="workload_validation_failed">Target validation failed</msg>
+    <msg name="rebuild_needed_short">Rebuild the project</msg>
+    <msg name='rebuild_needed_explain'>
+        Project is out of date
+        &#10;
+        &#10;Project files or build settings were modified since the last build. The analysis may fail or result data may not match your sources.
+        &#10;
+        &#10;To use up-to-date data, rebuild your project without closing this tab, then click Retry to rerun the procedure. Otherwise, click OK to continue using out-of-date information, or click Cancel to return to the previous page.
+    </msg>
+    <msg name='rebuild_needed_ignore'>You chose to ignore this issue.</msg>
+    <msg name="collection_is_running">Analysis is still running</msg>
+    <msg name='collection_is_running_explain'>Closing the result will stop the analysis and may affect collected data. Are you sure you want to proceed?</msg>
+    <msg name='collection_is_running_explain_close_project'>Closing the project will stop the analysis and may affect collected data. Are you sure you want to proceed?</msg>
+    <msg name='collection_is_running_explain_close_solution'>Closing the solution will stop the analysis and may affect collected data. Are you sure you want to proceed?</msg>
+    <msg name="long_result_path_caption">Target folder name is too long</msg>
+    <msg name="long_result_path_explain">The result will be saved to the specified directory but will not appear in <arg name='prod_short_name'/> Results in the Solution Explorer. To resolve the issue, shorten the folder name or change result accessibility settings in Tools &gt; Options &gt; <arg name='prod_short_name'/> &gt; Result Location before proceeding with analysis.</msg>
+    <msg name="long_result_path_ignore">The result will not appear in <arg name='prod_short_name'/> Results in the Solution Explorer.</msg>
+    <msg name='project_folder_read_only_caption'>Analyzing read-only project</msg>
+    <msg name='project_folder_read_only_explain'>
+      Cannot create a result because the project directory '<arg name='project_directory'/>' is protected.
+      &#10;
+      &#10;Click OK to save the result to alternative location '<arg name='alternative_location'/>' (the result will be saved to the specified directory but will not appear in My <arg name='prod_short_name'/> Results in the Solution Explorer).
+      &#10;
+      &#10;Click Cancel to cancel this analysis run.
+      &#10;
+      &#10;To prevent this error in future, unprotect the project directory, or change the result location and accessibility settings in Tools &gt; Options &gt; <arg name='prod_name'/> &gt; Result Location.
+    </msg>
+    <msg name='project_folder_read_only_ignore'>The result folder location was changed.</msg>
+    <msg name='target_executable_not_exist_caption'>Cannot locate an executable file</msg>
+    <msg name='target_executable_not_exist_explain'>
+      Cannot locate executable file: '<arg name='target_executable'/>'.
+      &#10;
+      &#10;The target must be an existing executable file. To analyze a shared library, analyze an executable file that calls the library.
+      &#10;
+      &#10;Click OK to locate the executable file.
+      &#10;
+      &#10;Click Cancel to cancel this analysis run.
+    </msg>
+    <msg name='target_executable_not_exist_fixed'>Located executable file for this analysis run: '<arg name='target_executable'/>'.</msg>
+    <msg name='another_analysis_is_running_caption'>Another analysis is running</msg>
+    <msg name='another_analysis_is_running_explain'>
+      Cannot start a new analysis while another analysis is running. Please wait for the analysis to finish or stop it manually.
+      &#10;
+      &#10;Click Cancel to cancel this analysis run.
+      &#10;
+      &#10;Click Retry to repeat the check.
+    </msg>
+    <msg name="cannot_compare_files_caption">Failed to compare results</msg>
+    <msg name="cannot_compare_files_missing_files">The selected results are not available or not accessible. Make sure the paths are valid.</msg>
+    <msg name="cannot_compare_different_at">
+      The selected results were collected using different analysis types. Choose results of the same analysis type.&#10;
+      &#10;Result 1 analysis type: '<arg name='at1_name'/>'
+      &#10;Result 2 analysis type: '<arg name='at2_name'/>'
+    </msg>
+    <msg name="cannot_compare_files_loading_failed">
+        The selected results failed to load.
+        &#10;Suggestion: Make sure you have read permission for each result directory and result directory contents are not corrupted.
+    </msg>
+    <msg name="convert_file_success_caption">Result successfully converted</msg>
+    <msg name="convert_file_success_explain">Successfully converted the result. If some symbols or source files are not resolved, try adding appropriate search directories in <arg name='prod_short_name'/> &gt; Project Properties &gt; Binary/Symbol Search or <arg name='prod_short_name'/> &gt; Project Properties &gt; Source Search and reloading the result.</msg>
+    <msg name="cannot_open_guide_caption">Cannot open file</msg>
+    <msg name="cannot_open_guide_explain">
+      Cannot open file: <arg name='file'/>
+      &#10;Make sure a browser is installed on your system, and files with HTM extension are associated with the browser. Check that the guide location is &lt;install-dir&gt;\documentation\&lt;locale&gt;\.
+    </msg>
+    <msg name="cannot_initialize_help_caption">Failed to open help file</msg>
+    <msg name="cannot_initialize_help_explain">Help initialization failed. Suggestion: Open the file manually using OS functionality.</msg>
+    <msg name="reresolve_warning_caption">Refinalizing may change result data</msg>
+    <msg name="reresolve_warning_explain">Refinalizing may change problem set, code location, and stack information because the <arg name='prod_short_name'/> discards previously resolved symbol information and performs symbol resolution again.</msg>
+    <msg name="reresolve_warning_checkbox">Do not show this dialog box again</msg>
+    <msg name="delete_result_caption">Delete result</msg>
+    <msg name="delete_result_explain">
+      You are about to delete the most recent result for this project. Deleting this result deletes problem state information needed to initialize problem states in future results. Suggestion: Wait until after you create and open a newer result before deleting this result.
+      &#10;
+      &#10;Are you sure you want to delete result '<arg name='file'/>'?
+    </msg>
+    <msg name="fail_delete_result_caption">Cannot delete result '<arg name='result_name'/>'</msg>
+    <msg name="fail_delete_result_explain">The result is in use by another instance of '<arg name='prod_short_name'/>'. Suggestion: Close the result.</msg>
+    <msg name='clipboard_dlg.title'>Corresponding <arg name='abbr'/>-cl Command Options</msg>
+  </catalog>
+</xmc>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.1">
+  <catalog name='cservices.core' lang='en'>
+    <msg name="license_error_caption">License check failed</msg>
+    <msg name="lack_of_gui_resources_caption">Cannot open result</msg>
+    <msg name="lack_of_gui_resources_explain">Cannot open result because system resources are inadequate. Suggestion: Close some results and retry.</msg>
+    <msg name="cannot_find_associated_project_caption">Cannot find project</msg>
+    <msg name="cannot_find_associated_project1">Cannot find project associated with the result.</msg>
+    <msg name="cannot_find_associated_project2">Cannot find project associated with the result. Do you want to use the current startup project?</msg>
+    <msg name="result_file_not_found_caption">Cannot open result</msg>
+    <msg name="result_file_not_found_explain">Result file <arg name="file_path"/> was not found on your system.</msg>
+  </catalog>
+</xmc>

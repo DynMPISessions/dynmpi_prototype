@@ -1,0 +1,900 @@
+# Annotation rules for QtThreads APIs
+
+CreateMutexMode = (
+               Module = "*",
+               Function = "QMutex::QMutex",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateMutexMode = (
+               Module = "*",
+               Function = "??0QMutex@@QAE@_N@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateMutexMode = (
+               Module = "*",
+               Function = "??0QMutex@@QAE@W4RecursionMode@0@@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateMutexMode = (
+               Module = "*",
+               Function = "_ZN6QMutexC1ENS_13RecursionModeE",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateMutexMode = (
+               Module = "*",
+               Function = "_ZN6QMutexC2ENS_13RecursionModeE",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+DestroyMutex = (
+               Module = "*",
+               Function = "QMutex::~QMutex",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+DestroyMutex = (
+               Module = "*",
+               Function = "??1QMutex@@QAE@XZ",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+DestroyMutex = (
+               Module = "*",
+               Function = "_ZN6QMutexD1Ev",
+               CallingConvention = thiscall, 
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always), 
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "QMutex::lock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "?lock@QMutex@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireMutex =  (
+               Module = "*",
+               Function = "_ZN6QMutex4lockEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+               
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "QMutex::tryLock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "?tryLock@QMutex@@QAE_NH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "?tryLock@QMutex@@QAE_NXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "_ZN6QMutex7tryLockEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+
+TryAcquireMutex =  (
+               Module = "*",
+               Function = "_ZN6QMutex7tryLockEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "QMutex::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "?unlock@QMutex@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseMutex = (
+               Module = "*",
+               Function = "_ZN6QMutex6unlockEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Mutex = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateCondition = (
+               Module = "*",
+               Function = "QWaitCondition::QWaitCondition",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateCondition = (
+               Module = "*",
+               Function = "??0QWaitCondition@@QAE@XZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitConditionC1Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyCondition = (
+               Module = "*",
+               Function = "QWaitCondition::~QWaitCondition",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyCondition = (
+               Module = "*",
+               Function = "??1QWaitCondition@@QAE@XZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitConditionD1Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "QWaitCondition::wait",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "?wait@QWaitCondition@@QAE_NPAVQMutex@@K@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "?wait@QWaitCondition@@QAE_NPAVQReadWriteLock@@K@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitCondition4waitEP6QMutexm",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+WaitForCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitCondition4waitEP14QReadWriteLockm",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+                              Lock = (1, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+SignalCondition = (
+               Module = "*",
+               Function = "QWaitCondition::wakeOne",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+SignalCondition = (
+               Module = "*",
+               Function = "?wakeOne@QWaitCondition@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+SignalCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitCondition7wakeOneEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+BroadcastCondition = (
+               Module = "*",
+               Function = "QWaitCondition::wakeAll",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+BroadcastCondition = (
+               Module = "*",
+               Function = "?wakeAll@QWaitCondition@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+BroadcastCondition = (
+               Module = "*",
+               Function = "_ZN14QWaitCondition7wakeAllEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Condition = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateReadWriteLockMode = (
+               Module = "*",
+               Function = "QReadWriteLock::QReadWriteLock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateReadWriteLockMode = (
+               Module = "*",
+               Function = "??0QReadWriteLock@@QAE@XZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateReadWriteLockMode = (
+               Module = "*",
+               Function = "??0QReadWriteLock@@QAE@W4RecursionMode@0@@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateReadWriteLockMode = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLockC1Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+CreateReadWriteLockMode = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLockC2ENS_13RecursionModeE",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+                              Mode = (1, int),
+               ),
+               Succeed = (always),
+);
+
+
+DestroyReadWriteLock = (
+               Module = "*",
+               Function = "QReadWriteLock::~QReadWriteLock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyReadWriteLock = (
+               Module = "*",
+               Function = "??1QReadWriteLock@@QAE@XZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyReadWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLockD1Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroyReadWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLockD2Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireReadLock = (
+               Module = "*",
+               Function = "QReadWriteLock::lockForRead",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireReadLock = (
+               Module = "*",
+               Function = "?lockForRead@QReadWriteLock@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireReadLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock11lockForReadEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+TryAcquireReadLock = (
+               Module = "*",
+               Function = "QReadWriteLock::tryLockForRead",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireReadLock = (
+               Module = "*",
+               Function = "?tryLockForRead@QReadWriteLock@@QAE_NH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireReadLock = (
+               Module = "*",
+               Function = "?tryLockForRead@QReadWriteLock@@QAE_NXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireReadLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock14tryLockForReadEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireReadLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock14tryLockForReadEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+AcquireWriteLock = (
+               Module = "*",
+               Function = "QReadWriteLock::LockForWrite",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireWriteLock = (
+               Module = "*",
+               Function = "?lockForWrite@QReadWriteLock@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireWriteLock = (
+               Module = "*",
+               Function = "?lockForWrite@QReadWriteLock@@QEAAXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock12lockForWriteEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+TryAcquireWriteLock = (
+               Module = "*",
+               Function = "QReadWriteLock::tryLockForWrite",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireWriteLock = (
+               Module = "*",
+               Function = "?tryLockForWrite@QReadWriteLock@@QAE_NH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireWriteLock = (
+               Module = "*",
+               Function = "?tryLockForWrite@QReadWriteLock@@QAE_NXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+); 
+
+TryAcquireWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock15tryLockForWriteEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+); 
+
+TryAcquireWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock15tryLockForWriteEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+); 
+
+ReleaseReadWriteLock = (
+               Module = "*",
+               Function = "QReadWriteLock::unlock",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseReadWriteLock = (
+               Module = "*",
+               Function = "?unlock@QReadWriteLock@@QAEXXZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseReadWriteLock = (
+               Module = "*",
+               Function = "_ZN14QReadWriteLock6unlockEv",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              ReadWriteLock = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateSemaphore = (
+               Module = "*",
+               Function = "QSemaphore::QSemaphore",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              InitialCount =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateSemaphore = (
+               Module = "*",
+               Function = "??0QSemaphore@@QAE@H@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              InitialCount =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateSemaphore = (
+               Module = "*",
+               Function = "_ZN10QSemaphoreC1Ei",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              InitialCount =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+CreateSemaphore = (
+               Module = "*",
+               Function = "_ZN10QSemaphoreC2Ei",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              InitialCount =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroySemaphore = (
+               Module = "*",
+               Function = "QSemaphore::~QSemaphore",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroySemaphore = (
+               Module = "*",
+               Function = "??1QSemaphore@@QAE@XZ",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroySemaphore = (
+               Module = "*",
+               Function = "_ZN10QSemaphoreD1Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+DestroySemaphore = (
+               Module = "*",
+               Function = "_ZN10QSemaphoreD2Ev",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+        
+AcquireSemaphoreCount = (
+               Module = "*",
+               Function = "QSemaphore::acquire",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireSemaphoreCount = (
+               Module = "*",
+               Function = "?acquire@QSemaphore@@QAEXH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+AcquireSemaphoreCount = (
+               Module = "*",
+               Function = "_ZN10QSemaphore7acquireEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+TryAcquireSemaphoreCount = (
+               Module = "*",
+               Function = "QSemaphore::tryAcquire",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireSemaphoreCount = (
+               Module = "*",
+               Function = "?tryAcquire@QSemaphore@@QAE_NH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireSemaphoreCount = (
+               Module = "*",
+               Function = "?tryAcquire@QSemaphore@@QAE_NHH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireSemaphoreCount = (
+               Module = "*",
+               Function = "_ZN10QSemaphore10tryAcquireEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+
+TryAcquireSemaphoreCount = (
+               Module = "*",
+               Function = "_ZN10QSemaphore10tryAcquireEii",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               ReturnOfInterest = (return, char),
+               Succeed = (!=0),
+);
+       
+ReleaseSemaphoreCount = (
+               Module = "*",
+               Function = "QSemaphore::release",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseSemaphoreCount = (
+               Module = "*",
+               Function = "?release@QSemaphore@@QAEXH@Z",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+
+ReleaseSemaphoreCount = (
+               Module = "*",
+               Function = "_ZN10QSemaphore7releaseEi",
+               CallingConvention = thiscall,
+               ParametersOfInterest = (
+                              Count =(1, int),
+                              Semaphore = (this, pointer),
+               ),
+               Succeed = (always),
+);
+#all except thread pool.

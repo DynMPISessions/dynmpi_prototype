@@ -1,0 +1,3 @@
+<plugin name="Thread Sanitizer" description = "Integrate with Thread Sanitizer (compile with -fsantize=thread to enable, not compatible with Memory Debugging)">
+    <breakpoint location="__sanitizer_report_error_summary" action="message_box" message="ThreadSanitizer has detected an error. Press pause and look at the Output and the Stacks windows for details." opt_errors="on" />
+</plugin>

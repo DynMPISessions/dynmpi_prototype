@@ -1,0 +1,3 @@
+Package ID: N/A
+Package Contents: Intel(R) Inspector 2021.4
+Build Number: 605683

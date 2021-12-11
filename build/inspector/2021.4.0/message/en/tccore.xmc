@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+  <catalog name="tccore" lang="en">
+      <msg name='UNSUPPORTED_MODULE'><arg name='prod_name' /> does not support the <arg name='desc' /> and may report false positives. Refer to the product release notes. </msg>
+      <msg name='UNSUPPORTED_OPTION'> Command-line option <arg name='option' /> is not supported in <arg name='prod_name'/>. </msg>
+      <msg name='TOO_MANY_DIAGNOSTICS'> Reported maximum number of issues.</msg>
+      <msg name='NO_ANNOTATIONS'> No site annotations were executed, so no Dependencies issues (problems and messages) can be found. </msg>
+      <msg name='NO_TASKS'> No tasks were executed in parallel site <arg name="site" /> defined at <arg name="file" /><arg name="line" /></msg>
+      <msg name='ONE_TASK'> Only one task was executed in parallel site <arg name="site" /> defined at <arg name="file" /><arg name="line" /></msg>
+      <msg name='SINGLE_THREAD'> Failed to find more than one thread.   Ensure that your program is multithreaded.</msg>
+      <msg name='DEADLOCK'> Deadlock was detected.  Application may hang. </msg>
+      <msg name='TERMINATE_ON_DEADLOCK'> Deadlock was detected.  Analysis terminated. </msg>
+      <msg name='FAIL_CREATE_FILE'> Failed to create file: <arg name='filename' /></msg>
+      <msg name='START'> Analyzing threads... </msg>
+      <msg name='STOP'> Finished analyzing threads. </msg>
+      <msg name='CILK_ERROR'><arg name='prod_name'/> does not support early versions of Intel® Cilk™ Plus.  Suggestion: Compile your application with the latest version of the Intel compiler and analyze again. </msg>
+      <msg name='CTSA'> One or more threads in the application accessed the stack of another thread.  If this is unexpected, it may indicate one or more bugs in your application. </msg>
+      <msg name='CTSA_NO_STACK'> One or more threads in the application accessed the stack of another thread.   This may indicate one or more bugs in your application.   Setting the <arg name='prod_name'/> to detect data races on stack accesses and running another analysis may help you locate these and other bugs.</msg>
+      <msg name='MAX_SUPPRESS_RANGE'> Ignored suppression rule at <arg name='location'/>. <arg name='prod_name' /> does not support suppressing a memory range larger than 2 GB. Suggestion: Set the suppression rule for address 0 and size 0 to suppress the entire memory range. </msg>
+      <msg name='SUPPRESSION'> Ignored invalid suppression at <arg name='location'/>. </msg>
+      <msg name='BAD_ANNOTATION'>Annotation Error: Site <arg name="site" /> has invalid annotations. Measurements in this site may be affected. </msg>
+      <msg name='SUPPORT_ONLY_ZCA'>Loop instance limitation doesn't support source annotations.</msg>
+  </catalog>
+</xmc>

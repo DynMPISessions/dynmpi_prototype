@@ -1,0 +1,48 @@
+<partialReport name="com.allinea.performancereports.papi"
+               xmlns="http://www.allinea.com/2016/AllineaReports">
+    <reportMetrics>
+
+        <reportMetric id="com.allinea.metrics.papi.fp_scalar_instructions" displayName="Scalar floating point ops" units="/s" colour="hsl(108, 62, 60)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.fp_scalar_instructions" sampleValue="mean" aggregation="mean"/>
+	</reportMetric>
+     
+        <reportMetric id="com.allinea.metrics.papi.fp_vector_instructions" displayName="Vector floating point ops" units="/s" colour="hsl(108, 42, 52)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.fp_vector_instructions" sampleValue="mean" aggregation="mean"/>
+	</reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.vector_instructions" displayName="Float and int vector ops" units="/s" colour="hsl(110, 25, 45)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.vector_instructions" sampleValue="mean" aggregation="mean"/>
+	</reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.total_instructions_f" displayName="Completed ops" units="/s" colour="hsl(121, 19, 37)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.total_instructions_f" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+    </reportMetrics>
+
+    <subsections>
+        <subsection id="PAPI-Float"
+                    order="0"
+                    maxAdviceStrings="2"
+                    heading="PAPI Floating-Point"
+                    colour="hsl(108, 50, 45)"
+                    requires="com.allinea.metrics.papi.total_instructions_f"
+                    >
+
+            <text>PAPI scalar and vector floating point instruction metrics (main thread only)</text>
+            
+            <entry  reportMetric="com.allinea.metrics.papi.fp_scalar_instructions"
+                    order="-100"
+                    group="float"/>
+            <entry  reportMetric="com.allinea.metrics.papi.fp_vector_instructions"
+                    order="-90"
+                    group="float"/>
+            <entry  reportMetric="com.allinea.metrics.papi.vector_instructions"
+                    order="-80"
+                    group="float"/>
+            <entry  reportMetric="com.allinea.metrics.papi.total_instructions_f"
+                    order="-70"
+                    group="float"/>
+        </subsection>
+    </subsections>
+</partialReport>

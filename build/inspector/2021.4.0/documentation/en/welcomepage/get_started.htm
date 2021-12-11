@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Get Started with Intel® Inspector"/>
+<meta name="prodname" content=""/>
+<meta name="version" content="XX.XX"/>
+<meta name="series" content=""/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="get_started"/>
+<meta name="DC.Language" content="en-US"/>
+<link rel="stylesheet" type="text/css" href="resources/intel_gsp_styles.css"/>
+<title>Get Started with Intel® Inspector</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1"/>
+
+</head>
+<body class="titlepage"  id="get_started"><a name="get_started"><!-- --></a>
+
+
+<div id="banner">
+<div id="bannerblock">
+<img src="resources/logo-classicblue-72px.svg" width="44px" class="intellogo" alt="Intel logo"/>
+<img src="resources/insp_icon.png" class="componentlogo"/>
+<h1 class="title">Get Started with 
+	 Intel® Inspector</h1>
+</div>
+</div>
+<div id="contentblock">
+<div id="mainmenu"><h3>Contents</h3><p><a class="mainmenulinks" href="#KEY_FEATURES">Key Features</a></p>
+<p><a class="mainmenulinks" href="#PREREQ">Prerequisites</a></p>
+<p><a class="mainmenulinks" href="#START">Get Started</a></p>
+<p><a class="mainmenulinks" href="#DOCUMENTATION">For More Information</a></p>
+<p><a class="mainmenulinks" href="#LEGAL">Notices and Disclaimers</a></p>
+<p><a class="mainmenulinks" href="#GUID-6487DD3F-9F82-4A04-9096-C2DDAC642BE6"/></p>
+<p><a class="mainmenulinks" href="#GUID-626C7B70-052F-4D35-B9D3-20BD1E5445E1"/></p>
+</div>
+<div id="INTRO"><p><span id="GSP_SHORT_DESC"><a name="GSP_SHORT_DESC"><!-- --></a>
+Intel® Inspector is a dynamic memory and threading error checking tool for users developing serial and multithreaded applications on Windows* and Linux* operating systems. 
+		  </span></p>
+<p>This document summarizes the typical workflow to get started using the 
+		  Intel Inspector GUI. 
+		</p>
+</div>
+<div id="KEY_FEATURES">
+<h2><a name="KEY_FEATURES"><!-- --></a>Key Features</h2>
+<p>Intel Inspector offers: 
+		<ul id="GUID-0E2BE55A-90D7-4F09-9868-154AFA9016D3"><li id="LI_E07F77DB759D40D4A56EA571928BF254"><p> Standalone GUI and command line operational environments. 
+			 </p>
+</li>
+<li id="LI_BFAA50364FFE4464A850D27D40F42ADB"><p> Preset analysis configurations (with some configurable settings), as well as the ability to create custom analysis configurations to help you control analysis scope and cost. 
+			 </p>
+</li>
+<li id="LI_6CB2782BC86E4E638CEF2D806BEEEBA0"><p> Visibility into individual problems, problem occurrences, and call stack information, with problem prioritization and filtering by inclusion and exclusion to help you focus on items that require your attention. 
+			 </p>
+</li>
+<li id="LI_25AE17A59CFD463090187A132891D39C"><p> Problem suppressions support to help you focus on only those issues that require your attention, including the ability to: 
+			 <ul id="GUID-CF693E6E-73FE-4A95-9AC3-AA25799F6614"><li id="LI_C90460175DEF469E8D18EEF927DFFD65"><p> Create suppression rules based on stacks 
+				  </p>
+</li>
+<li id="LI_00912636F4C6460486F6EED0D4BC69E3"><p> Convert third-party suppression files to the 
+					 Intel Inspector suppression file format 
+				  </p>
+</li>
+<li id="LI_D5AB48923B2B4EF39D7F99E8F35B2F18"><p> Create and edit suppression files in a text editor 
+				  </p>
+</li>
+</ul>
+</p>
+</li>
+<li id="LI_DB17CCA016E14DA8B42CD2BA296403F3"><p> Interactive debugging capability so you can investigate problems more deeply during analysis 
+			 </p>
+</li>
+<li id="LI_23F0E5024E794C46A193EFEEBFFF16A1"><p> Persistent, propagated problem state information to help you avoid investigating issues over and over again 
+			 </p>
+</li>
+<li id="LI_2D45E416E8444EB1AC7FDD2543A0DBF3"><p> A wealth of reported memory errors, including on-demand memory leak detection 
+			 </p>
+</li>
+<li id="LI_5B0A2C44D141434B830474A2BE47EC3D"><p> Memory growth measurement to help ensure your application uses no more memory than expected 
+			 </p>
+</li>
+<li id="LI_4E992C29EA544B4FA17E3411AFEEBF6A"><p> Data race, deadlock, lock hierarchy violation, and cross-thread stack access error detection, including error detection on the stack 
+			 </p>
+</li>
+<li id="LI_14DB17A9C1084684B2C548BE51309B47"><p>Intel® Software Manager to download and install Intel software updates, manage subscription status of installed software, activate serial numbers, and discover the latest news about Intel software (Windows* OS only) 
+			 </p>
+</li>
+</ul>
+</p>
+<p>Intel Inspector is available as a 
+		  <a href="https://software.intel.com/content/www/us/en/develop/tools/inspector.html" target="_blank">standalone installation</a> and as part of the following products: 
+		<ul id="UL_472F9E920E9F470FBAEE375D865027AE"><li id="LI_C566BC847CB84278BF057460620082D1"><a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/hpc-toolkit.html" target="_blank">Intel® oneAPI HPC Toolkit</a></li>
+<li id="LI_6AF02FBAE939428DB8F1B5E6C894BD2E"><a href="https://software.intel.com/content/www/us/en/develop/tools/oneapi/iot-toolkit.html" target="_blank">Intel® oneAPI IoT Toolkit</a></li>
+</ul>
+</p>
+</div>
+<div id="PREREQ">
+<h2><a name="PREREQ"><!-- --></a>Prerequisites</h2>
+<p id="PREREQ_INTRO_LIN">You can use the 
+		  Intel Inspector to analyze memory and threading errors in both debug and release modes of C++ and Fortran binaries. To build applications that produce the most accurate and complete 
+		  Intel Inspector analysis results: 
+		<ul id="GUID-F40F1BC9-14E1-434A-A5C7-D37F70286FC5"><li id="LI_68AE2000EC7A4483AA5449FA355E3794"><p>Build your application in debug mode. 
+			 </p>
+</li>
+<li id="LI_C950031FAC114915B1C8AB35542ED2C4"><p>Use optimal compiler/linker settings. For more information, see 
+				<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-building-applications" target="_blank">Building Applications in Intel Inspector Help</a></span>. 
+			 </p>
+</li>
+<li id="LI_D9404E61D1624A48BABD9673464A2C66"><p>Ensure your application creates more than one thread before you run threading analyses. 
+			 </p>
+</li>
+</ul>
+</p>
+<p id="PREREQ_LINUX1">In addition: 
+		<ul id="GUID-AFAFA7AB-8DAF-4867-A4C8-FF5B48344FC9"><li id="LI_C0DF8A11F1504C2891CEBB792A42A8F4"><p>Verify your application runs outside the 
+				Intel Inspector environment. 
+			 </p>
+</li>
+<li id="LI_385388B7263B48B5928D746DBEC448BF"><p>Ensure you set the EDITOR or VISUAL environment variable to your text editor. 
+			 </p>
+</li>
+<li id="LI_F53282C615564CCD8867D22BE41C2FB4"><p>Do one of the following to set up your environment: 
+			 <ul id="GUID-2415EF21-098B-44D0-AC36-FF9B5748275B"><li id="LI_CE89F670FD854DE38AC7D054BEA375ED"><p>Run one of the following 
+					 <span class="keyword">source</span> commands: 
+				  <ul id="GUID-7F09B679-E296-46CB-B846-4091A6E574B8"><li id="LI_75467DCC619942F9A0B98A836FBF3A4E"><p>For csh/tcsh users: 
+						  <span class="keyword">source &lt;inspector-install-dir&gt;/inspxe-vars.csh</span></p>
+</li>
+<li id="LI_16111682A637456EA1CCC227644B49CA"><p>For bash users: 
+						  <span class="keyword">source &lt;inspector-install-dir&gt;/inspxe-vars.sh</span></p>
+</li>
+<li id="LI_C5560365BA8D42529B8DECBA43D85A20"><p> For the application as part of an 
+						  Intel® oneAPI HPC Toolkit or 
+						  Intel® oneAPI IoT Toolkit installation, run the 
+						  <samp class="codeph">&lt;inspector-install-dir&gt;\env\vars.bat</samp> command. The default install path, 
+						  <samp class="codeph">&lt;inspector-install-dir&gt;</samp>, is below: 
+						<ul id="UL_236D05F6029445448E9D5410971BD28C"><li id="LI_AB758CC898304AD38DE49654758DFD5F"><samp class="codeph">/opt/intel/oneapi</samp> for root users 
+						  </li>
+<li id="LI_9B21AFD8E701418EBA279B1DB6039F26"><samp class="codeph">$HOME/intel/oneapi</samp> for non-root users 
+						  </li>
+</ul>
+</p>
+</li>
+</ul>
+</p>
+</li>
+<li id="LI_F9637551D9844CF6A1531F541BBB257C"><p>Add 
+					 <span class="filepath">&lt;inspector-install-dir&gt;/bin32</span> or 
+					 <span class="filepath">&lt;inspector-install-dir&gt;/bin64</span> to your path. 
+				  </p>
+</li>
+</ul>
+</p>
+</li>
+</ul>
+</p>
+</div>
+<div id="START">
+<h2><a name="START"><!-- --></a>Get Started</h2>
+<p>Follow these steps to get started using the 
+		  Intel Inspector. 
+		  <br/><a name="IMAGE_5A8F51DD7F044DAAB6F83E8FB43B51F6"><!-- --></a>
+<img id="IMAGE_5A8F51DD7F044DAAB6F83E8FB43B51F6" src="GUID-0BF3F510-E928-474F-8161-2FF2742170E4-low.jpg" alt="Intel Inspector workflow"/><br/></p>
+<div>
+<h3><a name=""><!-- --></a>Launch the 
+		  Intel Inspector</h3>
+<p>To launch the: 
+		  Intel Inspector standalone GUI: Run the 
+		  <span class="keyword">inspxe-gui</span> command. 
+		</p>
+<p>To launch the command line interface: Run the 
+		  <span class="keyword">inspxe-cl</span> command. (To get help, append 
+		  <span class="keyword">-help</span> to the command line.) 
+		</p>
+</div><div>
+<h3><a name=""><!-- --></a>Choose/Create Project</h3>
+<p>Intel Inspector is based on a project paradigm and requires that you create or open a project to enable analysis features. 
+		</p>
+<p>Think of an analysis project as a: 
+		<ul id="GUID-D91C2C6B-4D27-4654-A5C3-38DF9C2AFD21"><li id="LI_02E21EFCB26A4C03B49F4941637A37F6"><p>Compiled application 
+			 </p>
+</li>
+<li id="LI_06E23BFBD4254A4FA1119F9381733108"><p>Collection of configurable attributes, including suppression rules and search directories 
+			 </p>
+</li>
+<li id="LI_2C85FB1ACD6D4110B32EB0D2BDD9BBE8"><p>Container for analysis results 
+			 </p>
+</li>
+</ul>
+</p>
+</div><div>
+<h3><a name=""><!-- --></a>Configure Project</h3>
+<p>Data set size and workload have a direct impact on application execution time and analysis speed. 
+		</p>
+<p>For best results, choose small, representative data sets that create threads with minimal to moderate work per thread. 
+		</p>
+<p>Your objective: In as short a runtime period as possible, execute as many paths and the maximum number of tasks (parallel activities) as you can afford, while minimizing the redundant computation within each task to the bare minimum needed for good code coverage. 
+		</p>
+<p>Data sets that run a few seconds are ideal. Create additional data sets to ensure all your code is inspected. 
+		</p>
+<p>For more information, see 
+		  <span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-configuring-projects" target="_blank">Configuring Projects in Intel Inspector Help</a></span>. 
+		</p>
+</div><div>
+<h3><a name=""><!-- --></a>Configure Analysis</h3>
+<p>Intel Inspector offers a range of preset memory and threading analysis types (as well as custom analysis types) to help you control analysis scope and cost. The narrower the scope, the lighter the load on the system. The wider the scope, the larger the load on the system. 
+		</p>
+<div class="Note"><span class="notetitle">Tip:</span> <p>Use analysis types iteratively. Start with a narrow scope to verify your application is set up correctly and set expectations for analysis duration. Widen the scope only if you need more answers and you can tolerate the increased cost. 
+		  </p>
+</div>
+<p>For more information, see 
+		  <span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-configuring-analyses" target="_blank">Configuring Analyses in Intel Inspector Help</a></span>. 
+		</p>
+</div><div>
+<h3><a name=""><!-- --></a>Run Analysis</h3>
+<p>When you run an analysis, the 
+		  Intel Inspector: 
+		<ul id="GUID-5D4925F1-1FA4-4EC1-BBC1-6AF2076C831D"><li id="LI_609117197F25487396E1D800485E60B2"><p>Executes your application. 
+			 </p>
+</li>
+<li id="LI_891A84BCB3634783BE7C3577287CA066"><p>Identifies issues that may need handling. 
+			 </p>
+</li>
+<li id="LI_2093C243A0464F0E9AD4B672C1D0D8EF"><p>Collects those issues in a result. 
+			 </p>
+</li>
+<li id="LI_79DF231BDA854864A83CF35D1E2091EA"><p>Converts symbol information into filenames and line numbers. 
+			 </p>
+</li>
+<li id="LI_A09B936F6DB44BA093F41315E3DBA1E5"><p>Applies suppression rules. 
+			 </p>
+</li>
+<li id="LI_E956752E5A37402695326FF0640B3CB1"><p>Performs duplicate elimination. 
+			 </p>
+</li>
+<li id="LI_74C1A650B8E24848A8E296B7D5EC53AB"><p>Forms problem sets. 
+			 </p>
+</li>
+<li id="LI_E80AEC8A5CE74CC4A716EC95A2BA5BF3"><p>Depending on your analysis configuration options, may launch an interactive debugging session. 
+			 </p>
+</li>
+</ul>
+</p>
+<p>For more information, see 
+		  <span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-running-analyses" target="_blank">Running Analyses in Intel Inspector Help</a></span>. 
+		</p>
+</div><div>
+<h3><a name=""><!-- --></a>Choose Problems</h3>
+<p>During analysis, the 
+		  Intel Inspector displays problems in the order detected. After analysis is complete, 
+		  Intel Inspector: 
+		<ul id="GUID-B5B68223-A92C-4AA1-B846-4A5B5623B0B5"><li id="LI_AF31F0787E15453AA5EA01F17AA6144A"><p>Groups detected problems into problem sets (but still provides visibility into individual problems and problem occurrences). 
+			 </p>
+</li>
+<li id="LI_1A3F9CCA5686449BA78B70D683420CF0"><p>Prioritizes the problem sets. 
+			 </p>
+</li>
+<li id="LI_A78F089164E94FD58261EEE7E079E5FD"><p>Offers filtering to help you focus on those problem sets that require your attention. 
+			 </p>
+</li>
+</ul>
+</p>
+<p><a name="IMAGE_451CE79378B54AA1BEA1AF0522388D84"><!-- --></a>
+<img id="IMAGE_451CE79378B54AA1BEA1AF0522388D84" src="GUID-EC881420-CA95-4D42-834B-C6E83D73ED1A-low.jpg" alt="Summary window"/></p>
+<p>For more information, see 
+		  <span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-choosing-problems" target="_blank">Choosing Problems in Intel Inspector Help</a></span>. 
+		</p>
+</div><div>
+<h3><a name=""><!-- --></a>Interpret Result Data and Resolve Issues</h3>
+<p>Use the following 
+		  Intel Inspector features to enhance your productivity: 
+		
+<div class="tablenoborder"><a name="GUID-19C643F6-A78A-41F2-94C9-7DB4EE5CDAC4"><!-- --></a>
+<table cellpadding="4" summary="" id="GUID-19C643F6-A78A-41F2-94C9-7DB4EE5CDAC4" frame="border" border="1" cellspacing="0" rules="all"><thead align="left"><tr><th class="cellrowborder" align="left" valign="top" id="d29e370"><p>Objective 
+					 </p>
+</th>
+<th class="cellrowborder" align="left" valign="top" id="d29e373"><p> Feature 
+					 </p>
+</th>
+<th class="cellrowborder" align="left" valign="top" id="d29e376"><p> During Analysis/After Analysis Is Complete 
+					 </p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td class="cellrowborder" align="left" valign="top" headers="d29e370 "><p> Interpret result data. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e373 "><p>Explain Problem Help 
+					 </p>
+<p>For more information, see 
+						<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-accessing-explain-problem-help" target="_blank">Accessing Explain Problem Help in Intel Inspector Help</a></span>. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e376 "><ul id="GUID-1FCE3428-FF93-4EE0-8BCA-F75A7B14D605"><li id="LI_2F1FFAA4430145E994AC1CE207D9DD32"><p>During analysis 
+						  </p>
+</li>
+<li id="LI_01B3280D2B82425CA83A596BA5706560"><p>After analysis is complete 
+						  </p>
+</li>
+</ul>
+</td>
+</tr>
+<tr><td class="cellrowborder" rowspan="3" align="left" valign="top" headers="d29e370 "><p>Focus only on those issues that require your attention. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e373 "><p>Severity Levels 
+					 </p>
+<p>For more information, see 
+						<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-severity-levels" target="_blank">Severity Levels in Intel Inspector Help</a></span>. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e376 "><ul id="GUID-12BEF97B-4284-41D6-B1D1-A29F57CF4021"><li id="LI_BAE1F50977A749FC834159D09815A579"><p>During analysis 
+						  </p>
+</li>
+<li id="LI_EC8AF9C5BFCB46D4AF7770113E79B959"><p>After analysis is complete 
+						  </p>
+</li>
+</ul>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" headers="d29e373 "><p>States 
+					 </p>
+<p>For more information, see 
+						<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-states" target="_blank">States in Intel Inspector Help</a></span>. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e376 "><p>After analysis is complete 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" headers="d29e373 "><p>Suppression rules 
+					 </p>
+<p>For more information, see 
+						<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-suppressions-support" target="_blank">Suppressions Support in Intel Inspector Help</a></span>. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e376 "><p>After analysis is complete 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" headers="d29e370 "><p> Resolve issues. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e373 "><p>Direct access to a default editor 
+					 </p>
+<p>For more information, see 
+						<span><a href="https://software.intel.com/en-us/inspector-user-guide-linux-editing-source-code" target="_blank">Editing Source Code in Intel Inspector Help</a></span>. 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" headers="d29e376 "><ul id="GUID-1A5D2E40-F3BC-43F5-BF97-376239D0FF3D"><li id="LI_CEF807A0B59C409987028E8A66069A12"><p>During analysis 
+						  </p>
+</li>
+<li id="LI_1A32CA309DC24A5480D6E944B327BFEE"><p>After analysis is complete 
+						  </p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</p>
+</div></div>
+<div id="DOCUMENTATION">
+<h2><a name="DOCUMENTATION"><!-- --></a>For More Information</h2>
+
+<div class="tablenoborder"><a name="GUID-68C98317-E997-42FC-A4C4-2F79D19D9CD7"><!-- --></a>
+<table cellpadding="4" summary="" id="GUID-68C98317-E997-42FC-A4C4-2F79D19D9CD7" frame="border" border="1" cellspacing="0" rules="all"><thead align="left"><tr><th class="cellrowborder" align="left" valign="top" width="23.752969121140143%" id="d29e483"><p>Document/Resource 
+					 </p>
+</th>
+<th class="cellrowborder" align="left" valign="top" width="76.24703087885986%" id="d29e486"><p>Description 
+					 </p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td class="cellrowborder" align="left" valign="top" width="23.752969121140143%" headers="d29e483 "><p><a href="https://software.intel.com/en-us/inspector/documentation/featured-documentation" target="_blank">Intel Inspector: Featured Documentation</a></p>
+</td>
+<td class="cellrowborder" align="left" valign="top" width="76.24703087885986%" headers="d29e486 "><p>An excellent overall resource for novice, intermediate, and advanced users, this page includes links to guides, release notes, videos, featured topics, training samples, and more. 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" width="23.752969121140143%" headers="d29e483 "><p><a href="https://software.intel.com/en-us/articles/intel-inspector-release-notes" target="_blank">Intel Inspector Release Notes and New Features</a></p>
+</td>
+<td class="cellrowborder" align="left" valign="top" width="76.24703087885986%" headers="d29e486 "><p>Contain up-to-date information about the 
+						Intel Inspector, including a description, technical support, and known limitations. This document also contains system requirements, installation instructions, and instructions for setting up the command line environment. 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" width="23.752969121140143%" headers="d29e483 "><p><a href="https://software.intel.com/en-us/product-code-samples" target="_blank">Training Samples, ReadMe's, and Tutorials</a> or 
+						<a href="https://software.intel.com/en-us/articles/inspector-tutorials" target="_blank">Tutorials</a></p>
+</td>
+<td class="cellrowborder" align="left" valign="top" width="76.24703087885986%" headers="d29e486 "><p>Help you learn to use the 
+						Intel Inspector. After you copy a training sample compressed file to a writable directory, use a suitable tool to extract the contents. 
+						<span>To load a training sample into the Visual Studio* environment, double-click the 
+						  <span class="filepath">.sln</span> file. 
+						</span></p>
+<p>Training samples help you learn to use the 
+						Intel Inspector. Training samples are installed as individual compressed files under 
+						<span class="filepath">&lt;inspector-install-dir&gt;/samples/en/</span>. After you copy a training sample compressed file to a writable directory, use a suitable tool to extract the contents. Extracted contents include a short README that describes how to build the training sample and fix issues. 
+						 
+					 </p>
+<p>Tutorials show you how to find and fix uninitialized memory access, memory leak, and data race errors using C++ and Fortran training samples. 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" width="23.752969121140143%" headers="d29e483 "><p><span><a href="https://software.intel.com/en-us/inspector-user-guide-linux" target="_blank">Intel® Inspector User Guide</a></span></p>
+</td>
+<td class="cellrowborder" align="left" valign="top" width="76.24703087885986%" headers="d29e486 "><p>The 
+						<em>User Guide</em> is the primary documentation for the 
+						Intel Inspector. 
+					 </p>
+</td>
+</tr>
+<tr><td class="cellrowborder" align="left" valign="top" width="23.752969121140143%" headers="d29e483 "><p>More Resources 
+					 </p>
+</td>
+<td class="cellrowborder" align="left" valign="top" width="76.24703087885986%" headers="d29e486 "><p><a href="https://software.intel.com/en-us/inspector" target="_blank">Intel Inspector: Home</a></p>
+<p><a href="https://software.intel.com/en-us/articles/inspector-glossary" target="_blank">Intel Inspector Glossary</a></p>
+<p><a href="https://software.intel.com/en-us/inspector/documentation/view-all" target="_blank">Explore Intel Inspector Documentation</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="LEGAL">
+<h2><a name="LEGAL"><!-- --></a>Notices and Disclaimers</h2>
+</div>
+<div id="GUID-6487DD3F-9F82-4A04-9096-C2DDAC642BE6"><p>Intel technologies may require enabled hardware, software or service activation. 
+      </p>
+<p>No product or component can be absolutely secure. 
+      </p>
+<p>Your costs and results may vary. 
+      </p>
+<p> © Intel Corporation. Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation or its subsidiaries. Other names and brands may be claimed as the property of others. 
+      </p>
+</div>
+<div id="GUID-626C7B70-052F-4D35-B9D3-20BD1E5445E1"><p>No license (express or implied, by estoppel or otherwise) to any intellectual property rights is granted by this document. 
+      </p>
+<p/>
+<p> The products described may contain design defects or errors known as errata which may cause the product to deviate from published specifications. Current characterized errata are available on request. 
+      </p>
+<p/>
+<p> Intel disclaims all express and implied warranties, including without limitation, the implied warranties of merchantability, fitness for a particular purpose, and non-infringement, as well as any warranty arising from course of performance, course of dealing, or usage in trade. 
+      </p>
+</div>
+</div>
+
+</body>
+</html>

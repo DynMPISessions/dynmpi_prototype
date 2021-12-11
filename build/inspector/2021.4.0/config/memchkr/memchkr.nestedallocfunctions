@@ -1,0 +1,10 @@
+#
+# Copyright (C) 2019 Intel Corporation.  All Rights Reserved.
+# 
+# This file describes a list of functions where the nested allocators are allowed
+# in the name of functions the wildcards (* ?) may be used.
+
+name=tcache_init* nargs=0 ret=0
+name=tcache_thread_shutdown nargs=0 ret=0
+name=*malloc_arena_thread_freeres nargs=0 ret=0
+name=*_IO_file_underflow nargs=1 ret=1

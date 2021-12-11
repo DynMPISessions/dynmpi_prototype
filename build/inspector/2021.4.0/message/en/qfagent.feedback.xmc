@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+    <catalog name="qfagent.feedback" lang="en">
+        <msg name='BoldMessage'><arg name="%productName"/> experienced an unexpected error.</msg>
+        <msg name='MainMessageStart'>Please send a problem report: <arg name="%reportToolCommandLine"/></msg>
+        <msg name='MainMessageEnd'>Report data may be used to improve product stability. Our apologies for the inconvenience and thank you for your assistance.</msg>
+        <msg name="FailedToQueryLogDir">Failed to obtain information on logs directory: <arg name="%1"/></msg>
+        <msg name="FileExists">Cannot archive logs directory: archive with this name already exists (<arg name="%1" />)</msg>
+        <msg name="FailedToZip">Cannot archive logs directory</msg>
+        <msg name="NoCrashReports">No problem reports found</msg>
+        <msg name="CrashReportsFound">Found <arg name="%1"/> problem reports:</msg>
+        <msg name="IllegalPid">Wrong PID specified</msg>
+        <msg name="CrashFileNotFound">Cannot find crash information file <arg name="%1"/></msg>
+        <msg name="MainMessageStart">Please describe steps that lead to the problem and send a problem report to:</msg>
+        <msg name="MainMessageEnd">Report data may be used to improve product stability. Our apologies for the inconvenience and thank you for your assistance.</msg>
+        <msg name="EmailUrl">parallel.studio.support@intel.com</msg>
+        <msg name="EmailSubject"><arg name="ProductName" /> problem report</msg>
+        <msg name="EmailingError">Error sending email: <arg name="MailAgentError"/></msg>
+        <msg name="FailedToInitQfagent">Failed to initialize internal error handling system</msg>
+        <msg name="ReportSaved">Please send your problem report to the Intel Customer Support team.</msg>
+        <msg name="FailedToSaveReport">Failed to collect problem and system information</msg>
+        <msg name="EmailBody">If you do not want to be contacted about this problem report, please add "Do not contact" to the top of the e-mail.</msg>
+        <msg name="FailedToCollectSysinfo">Failed to collect system information</msg>
+        <msg name="FailedToCreateMissingCrashFile">Failed to create missing crash info file</msg>
+        <msg name="FailedModuleInfoRequiresCrashFile">Cannot collect modules information. Specify path to the crash information file with --crash-info-file option.</msg>
+        <msg name="FailedProductInfoRequiresCrashFile">Cannot collect product information. Specify path to the crash information file with --crash-info-file option.</msg>
+        <msg name="FailedHandleCrashRequiresCrashFile">Cannot handle crash. Specify path to the crash information file with --crash-info-file option.</msg>
+        <msg name="FailedToCollectProductInfo">Failed to collect product information</msg>
+        <msg name="help">Show help information.</msg>
+        <msg name="hidden-help">Show help information for hidden options.</msg>
+        <msg name="report-system-info">Show system information.</msg>
+        <msg name="no-system-info">Disable collecting system information.</msg>
+        <msg name="system-info-file">Specify the path to write system information to a file.</msg>
+        <msg name="collect-module-info">Put modules checksums and versions in the crash information file.</msg>
+        <msg name="collect-product-info">Put failed product details in the crash information file.</msg>
+        <msg name="get-product-name">Put the failed product name in the crash information file.</msg>
+        <msg name="handle-crash">Show crash information and exit.</msg>
+        <msg name="crash-info-file">Specify the path to write crash information to a file.</msg>
+        <msg name="create-bug-report">Pack product log files, system information, and product installation details into a bug report package with the specified name. Also dumps stacks of product processes, if any, unless -no-dump option specified.</msg>
+        <msg name="no-dump">Disable stack dumps for running product processes when creating bug report.</msg>
+        <msg name="dump-stack">Dump stacks for specified PID only. You can list several PIDs divided by commas.</msg>
+        <msg name="dump-memory">Dump memory in addition to stacks. Use this option in conjunction with -create-bug-report or -dump-stack.</msg>
+        <msg name="list-crash-reports">Show existing crash information filenames (the most recent is the last one).</msg>
+        <msg name="send-crash-report">Send the specified problem report to the Intel Customer Support team. Specify either a path to the crash information file or the word 'latest' to send the most recent crash report.</msg>
+        <msg name="mercy-kill">Enforce the process with PID specified to terminate.</msg>
+        <msg name="product-log-dir">Specify the path to the latest log directory.</msg>
+        <msg name="merge-product-log">Merge product logs in the specified log directory.</msg>
+        <msg name="ProductLogDirOptionMissed">No product log directory specified.</msg>
+        <msg name="FailedTogetCallstack">Failed to get callstack:</msg>
+        <msg name="CannotMakeProcessAttach"> cannot attach to process.</msg>
+        <msg name="CannotMakeProcessDetach"> cannot detach from process. However, stack should be read.</msg>
+        <msg name="CannotMakeStackRead"> cannot read the stack.</msg>
+        <msg name="CannotMakeProcessOpen"> cannot open process with desired permissions.</msg>
+    </catalog>
+</xmc>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bag>
+
+<message_type id="2012" prefix="cli">
+    <helpid type="ustring">help_topic_1</helpid>
+    <dhelpid type="ustring">dyn_help_topic_1</dhelpid>
+    <dhelpid type="ustring">dyn_help_topic_2</dhelpid>
+    <title_msgid type="ustring">generic_error_collector</title_msgid>
+</message_type>
+
+<message_type id="2012" prefix="cli">
+    <helpid type="ustring">help_topic_1</helpid>
+    <dhelpid type="ustring">dyn_help_topic_1</dhelpid>
+    <dhelpid type="ustring">dyn_help_topic_2</dhelpid>
+    <title_msgid type="ustring">generic_error_collector</title_msgid>
+</message_type>
+
+
+<!--Test message with no prefix-->
+<message_type id="5015">
+    <helpid type="ustring">help_topic_5015</helpid>
+    <dhelpid type="ustring">dyn_help_topic_5015_1</dhelpid>
+    <dhelpid type="ustring">dyn_help_topic_2015_2</dhelpid>
+    <title_msgid type="ustring">title_msgid_5015</title_msgid>
+</message_type>
+
+</bag>

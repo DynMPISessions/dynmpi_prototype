@@ -1,0 +1,435 @@
+# See rules syntax in suppression_rules_format.sup file
+
+# TODO: Fix these problems in OpenCL runtime and remove as much rules as possible
+
+###########################################################
+# Set of rules for overlaped regions in memcpy()
+{
+    Invalid memcpy in libOclCpuBackEnd.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libOclCpuBackEnd.so
+}
+{
+    Invalid memcpy in libOpenCL.so
+    Memchkr:Param
+    obj*:libc*
+    obj:libOpenCL.*
+}
+{
+    Invalid memcpy in libintelocl.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libintelocl.so
+}
+{
+    Invalid memcpy in libcpu_device.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libcpu_device.so
+}
+{
+    Invalid memcpy in libnuma.so
+    Memchkr:Param
+    obj*:libc.*
+    obj:libnuma.*
+}
+{
+    Invalid memcpy in libigdrcl.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libigdrcl.*
+}
+{
+    Invalid memcpy in libigdrcl.so
+    Memchkr:Param
+    obj*:libc.*
+    obj:libigdrcl.*
+}
+{
+    Invalid memcpy in libigc.so
+    Memchkr:Param
+    obj:libigc.*
+}
+{
+    Invalid memcpy in libigc.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libigc.*
+}
+{
+    Invalid memcpy in libcommon_clang.so
+    Memchkr:Param
+    obj*:libc*
+    obj:libcommon_clang.*
+}
+{
+    Invalid memcpy in libcommon_clang.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libcommon_clang.*
+}
+{
+    Invalid memcpy in libclang_compiler.so
+    Memchkr:Param
+    obj*:libc*
+    obj:libclang_compiler.*
+}
+{
+    Invalid memcpy in libclang_compiler.so
+    Memchkr:Param
+    obj*:libstdc++.*
+    obj:libclang_compiler.*
+}
+
+###########################################################
+# Suppress uninit reads in OpenCL runtime
+{
+    Uninit reads in libcpu_device.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libcpu_device.*
+}
+{
+    Uninit reads in libintelocl.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libintelocl.*
+}
+{
+    Uninit reads under libintelocl.so!_ZN5Intel6OpenCL9Framework16FrontEndCompiler10InitializeEPKcPKvm()
+    Memchkr:Uninit0
+    obj*:*
+    obj*:libintelocl.*
+    fun:*OpenCL*FrontEndCompiler*Initialize*
+}
+{
+    Uninit reads under libintelocl.so!_ZN5Intel6OpenCL9Framework16FrontEndCompiler10InitializeEPKcPKvm()
+    Memchkr:Invalid0
+    obj*:*
+    obj*:libintelocl.*
+    fun:*OpenCL*FrontEndCompiler*Initialize*
+}
+{
+    Uninit reads in libigdrcl.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libigdrcl.*
+}
+{
+    Uninit reads in libopencl-clang.so
+    Memchkr:Uninit0
+    obj:libopencl-clang.*
+}
+{
+    Uninit reads in libigc.so
+    Memchkr:Uninit0
+    obj:libigc.*
+}
+{
+    Uninit reads in libigc.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libigc.*
+}
+{
+    Uninit in OpenCL kernel task
+    Memchkr:Uninit0
+    obj*:libtbb.*
+    obj:libtask_executor.*
+}
+{
+    Uninit reads in libOclCpuBackEnd.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libOclCpuBackEnd.*
+}
+{
+    Uninit reads in libOclCpuBackEnd.so
+    Memchkr:Uninit0
+    obj*:libstdc++.*
+    obj:libOclCpuBackEnd.*
+}
+{
+    Uninit reads in libsycl.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libsycl.*
+}
+{
+    Uninit reads in libclang_compiler.so
+    Memchkr:Uninit0
+    obj*:libc.*
+    obj:libclang_compiler.*
+}
+{
+    Memory leak in task executor initialize
+    Memchkr:Leak
+    fun*:*
+    frm:*task_executor*.so!*Init*
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clCreateKernel
+}
+{
+    Allocation problems in Intel OCL
+    Memchkr:Free
+    fun*:*
+    frm:*intelocl*!clReleaseKernel
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clCreateProgramWithIL
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    frm:libintelocl.so!MemoryObject
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!*MemoryObject*
+}
+{
+    Free problems in Intel OCL
+    Memchkr:Free
+    fun*:*
+    fun:*Intel*OpenCL*Framework*GenericMemObjectD*
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clEnqueueNDRangeKernel
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clCompileProgram
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clLinkProgram
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!clCreateContext
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Invalid0
+    fun*:*
+    frm:*intelocl*!clCreateContext
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Uninit0
+    fun*:*
+    frm:*intelocl*!clCreateContext
+}
+{
+    Problems in Intel OCL
+    Memchkr:Free
+    fun*:*
+    frm:*intelocl*!clReleaseEvent
+}
+{
+    Problems in Intel OCL
+    Memchkr:Uninit0
+    fun*:*
+    frm:*intelocl*!*Intel*OpenCL*Framework*FrontEndCompiler*ParseSpirv*
+    
+}
+{
+    problems in CLang
+    Memchkr:Invalid0
+    fun*:*
+    frm:*clang_compiler*!*ParseSPIRV*
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    frm:*intelocl*!*InitFECompiler*
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!*InitFECompiler*
+}
+{
+    Leak problems in Intel OCL
+    Memchkr:Leak
+    fun*:*
+    frm:*intelocl*!*clGetPlatformIDs*
+}
+{
+    Leak problems in OCL CPU backend
+    Memchkr:Leak
+    fun*:*
+    frm:*OclCpuBackEnd*!getNameWithPrefixImpl
+}
+{
+    Leak problems in OCL CPU backend
+    Memchkr:Leak
+    fun*:*
+    frm:*OclCpuBackEnd*!*setName*
+}
+{
+    Leak problems in SYCL
+    Memchkr:Leak
+    frm:*sycl*!*initialize*
+}
+{
+    Problems in Intel OCL
+    Memchkr:Invalid0
+    fun*:*
+    frm:*intelocl*!*clGetContextInfo*
+}
+{
+    Problems in Intel OCL
+    Memchkr:Invalid0
+    frm:*intelocl*!*LockOnDevice*
+}
+{
+    Problems in TBB
+    Memchkr:Invalid0
+    fun*:*
+    frm:*tbbmalloc*!*initMemoryManager*
+}
+{
+    Problems in OCL backend
+    Memchkr:Invalid0
+    fun*:*
+    frm:*OclCpuBackEnd*!*grow_pod*
+}
+{
+    Problems in OCL backend
+    Memchkr:PartialInvalid0
+    fun*:*
+    frm:*OclCpuBackEnd*!*grow_pod*
+}
+{
+    Problems in CLang
+    Memchkr:Invalid0
+    fun*:*
+    frm:*clang_compiler*!*grow_pod*
+}
+{
+    Problems in SYCL
+    Memchkr:Uninit0
+    frm:*sycl*!*enqueueCommand*
+    frm:*sycl*!*addCG*
+}
+{
+    Problems in SYCL
+    Memchkr:Uninit0
+    fun*:*
+    frm:*sycl*!*get_platforms*
+}
+{
+    Problems in SYCL
+    Memchkr:PartialUninit0
+    fun*:*
+    frm:*sycl*!*get_platforms*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    fun*:*
+    frm:*sycl*!*get_platforms*
+}
+{
+    Problems in SYCL
+    Memchkr:PartialUninit0
+    fun*:*
+    frm:*sycl*!*get_devices*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    fun*:*
+    frm:*sycl*!*get_devices*
+}
+{
+    Problems in SYCL
+    Memchkr:PartialUninit0
+    frm:*sycl*!*sycl*handler*processArg*
+}
+{
+    Problems in SYCL
+    Memchkr:Uninit0
+    fun*:*
+    frm:*sycl*!*sycl*ExecCGCommand*
+}
+{
+    Problems in SYCL
+    Memchkr:Uninit0
+    frm:*sycl*!*sycl*event_impl*wait*
+}
+{
+    Problems in SYCL
+    Memchkr:Free
+    frm:*sycl*!*sycl*queue_impl*wait*
+}
+{
+    Problems in SYCL
+    Memchkr:Uninit0
+    frm:*sycl*!*sycl*queue_impl*wait*
+}
+{
+    Problems in SYCL
+    Memchkr:Free
+    frm:*sycl*!*sycl*queue_impl*dispose*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    frm:*sycl*!*sycl*context*device*function*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    frm:*sycl*!*sycl*ProgramManager*getBuiltPIProgram*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    fun*:*
+    frm:*sycl*!*sycl*ProgramManager*getBuiltPIProgram*
+}
+{
+    Problems in SYCL
+    Memchkr:Leak
+    frm:*sycl*!*sycl*ProgramManager*getOrCreateKernel*
+}
+{
+    Problems in TBB
+    Memchkr:Uninit0
+    fun*:*
+    frm:*tbb*!*private_worker*run*
+}
+{
+    Problems in OCL backend
+    Memchkr:PartialUninit0
+    fun*:*
+    frm:*OclCpuBackEnd*!*Instruction*getAllMetadataImpl*
+}
+{
+    Problems in OCL backend
+    Memchkr:PartialUninit0
+    fun*:*
+    frm:*OclCpuBackEnd*!*runOnMachineFunction*
+}

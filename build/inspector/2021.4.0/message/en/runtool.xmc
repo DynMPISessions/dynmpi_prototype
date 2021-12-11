@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+ Copyright © 2009-2021 Intel Corporation. All rights reserved.
+
+ The information contained herein is the exclusive property of
+ Intel Corporation and may not be disclosed, examined, or reproduced in
+ whole or in part without explicit written authorization from the Company.
+
+-->
+<xmc version="1.0">
+  <catalog name="runtool" lang="en">
+    <msg name='debug-create-file-fail'>
+      Failed to start a debug session because <arg name='prod_name'/> failed to create the initialization file.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='debug-win-open-fail-interrupt'>
+      Failed to start a debug session because of an interrupt.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='debug-win-open-fail-internal'>
+      Cannot determine if debug session startup succeeded (internal error occurred).<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='term-not-found'>
+      Failed to start a debug session because <arg name='arg1'/> was not found.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='term-not-executable'>
+      Failed to start a debug session because <arg name='arg1'/> is not executable.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='debugger-not-found'>
+      Failed to start a debug session because <arg name='arg1'/> was not found.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='debugger-not-executable'>
+      Failed to start a debug session because <arg name='arg1'/> is not executable.<br/>Suggestion: Open a debugger session manually.
+    </msg>
+    <msg name='debug-command'>
+      If the debug session fails to start automatically, try launching a debugging session manually with the following command: &#10;[debugger-path] <arg name='arg1'/>&#10;Then run the following commands in the debugging session:&#10;<arg name='arg2'/>
+    </msg>
+    <msg name='unknown-option'>
+      Unknown option: <arg name='arg1'/>
+    </msg>
+    <msg name='miss-app'>
+      Cannot run analysis because application parameter value is empty. Suggestion: Specify an application to analyze.
+    </msg>
+    <msg name='app-not-found'>
+      Cannot find application <arg name='arg1'/>. Suggestion: Make sure the application is in your path.
+    </msg>
+    <msg name='bad-result-dir'>
+      Cannot access result directory <arg name='arg1'/>. Suggestion: Make sure the result directory is not read-only and the pathname does not exceed <arg name='arg2'/> characters.
+    </msg>
+    <msg name='cannot-mkdir'>
+      Cannot create directory <arg name='arg1'/> or the directory is unusable. Suggestion: Make sure the directory is not read-only and the pathname does not exceed <arg name='arg2'/> characters.
+    </msg>
+    <msg name='finalized-dir'>
+      Result directory contents <arg name='arg1'/> are finalized. Suggestion: Specify another result directory.
+    </msg>
+    <msg name='option-file-not-found'>
+      Cannot find option file <arg name='arg1'/>. Suggestion: Specify another file.
+    </msg>
+    <msg name='resultdir-not-found'>
+      Result directory <arg name='arg1'/> is not found or empty. Suggestion: Specify valid path.
+    </msg>
+    <msg name='found-no-live-process'>
+      Cannot find analysis in progress for the specified result directory. The analysis was terminated or the result directory is invalid.
+    </msg>
+    <msg name='bad-option-file'>
+      Cannot process contents of option file <arg name='arg1'/>. Suggestion: Separate each option in the file with a newline character.
+    </msg>
+    <msg name='action-more-than-once'>
+      More than one action option was specified. Suggestion: Check your command and try again.
+    </msg>
+    <msg name='ctrlC-kill-analysis'>
+      Analysis was terminated by Ctrl + C.
+    </msg>
+    <msg name='no-executable-of-interest'>
+      Cannot find analysis results. Suggestion: Make sure that the application launched your executable of interest <arg name='arg1'/>.
+    </msg>
+    <msg name='path-too-long'>
+      Cannot create file. The path <arg name='arg1'/> exceeds <arg name='arg2'/> characters. Suggestion: Shorten the directory path and/or project name.
+    </msg>
+    <msg name="flock-failure">
+        File locking failed. Possible cause: File lock functionality (flock) is disabled in the file system. For example: This may happen with Lustre* file systems and will happen with NFS* file systems. Suggestion: Move the project directory to a file system with flock enabled, enable flock support on the current file system, or use the fcntl() function on an NFS file system.
+    </msg>
+    <msg name='command-error'>
+      Cannot communicate with the process.
+    </msg>
+    <msg name='internal-error'>
+      An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.
+    </msg>
+    <msg name='internal-error-with-log'>
+      An internal error has occurred. Our apologies for this inconvenience. Please gather a description of the steps leading up to the problem and contact the Intel customer support team.
+    </msg>
+    <msg name='internal-warning'>Non-fatal internal problem was detected and logged.</msg>
+    <msg name='external-error'>
+      An external error has occurred. <arg name='arg1'/> failed with error: <arg name='arg2'/>
+    </msg>
+    <msg name='collector-starts'>Analysis started...</msg>
+    <msg name='collector-done'>Analysis completed</msg>
+    <msg name='collector-canceled'>Analysis canceled by user</msg>
+    <msg name='collector-aborted'>Analysis terminated</msg>
+    <msg name='marker-file'>
+      Result file: <arg name='arg1'/>
+    </msg>
+    <msg name='log-start'>
+      === Start: [<arg name='arg1'/>] ===
+    </msg>
+    <msg name='log-end'>
+      === End: [<arg name='arg1'/>] ===
+    </msg>
+    <msg name='app-exit-code'>
+      Application exit code: <arg name='arg1'/>
+    </msg>
+    <msg name='press-any-key'>Press any key to continue . . . </msg>
+    <msg name='bandwidth-measurement-starts'>Peak bandwidth measurement started...</msg>
+    <msg name='bandwidth-measurement-done'>Peak bandwidth measurement finished.</msg>
+    <msg name='available-config'>Available analysis types:</msg>
+    <msg name='config-header'>
+      Name<arg name='arg1'/>Description
+    </msg>
+    <msg name='supported-report-types'>Supported report types are:</msg>
+    <msg name='invalid-report-format'><arg name='prod_short_name'/> does not support <arg name='arg1'/> format for the <arg name='arg2'/> report.</msg>
+    <msg name='collect-option-not-found'>Cannot find collection type to apply to analysis. Suggestion: To view available collection types, use -help collect.</msg>
+    <msg name='config-file-not-found'>
+      Cannot find collection type <arg name='arg1'/>. Suggestion: To view available collection types, use -help collect.
+    </msg>
+    <msg name='bad-config-file'>
+      Cannot find the analysis type defined in the file <arg name='arg1'/>. Suggestion: Edit the file or select a different file.
+    </msg>
+    <msg name='created-sup-file'>
+      Created suppression file <arg name='arg1'/> from <arg name='arg2'/>.
+    </msg>
+    <msg name='suppression-file-exists'>
+      Suppression file <arg name='arg1'/> already exists and will be overwritten.
+    </msg>
+    <msg name='suppression-file-not-found'>
+      Cannot find suppression file or directory <arg name='arg1'/>. Suggestion: Specify another file.
+    </msg>
+    <msg name='sup-files'>Used suppression file(s): <arg name='arg1'/></msg>
+     <msg name='suppression-file-not-exist'>
+      Suppression file <arg name='arg1'/> does not exist. Suggestion: Check the path and name specified, or specify a different suppression name.
+    </msg>
+    <msg name='convert-sup-file-failed'>
+      Unable to convert old format or third-party suppression file <arg name='arg1'/> to new suppression file <arg name='arg2'/>. <arg name='arg3'/>
+    </msg>
+    <msg name='convert-sup-file-incomplete'>
+      <arg name='arg1'/> requires option modifiers <arg name='arg2'/> and <arg name='arg3'/> to convert an old format or third-party suppression file.
+    </msg>
+    <msg name='converted-sup-file'>
+      Converted old format or third-party suppression file <arg name='arg1'/> to <arg name='arg2'/>.
+    </msg>
+    <msg name='problems-total'>
+      <arg name='arg1'/> new problem(s) found
+    </msg>
+    <msg name='problems-type'>
+      <arg name='arg1'/> problem(s) detected
+    </msg>
+    <msg name='bad-collect-setting'>
+      Cannot process analysis type settings in file <arg name='arg1'/>. Suggestion: Edit the file or select a different file.
+    </msg>
+    <msg name='miss-analysis-type'>
+      Cannot find analysis type settings in file <arg name='arg1'/>. Suggestion: Edit the file or select a different file.
+    </msg>
+    <msg name='miss-pdr-file'>
+      Cannot find data file for symbol resolution in directory <arg name='arg1'/>.
+    </msg>
+    <msg name='bad-pdr-file'>
+      Cannot load result file <arg name='arg1'/>. Suggestion: Check whether the file is correct and readable.
+    </msg>
+    <msg name='too-many-analysis-types'>
+      File <arg name='arg1'/> contains multiple analysis types. Only the first analysis will be launched.
+    </msg>
+    <msg name='sup-file-not-found'>
+      Cannot find suppression file <arg name='arg1'/>. Suggestion: Check its location and content.
+    </msg>
+    <msg name='license-error'>
+      <arg name='prod_name'/> license check failed. <arg name='arg1'/>
+    </msg>
+    <msg name='ssa-license-error'>
+      You do not have a valid license to view Static Analysis results. <arg name='arg1'/>
+    </msg>
+    <msg name='miss-import-file'>
+      Cannot open result because file <arg name='arg1'/> is missing.
+    </msg>
+    <msg name='invalid_archive_ext'>
+      <arg name='arg1'/> is not a valid archive extention. Using .inspxez instead
+    </msg>
+    <msg name='creating_archive'>
+      Creating archive <arg name='arg1'/> ...
+    </msg>
+    <msg name='archive_file_exists'>
+      Archive <arg name='arg1'/> already exists
+    </msg>
+    <msg name='archive_file_fail'>
+      Failed to create archive <arg name='arg1'/>
+    </msg>
+    <msg name='different-analysis-types'>
+      Cannot compare results. The selected results were collected using different analysis types: <arg name='arg1'/> and <arg name='arg2'/>. Suggestion: Choose results of the same analysis type.
+    </msg>
+    <msg name='load-error'>
+      Cannot load result <arg name='arg1'/>. <arg name='arg2'/>
+    </msg>
+    <msg name='load-warning'>
+      Encountered an issue while loading result [<arg name='arg1'/>]. <arg name='arg2'/>
+    </msg>
+    <msg name='merge-error'>
+      Cannot merge states. <arg name='arg1'/>
+    </msg>
+    <msg name='merge-warning'>
+      Encountered an issue while merging states. <arg name='arg1'/>
+    </msg>
+    <msg name='merged'>
+      Updated <arg name='arg1'/> based on states from <arg name='arg2'/>.
+    </msg>
+    <msg name='created-breakpoints'>
+      Created breakpoints for result <arg name='arg1'/>.
+    </msg>
+    <msg name='create-breakpoints-failed'>
+      Failed to create breakpoints for result <arg name='arg1'/>. <arg name='arg2'/>
+    </msg>
+    <msg name='create-all-breakpoints'>
+      Creating breakpoints for all problems.
+    </msg>
+    <msg name='breakpoint-file-exists'>
+      Overwriting existing breakpoints for result <arg name='arg1'/>.
+    </msg>
+    <msg name='invalid-breakpoint'>
+      Invalid problem breakpoint identifier <arg name='arg1'/>. Should be in the form Pn (where n is an integer) or all.
+    </msg>
+    <msg name='undebuggable-breakpoint'>
+      Cannot debug problem <arg name='arg1'/> of type <arg name='arg2'/>. Suggestion: Consult the product documentation for a list of problem types that can be debugged.
+    </msg>
+    <msg name='undebuggable-result'>
+      Debugging is not supported for <arg name='arg1'/> results; cannot create breakpoints for <arg name='arg2'/>. Suggestion: Consult the product documentation for a list of analysis types that can be debugged.
+    </msg>
+    <msg name='no-breakpoint'>
+      Cannot create breakpoints for the specified problem identifiers.
+    </msg>
+    <msg name='no-breakpoint-file'>
+      Problem breakpoints are not defined for result <arg name='arg1'/>. Suggestion: Use <arg name='arg2'/> to define problems to break on.
+    </msg>
+    <msg name='no-baseline-result'>
+      Missing argument. Use <arg name='arg2'/> and <arg name='arg1'/> together to provide a list of problems to break on.
+    </msg>
+    <msg name='validate-breakpoints'>
+      Checking if binary changed or moved since baseline result was created. This may take a few seconds...
+    </msg>
+    <msg name='module-checksum-failed'>
+      Binary for module <arg name='arg2'/> changed since creating baseline result <arg name='arg1'/>. Suggestion: Regenerate problem breakpoints using a newer result.
+    </msg>
+    <msg name='module-not-found'>
+      Cannot find module <arg name='arg2'/> used to create baseline result <arg name='arg1'/>. Suggestion: Regenerate problem breakpoints using a newer result.
+    </msg>
+    <msg name='breakpoints-check-failed'>
+      Cannot validate problem breakpoints. Suggestion: Regenerate problem breakpoints for the baseline result.
+    </msg>
+    <msg name='mrte-mode-depricated'>
+      Managed code (.NET) profiling is not supported. -mrte-mode option is ignored.
+    </msg>
+    <msg name='prepare-for-input'>Preparing for user input...</msg>
+    <msg name='parse-input'>Parsing user input...</msg>
+    <msg name='process-input'>Processing user input...</msg>
+    <msg name='modify-env'>Modifying analysis environment...</msg>
+    <msg name='mutually-exclusive-options'>
+      Mutually exclusive options: <arg name='arg1'/>
+    </msg>
+    <msg name='option-ignored'>
+      Option ignored: <arg name='arg1'/>
+    </msg>
+    <msg name='deprecated-option-ignored'>
+      Deprecated option ignored: <arg name='arg1'/>
+    </msg>
+    <msg name='f-starts'>
+      <arg name='arg1'/>
+    </msg>
+    <msg name='status'>
+      <arg name='arg1'/>
+    </msg>
+  </catalog>
+</xmc>

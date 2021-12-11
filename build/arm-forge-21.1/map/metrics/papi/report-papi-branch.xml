@@ -1,0 +1,39 @@
+<partialReport name="com.allinea.performancereports.papi"
+               xmlns="http://www.allinea.com/2016/AllineaReports">
+    <reportMetrics>
+        <reportMetric id="com.allinea.metrics.papi.total_instructions_b" displayName="Completed instructions" units="/s" colour="hsl(271, 75, 32)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.total_instructions_b" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.branch_instructions" displayName="Branch instructions" units="/s" colour="hsl(271, 75, 60)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.branch_instructions" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.mispredicted_branch_instructions" displayName="Mispredicted branches" units="/s" colour="hsl(271, 75, 45)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.mispredicted_branch_instructions" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>        
+    </reportMetrics>
+
+    <subsections>
+        <subsection id="PAPI-Branch"
+                    order="0"
+                    heading="PAPI Branches"
+                    colour="hsl(271, 75, 60)"
+                    requires="com.allinea.metrics.papi.branch_instructions"
+                    >
+
+            <text>PAPI branch prediction metrics (main thread only):</text>
+            
+            <entry  reportMetric="com.allinea.metrics.papi.total_instructions_b"
+                    order="-100"
+                    group="branch"/>
+            <entry  reportMetric="com.allinea.metrics.papi.branch_instructions"
+                    order="-90"
+                    group="branch"/>
+            <entry  reportMetric="com.allinea.metrics.papi.mispredicted_branch_instructions"
+                    order="-80"
+                    group="branch"/>
+
+        </subsection>
+    </subsections>
+</partialReport>

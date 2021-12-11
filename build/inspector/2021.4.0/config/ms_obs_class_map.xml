@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<maps>
+    <collection_map name='asdp.ms_obs_classes'>
+
+        <item name='obs_call_thr1' arg='1' />
+
+        <item name='obs_data_serial_alloc' arg='2' />
+        <item name='obs_data_serial_construct' arg='2'/>
+        <item name='obs_data_serial_read' arg='1' />
+        <item name='obs_data_serial_write' arg='1' />
+
+        <item name='obs_data_capture_alloc' arg='2' />
+        <item name='obs_data_capture_construct' arg='2'/>
+        <item name='obs_data_capture_read' arg='1' />
+        <item name='obs_data_capture_write' arg='1' />
+
+
+        <item name='obs_dealloc_alloc' arg='2' />
+        <item name='obs_dealloc_free' arg='2' />
+        <item name='obs_dealloc_invalid' arg='1' />
+        <item name='obs_dealloc_mismatch' arg='1' />
+        <item name='obs_dealloc_mismatch_crtheap' arg='1' />
+        <item name='obs_dealloc_mismatch_explicitheap' arg='1' />
+
+        <item name='obs_reachable_leak_alloc' arg='1' />
+        <item name='obs_reachable_leak_free' arg='2' />
+        <item name='obs_reachable_leak_thr1' arg='1' />
+
+        <item name='obs_leaked_alloc' arg='1' />
+        <item name='obs_leaked_free' arg='2' />
+        <item name='obs_leaked_thr1' arg='1' />
+
+        <item name='obs_acc_token_creation_site' arg='1' />
+        <item name='obs_chng_ntfy_creation_site'  arg='1' />
+        <item name='obs_crit_sec_creation_site'  arg='1' />
+        <item name='obs_desktop_creation_site'  arg='1' />
+        <item name='obs_event_log_creation_site'  arg='1' />
+        <item name='obs_file_or_device_creation_site'  arg='1' />
+        <item name='obs_find_creation_site'  arg='1' />
+        <item name='obs_kernel_obj_creation_site'  arg='1' />
+        <item name='obs_mem_res_ntfy_creation_site'  arg='1' />
+        <item name='obs_module_creation_site'  arg='1' />
+        <item name='obs_proc_or_thr_creation_site'  arg='1' />
+        <item name='obs_synch_obj_creation_site'  arg='1' />
+        <item name='obs_upd_res_creation_site'  arg='1' />
+        <item name='obs_win_station_creation_site'  arg='1' />
+
+        <item name='obs_dc_creation_site'  arg='1' />
+        <item name='obs_drawing_obj_creation_site'  arg='1' />
+        <item name='obs_metafile_creation_site'  arg='1' />
+        <item name='obs_metafile_dc_creation_site'  arg='1' />
+
+        <item name='obs_accel_table_creation_site'  arg='1' />
+        <item name='obs_caret_creation_site'  arg='1' />
+        <item name='obs_cursor_creation_site'  arg='1' />
+        <item name='obs_dde_conv_creation_site'  arg='1' />
+        <item name='obs_icon_creation_site'  arg='1' />
+        <item name='obs_menu_creation_site'  arg='1' />
+        <item name='obs_window_creation_site'  arg='1' />
+        <item name='obs_wnd_pos_creation_site'  arg='1' />
+        <item name='obs_wnd_hook_creation_site'  arg='1' />
+        <item name='obs_socket_creation_site' arg='1' />
+
+        <item name='obs_lock_dangling_alloc' arg='2' />
+        <item name='obs_lock_dangling_free' arg='2' />
+        <item name='obs_lock_dangling_site' arg='2' />
+        <item name='obs_lock_dangling_thr1' arg='1' />
+
+        <item name='obs_lock_inconsistent_alloc' arg='2' />
+        <item name='obs_lock_inconsistent_free' arg='2' />
+        <item name='obs_lock_inconsistent_construct' arg='2' />
+        <item name='obs_lock_inconsistent_read' arg='1' />
+        <item name='obs_lock_inconsistent_write' arg='1' />
+
+        <item name='obs_lock_uninit_alloc' arg='2' />
+        <item name='obs_lock_uninit_free' arg='2' />
+        <item name='obs_lock_uninit_site' arg='2' />
+        <item name='obs_lock_uninit_thr1' arg='1' />
+
+        <item name='obs_lockset1_defined' arg='2'/>
+        <item name='obs_lockset2_defined' arg='2'/>
+        <item name='obs_lockset2_thread' arg='2'/>
+
+        <item name='obs_mem_ctsa_alloc' arg='2' />
+        <item name='obs_mem_ctsa_owner' arg='1' />
+        <item name='obs_mem_ctsa_accessor' arg='1' />
+
+        <item name='obs_mem_invalid_alloc' arg='2' />
+        <item name='obs_mem_invalid_free' arg='2' />
+        <item name='obs_mem_invalid_read' arg='1' />
+        <item name='obs_mem_invalid_write' arg='1' />
+
+        <item name='obs_mem_invalid_partial_alloc' arg='2' />
+        <item name='obs_mem_invalid_partial_free' arg='2' />
+        <item name='obs_mem_invalid_partial_read' arg='1' />
+
+        <item name='obs_mem_sharable_alloc' arg='2' />
+        <item name='obs_mem_sharable_free' arg='2' />
+        <item name='obs_mem_sharable_thr1' arg='1' />
+        <item name='obs_mem_sharable_thr2' arg='1' />
+
+        <item name='obs_storage_flow_alloc' arg='2' />
+        <item name='obs_storage_flow_construct' arg='2'/>
+        <item name='obs_storage_flow_read' arg='1' />
+        <item name='obs_storage_flow_write' arg='1' />
+
+        <item name='obs_storage_reduction_alloc' arg='2' />
+        <item name='obs_storage_reduction_construct' arg='2'/>
+        <item name='obs_storage_reduction_read' arg='1' />
+        <item name='obs_storage_reduction_write' arg='1' />
+
+        <item name='obs_storage_reuse_alloc' arg='2' />
+        <item name='obs_storage_reuse_construct' arg='2' />
+        <item name='obs_storage_reuse_read' arg='1' />
+        <item name='obs_storage_reuse_write' arg='1' />
+
+        <item name='obs_storage_output_alloc' arg='2' />
+        <item name='obs_storage_output_construct' arg='2' />
+        <item name='obs_storage_output_write' arg='1' />
+
+        <item name='obs_mem_uninit_alloc' arg='2' />
+        <item name='obs_mem_uninit_free' arg='2' />
+        <item name='obs_mem_uninit_read' arg='1' />
+
+        <item name='obs_mem_uninit_partial_alloc' arg='2' />
+        <item name='obs_mem_uninit_partial_free' arg='2' />
+        <item name='obs_mem_uninit_partial_read' arg='1' />
+
+        <item name='obs_munmap_alloc' arg='2' />
+        <item name='obs_munmap_free' arg='2' />
+        <item name='obs_munmap_allocated' arg='1' />
+        <item name='obs_munmap_notmapped' arg='1' />
+
+        <item name='obs_int_leaked_alloc' arg='1' />
+        <item name='obs_int_leaked_free' arg='1' />
+        <item name='obs_int_leaked_thr1' arg='1' />
+        <item name='obs_int_start_thr1' arg='1' />
+        <item name='obs_int_end_thr1' arg='1' />
+
+        <item name='obs_race_alloc' arg='2' />
+        <item name='obs_race_free' arg='2' />
+        <item name='obs_race_write' arg='1' />
+        <item name='obs_race_read' arg='1' />
+        <item name='obs_race_alloc_g1' arg='2' />
+        <item name='obs_race_alloc_g2' arg='2' />
+
+        <item name='obs_site_create_construct' arg='1' />
+
+
+        <item name='obs_site_dangling_start' arg='1' />
+
+        <item name='obs_site_nobegin_end' arg='1' />
+        <item name='obs_site_nobegin_construct' arg='1' />
+
+        <item name='obs_sync_cycle_alloc' arg='2' />
+        <item name='obs_sync_cycle_acquire1' arg='1' />
+        <item name='obs_sync_cycle_acquire2' arg='1' />
+
+        <item name='obs_sync_cycle_whatif_alloc' arg='2' />
+        <item name='obs_sync_cycle_whatif_construct' arg='2' />
+        <item name='obs_sync_cycle_whatif_acquire1' arg='1' />
+        <item name='obs_sync_cycle_whatif_acquire2' arg='1' />
+
+        <item name='obs_sync_deadlock_alloc' arg='2' />
+        <item name='obs_sync_deadlock_acquire1' arg='1' />
+        <item name='obs_sync_deadlock_acquire2' arg='1' />
+
+        <item name='obs_sync_order_alloc' arg='2' />
+        <item name='obs_sync_order_release1' arg='1' />
+        <item name='obs_sync_order_release2' arg='1' />
+
+        <item name='obs_task_dangling_site' arg='2' />
+        <item name='obs_task_dangling_start_task' arg='1' />
+
+        <item name='obs_task_nobegin_site' arg='2' />
+        <item name='obs_task_nobegin_end_task' arg='1' />
+
+        <item name='obs_task_orphaned_start_task' arg='1' />
+        <item name='obs_task_orphaned_construct' arg='2' />
+
+        <item name='obs_task_none_site' arg='1' />
+
+        <item name='obs_task_one_site' arg='1' />
+
+        <item name='obs_thr_create_alloc' arg='2' />
+        <item name='obs_thr_create_free' arg='2' />
+        <item name='obs_thr_create_thr1' arg='2' />
+
+        <item name='obs_thr_create_whatif_alloc' arg='2' />
+        <item name='obs_thr_create_whatif_free' arg='2' />
+        <item name='obs_thr_create_whatif_construct' arg='2' />
+        <item name='obs_thr_create_whatif_thr1' arg='2' />
+
+        <item name='obs_thr_create_start_entry' arg='2' />
+        <item name='obs_thr_create_start_creation' arg='2' />
+
+        <item name='obs_thr_create_start_whatif_entry' arg='2' />
+        <item name='obs_thr_create_start_whatif_creation' arg='2' />
+        <item name='obs_thr_create_start_whatif_construct' arg='2' />
+
+        <item name='obs_thr_terminate_deadlock' arg='1' />
+
+        <item name='obs_observe_start' arg='1' />
+        <item name='obs_observe_construct' arg='2' />
+        <item name='obs_observe_read' arg='2' />
+        <item name='obs_observe_write' arg='2' />
+        <item name='obs_observe_update' arg='2' />
+
+        <item name='obs_sync_deadlock_whatif_alloc' arg='2' />
+        <item name='obs_sync_deadlock_whatif_construct' arg='2' />
+        <item name='obs_sync_deadlock_whatif_acquire1' arg='1' />
+        <item name='obs_sync_deadlock_whatif_acquire2' arg='1' />
+        <item name='obs_thr_terminate_deadlock_whatif' arg='1' />
+        <item name='obs_thr_terminate_deadlock_whatif_construct' arg='2' />
+        <item name='obs_thr_death_thr1' arg='2' />
+        <item name='obs_exception_thr1' arg='1' />
+        <item name='obs_thr_death_whatif_thr1' arg='2' />
+        <item name='obs_thr_death_whatif_construct' arg='2'/>
+        <item name='obs_exception_whatif_thr1' arg='1' />
+        <item name='obs_exception_whatif_site' arg='2' />
+
+
+        <item name='obs_x_leaked_alloc' arg='1' />
+        <item name='obs_x_leaked_free' arg='2' />
+        <item name='obs_x_leaked_cons' arg='2' />
+        <item name='obs_x_leaked_thr1' arg='1' />
+        <item name='obs_x_leaked_thr2' arg='1' />
+
+        <item name='obs_x_mem_invalid_alloc' arg='2' />
+        <item name='obs_x_mem_invalid_free' arg='2' />
+        <item name='obs_x_mem_invalid_cons' arg='2' />
+        <item name='obs_x_mem_invalid_thr1' arg='1' />
+        <item name='obs_x_mem_invalid_thr2' arg='1' />
+
+        <item name='obs_x_race_alloc' arg='2' />
+        <item name='obs_x_race_free' arg='2' />
+        <item name='obs_x_race_cons' arg='2' />
+        <item name='obs_x_race_write' arg='1' />
+        <item name='obs_x_race_read' arg='1' />
+
+        <item name='obs_x_race_lib_alloc' arg='2' />
+        <item name='obs_x_race_lib_free' arg='2' />
+        <item name='obs_x_race_lib_cons' arg='2' />
+        <item name='obs_x_race_lib_thr1' arg='1' />
+        <item name='obs_x_race_lib_thr2' arg='1' />
+
+        <item name='obs_x_sync_cycle_alloc' arg='2' />
+        <item name='obs_x_sync_cycle_free' arg='2' />
+        <item name='obs_x_sync_cycle_cons' arg='2' />
+        <item name='obs_x_sync_cycle_thr1' arg='1' />
+        <item name='obs_x_sync_cycle_thr2' arg='1' />
+
+        <item name='obs_x_sync_dangle_alloc' arg='2' />
+        <item name='obs_x_sync_dangle_free' arg='2' />
+        <item name='obs_x_sync_dangle_cons' arg='2' />
+        <item name='obs_x_sync_dangle_thr1' arg='1' />
+        <item name='obs_x_sync_dangle_thr2' arg='1' />
+
+        <item name='obs_x_sync_notify_alloc' arg='2' />
+        <item name='obs_x_sync_notify_free' arg='2' />
+        <item name='obs_x_sync_notify_cons' arg='2' />
+        <item name='obs_x_sync_notify_thr1' arg='1' />
+        <item name='obs_x_sync_notify_thr2' arg='1' />
+
+        <item name='obs_x_thr_cdecl_alloc' arg='2' />
+        <item name='obs_x_thr_cdecl_free' arg='2' />
+        <item name='obs_x_thr_cdecl_cons' arg='2' />
+        <item name='obs_x_thr_cdecl_thr1' arg='1' />
+        <item name='obs_x_thr_cdecl_thr2' arg='1' />
+
+        <item name='obs_x_thr_create_alloc' arg='2' />
+        <item name='obs_x_thr_create_free' arg='2' />
+        <item name='obs_x_thr_create_cons' arg='2' />
+        <item name='obs_x_thr_create_thr1' arg='1' />
+        <item name='obs_x_thr_create_thr2' arg='1' />
+
+        <item name='obs_x_thr_death_alloc' arg='2' />
+        <item name='obs_x_thr_death_free' arg='2' />
+        <item name='obs_x_thr_death_cons' arg='2' />
+        <item name='obs_x_thr_death_thr1' arg='1' />
+        <item name='obs_x_thr_death_thr2' arg='1' />
+
+        <item name='obs_x_thr_stall_infinite_alloc' arg='2' />
+        <item name='obs_x_thr_stall_infinite_free' arg='2' />
+        <item name='obs_x_thr_stall_infinite_cons' arg='2' />
+        <item name='obs_x_thr_stall_infinite_thr1' arg='1' />
+        <item name='obs_x_thr_stall_infinite_thr2' arg='1' />
+
+        <item name='obs_x_thr_stall_timed_alloc' arg='2' />
+        <item name='obs_x_thr_stall_timed_free' arg='2' />
+        <item name='obs_x_thr_stall_timed_cons' arg='2' />
+        <item name='obs_x_thr_stall_timed_thr1' arg='1' />
+        <item name='obs_x_thr_stall_timed_thr2' arg='1' />
+
+        <item name='obs_x_thr_stdcall_alloc' arg='2' />
+        <item name='obs_x_thr_stdcall_free' arg='2' />
+        <item name='obs_x_thr_stdcall_cons' arg='2' />
+        <item name='obs_x_thr_stdcall_thr1' arg='1' />
+        <item name='obs_x_thr_stdcall_thr2' arg='1' />
+
+        <item name='obs_x_thr_terminate_deadlock_alloc' arg='2' />
+        <item name='obs_x_thr_terminate_deadlock_free' arg='2' />
+        <item name='obs_x_thr_terminate_deadlock_cons' arg='2' />
+        <item name='obs_x_thr_terminate_deadlock_thr1' arg='1' />
+        <item name='obs_x_thr_terminate_deadlock_thr2' arg='1' />
+
+        <item name='obs_x_thr_wait_infinite_alloc' arg='2' />
+        <item name='obs_x_thr_wait_infinite_free' arg='2' />
+        <item name='obs_x_thr_wait_infinite_cons' arg='2' />
+        <item name='obs_x_thr_wait_infinite_thr1' arg='1' />
+        <item name='obs_x_thr_wait_infinite_thr2' arg='1' />
+
+        <item name='obs_x_thr_wait_timed_alloc' arg='2' />
+        <item name='obs_x_thr_wait_timed_free' arg='2' />
+        <item name='obs_x_thr_wait_timed_cons' arg='2' />
+        <item name='obs_x_thr_wait_timed_thr1' arg='1' />
+        <item name='obs_x_thr_wait_timed_thr2' arg='1' />
+
+        <item name='obs_x_race_cons_thread1' arg='1' />
+        <item name='obs_x_race_cons_thread2' arg='1' />
+        <item name='obs_x_not_local_alloc' arg='2' />
+        <item name='obs_x_thr_omp_for_private' arg='2' />
+        <item name='obs_x_thr_notloc_last_writer' arg='1' />
+        <item name='obs_x_thr_notloc_reader' arg='1' />
+        <item name='obs_x_par_undef_alloc' arg='2' />
+        <item name='obs_x_thr_omp_par_undef' arg='2' />
+        <item name='obs_x_thr_par_undef_last_writer' arg='1' />
+        <item name='obs_x_thr_par_undef_reader' arg='1' />
+        <item name='obs_x_thr_omp_osec_skip' arg='2' />
+        <item name='obs_x_thr_osec_skip_writer' arg='1' />
+        <item name='obs_x_thr_osec_skip_reader' arg='1' />
+        <item name='obs_x_thr_omp_sync_ws_omp_loop_loc' arg='2' />
+        <item name='obs_x_thr_omp_sync_ws_sync_or_master_loc' arg='1' />
+        <item name='obs_x_thr_omp_sync_ws_loop_body_block_loc' arg='1' />
+        <item name='obs_x_omp_partial_cmn_alloc' arg='2' />
+        <item name='obs_x_thr_omp_omp_partial_cmn_construct' arg='2' />
+        <item name='obs_x_thr_omp_partial_cmn_access1' arg='1' />
+        <item name='obs_x_thr_omp_partial_cmn_access2' arg='1' />
+        <item name='obs_x_ser_undef_alloc' arg='2' />
+        <item name='obs_x_thr_omp_ser_undef' arg='2' />
+        <item name='obs_x_thr_omp_ser_undef_last_writer' arg='1' />
+        <item name='obs_x_thr_omp_ser_undef_reader' arg='1' />
+        <item name='obs_x_thr_obj_use_create_location' arg='2' />
+        <item name='obs_x_thr_obj_use_create_user' arg='1' />
+        <item name='obs_x_thr_unlock_not_owned_lock_fn' arg='2' />
+        <item name='obs_x_thr_unlock_not_owned_lock_unlocker' arg='1' />
+        <item name='obs_x_thr_unlock_not_owned_lock_unlocker_copy' arg='1' />
+        <item name='obs_x_thr_api_value_arg_fn' arg='2' />
+        <item name='obs_x_thr_api_value_arg_bad_api_caller' arg='1' />
+        <item name='obs_x_thr_api_value_arg_bad_api_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_invalid_arg_fn' arg='2' />
+        <item name='obs_x_thr_api_invalid_arg_api_caller' arg='1' />
+        <item name='obs_x_thr_api_invalid_arg_api_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_null_arg_fn' arg='2' />
+        <item name='obs_x_thr_api_null_arg_api_caller' arg='1' />
+        <item name='obs_x_thr_api_null_arg_api_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_mutex_arg_bad_fn' arg='2' />
+        <item name='obs_x_thr_api_mutex_arg_fn_caller' arg='1' />
+        <item name='obs_x_thr_api_mutex_arg_fn_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_event_arg_bad_fn' arg='2' />
+        <item name='obs_x_thr_api_event_arg_fn_caller' arg='1' />
+        <item name='obs_x_thr_api_event_arg_fn_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_semaphore_arg_bad_fn' arg='2' />
+        <item name='obs_x_thr_api_semaphore_arg_fn_caller' arg='1' />
+        <item name='obs_x_thr_api_semaphore_arg_fn_caller_copy' arg='1' />
+        <item name='obs_x_thr_api_thread_arg_bad_fn' arg='2' />
+        <item name='obs_x_thr_api_thread_arg_fn_caller' arg='1' />
+        <item name='obs_x_thr_api_thread_arg_fn_caller_copy' arg='1' />
+        <item name='obs_x_thr_omp_no_ordered_non_ordered_pragma_loc' arg='2' />
+        <item name='obs_x_thr_omp_no_ordered_ordered_pragma_loc' arg='1' />
+        <item name='obs_x_thr_omp_no_ordered_ordered_pragma_loc_copy' arg='1' />
+        <item name='obs_x_thr_omp_sync_ordered_parallel_pragma_loc' arg='2' />
+        <item name='obs_x_thr_omp_sync_ordered_sync_pragma_loc' arg='1' />
+        <item name='obs_x_thr_omp_sync_ordered_ordered_pragma_loc' arg='1' />
+        <item name='obs_x_thr_api_errorcode_function' arg='2' />
+        <item name='obs_x_thr_api_errorcode_api_violator' arg='1' />
+        <item name='obs_x_inf_hold_n_wait_func' arg='2' />
+        <item name='obs_x_thr_inf_hold_n_wait_wait_call' arg='2' />
+        <item name='obs_x_thr_inf_hold_n_wait_lock1' arg='1' />
+        <item name='obs_x_thr_inf_hold_n_wait_wait_call_copy' arg='1' />
+        <item name='obs_x_timed_hold_n_wait_event_alloc' arg='2' />
+        <item name='obs_x_thr_timed_hold_n_wait_fn' arg='1' />
+        <item name='obs_x_thr_timed_hold_n_wait_thread1_create' arg='1' />
+        <item name='obs_x_thr_timed_hold_n_wait_wait_loc' arg='2' />
+        <item name='obs_x_thr_deadlock_terminate_fn' arg='2' />
+        <item name='obs_x_thr_deadlock_terminate_thread' arg='1' />
+        <item name='obs_x_thr_deadlock_terminate_thread_copy' arg='1' />
+        <item name='obs_x_thr_omp_priv_not_on_stack_pragma' arg='1' />
+        <item name='obs_x_thr_omp_priv_not_on_stack_pragma_copy' arg='1' />
+        <item name='obs_x_thr_omp_priv_not_on_stack_pragma_copy2' arg='1' />
+
+        <!-- MAP observations -->
+        <item name='obs_site_end' arg='1' />
+        <item name='obs_site' arg='2' />
+        <item name='obs_uniform_stride_thr1' arg='1' />
+        <item name='obs_uniform_stride_read_thr1' arg='1' />
+        <item name='obs_uniform_stride_write_thr1' arg='1' />
+        <item name='obs_uniform_stride_readwrite_thr1' arg='1' />
+        <item name='obs_uniform_stride_data_loc' arg='2' />
+        <item name='obs_unit_stride_thr1' arg='1' />
+        <item name='obs_unit_stride_read_thr1' arg='1' />
+        <item name='obs_unit_stride_write_thr1' arg='1' />
+        <item name='obs_unit_stride_readwrite_thr1' arg='1' />
+        <item name='obs_unit_stride_data_loc' arg='2' />
+        <item name='obs_const_unit_stride_thr1' arg='1' />
+        <item name='obs_const_unit_stride_read_thr1' arg='1' />
+        <item name='obs_const_unit_stride_write_thr1' arg='1' />
+        <item name='obs_const_unit_stride_readwrite_thr1' arg='1' />
+        <item name='obs_const_unit_stride_data_loc' arg='2' />
+        <item name='obs_variable_stride_thr1' arg='1' />
+        <item name='obs_variable_stride_read_thr1' arg='1' />
+        <item name='obs_variable_stride_write_thr1' arg='1' />
+        <item name='obs_variable_stride_readwrite_thr1' arg='1' />
+        <item name='obs_variable_stride_data_loc' arg='2' />
+        <item name='obs_gather_stride_thr1' arg='1' />
+        <item name='obs_gather_stride_read_thr1' arg='1' />
+        <item name='obs_gather_stride_data_loc' arg='2' />
+        <item name='obs_scatter_stride_thr1' arg='1' />
+        <item name='obs_scatter_stride_write_thr1' arg='1' />
+        <item name='obs_scatter_stride_data_loc' arg='2' />
+
+
+        <!-- SC observations -->
+        <item name='OBS_BAD_DEREF_PRIMARY' arg='1' />
+        <item name='OBS_BAD_MOD_PRIMARY' arg='1' />
+        <item name='OBS_BAD_OPER_PRIMARY' arg='1' />
+        <item name='OBS_BAD_USE_PRIMARY' arg='1' />
+        <item name='OBS_BUFF_OVERFLOW_PRIMARY' arg='1' />
+        <item name='OBS_DEF_PRIMARY' arg='1' />
+        <item name='OBS_DEF_SECONDARY' arg='2' />
+        <item name='OBS_DIV_ZERO_PRIMARY' arg='1' />
+        <item name='OBS_EX_THROW_PRIMARY' arg='1' />
+        <item name='OBS_FMT_MISMATCH_PRIMARY' arg='1' />
+        <item name='OBS_FUNC_CALL_PRIMARY' arg='1' />
+        <item name='OBS_FUNC_CALL_SECONDARY' arg='2' />
+        <item name='OBS_INFINITE_LOOP_PRIMARY' arg='1' />
+        <item name='OBS_INT_OVERFLOW_PRIMARY' arg='1' />
+        <item name='OBS_INT_UNDERFLOW_PRIMARY' arg='1' />
+        <item name='OBS_MEM_ALLOC_PRIMARY' arg='1' />
+        <item name='OBS_MEM_ALLOC_SECONDARY' arg='2' />
+        <item name='OBS_MEM_LEAK_PRIMARY' arg='1' />
+        <item name='OBS_MISS_DEF_SECONDARY' arg='2' />
+        <item name='OBS_MOD_PRIMARY' arg='1' />
+        <item name='OBS_MOD_SECONDARY' arg='2' />
+        <item name='OBS_NULL_DEREF_PRIMARY' arg='1' />
+        <item name='OBS_OMP_DIR_DECL_PRIMARY' arg='1' />
+        <item name='OBS_OMP_DIR_DECL_SECONDARY' arg='2' />
+        <item name='OBS_OMP_DIR_MISUSE_PRIMARY' arg='1' />
+        <item name='OBS_OMP_VIOLATION_PRIMARY' arg='1' />
+        <item name='OBS_SUSPISIOUS_ASSIGN_PRIMARY' arg='1' />
+        <item name='OBS_TYPE_CONV_PRIMARY' arg='1' />
+        <item name='OBS_UNINIT_READ_PRIMARY' arg='1' />
+        <item name='OBS_UNINIT_USE_PRIMARY' arg='1' />
+        <item name='OBS_UNKNOWN' arg='1' />
+        <item name='OBS_UNREACH_PRIMARY' arg='1' />
+        <item name='OBS_USE_PRIMARY' arg='1' />
+        <item name='OBS_USE_SECONDARY' arg='2' />
+
+        <!-- Persistent Inspector observations -->
+        <item name='obs_flush' arg='1' />
+        <item name='obs_flush_redundant' arg='1' />
+        <item name='obs_mem_store' arg='1' />
+        <item name='obs_mem_store_main' arg='1' />
+        <item name='obs_mem_store_prev' arg='2' />
+        <item name='obs_mem_store_not_fenced' arg='1' />
+        <item name='obs_mem_store_unflushed' arg='1' />
+        <item name='obs_mem_store_no_backup' arg='1' />
+        <item name='obs_mem_load' arg='2' />
+        <item name='obs_mem_load_prev' arg='2' />
+        <item name='obs_fence_redundant' arg='1' />
+        <item name='obs_unmap' arg='1' />
+        <item name='obs_tx_begin' arg='2' />
+        <item name='obs_tx_begin_without_end' arg='1' />
+        <item name='obs_tx_snapshot' arg='1' />
+        <item name='obs_tx_redundant_snapshot' arg='1' />
+        <item name='obs_tx_api_usage' arg='1' />
+        <item name='obs_invalid_kernel_arg_alloc' arg='2' />
+        <item name='obs_invalid_kernel_arg_thr1' arg='1' />
+        <item name='obs_host_ptr_on_device_alloc' arg='2' />
+        <item name='obs_host_ptr_on_device_thr1' arg='1' />
+        <item name='obs_ptr_from_other_device_alloc' arg='2' />
+        <item name='obs_ptr_from_other_device_thr1' arg='1' />
+        <item name='obs_mismatch_queue_alloc' arg='2' />
+        <item name='obs_mismatch_queue_thr1' arg='1' />
+        <item name='obs_non_host_ptr_alloc' arg='2' />
+        <item name='obs_non_host_ptr_thr1' arg='1' />
+        <item name='obs_async_buffer_alloc' arg='2' />
+        <item name='obs_async_buffer_thr1' arg='1' />
+        <item name='obs_invalid_kernel_arg_size' arg='1' />
+
+    </collection_map>
+</maps>

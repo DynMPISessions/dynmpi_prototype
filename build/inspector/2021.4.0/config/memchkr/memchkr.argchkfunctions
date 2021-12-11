@@ -1,0 +1,12 @@
+#
+# Copyright (C) 2012 Intel Corporation.  All Rights Reserved.
+# 
+
+# list of functions that we want to check their arguments
+__memcpy
+__bcopy
+memcpy
+bcopy
+__GI_memcpy
+__GI_bcopy
+memmove

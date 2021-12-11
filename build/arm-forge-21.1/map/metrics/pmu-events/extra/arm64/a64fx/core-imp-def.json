@@ -1,0 +1,1102 @@
+// Copyright© 2019 Fujitsu Limited, 4-1-1 Kamikodanaka, Nakahara-ku, Kawasaki, 211-8588, Japan. All rights reserved.
+// Distributed under prior written authorization of Fujitsu Limited.
+[
+    {
+        "BriefDescription": "This event counts on writes to the PMSWINC register.",
+        "EventCode": "0x0000",
+        "EventName": "SW_INCR",
+        "PublicDescription": "This event counts on writes to the PMSWINC register."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a refill of the L1I cache.See L1I_CACHE_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0001",
+        "EventName": "L1I_CACHE_REFILL",
+        "PublicDescription": "This event counts operations that cause a refill of the L1I cache.See L1I_CACHE_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB refill of the L1I TLB.See L1I_TLB_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0002",
+        "EventName": "L1I_TLB_REFILL",
+        "PublicDescription": "This event counts operations that cause a TLB refill of the L1I TLB.See L1I_TLB_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a refill of the L1D cache.See L1D_CACHE_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0003",
+        "EventName": "L1D_CACHE_REFILL",
+        "PublicDescription": "This event counts operations that cause a refill of the L1D cache.See L1D_CACHE_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a cache access to the L1D cache.See L1D_CACHE of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0004",
+        "EventName": "L1D_CACHE",
+        "PublicDescription": "This event counts operations that cause a cache access to the L1D cache.See L1D_CACHE of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB refill of the L1D TLB.See L1D_TLB_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0005",
+        "EventName": "L1D_TLB_REFILL",
+        "PublicDescription": "This event counts operations that cause a TLB refill of the L1D TLB.See L1D_TLB_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts every architecturally executed instruction.",
+        "EventCode": "0x0008",
+        "EventName": "INST_RETIRED",
+        "PublicDescription": "This event counts every architecturally executed instruction."
+    },
+    {
+        "BriefDescription": "This event counts each exception taken.",
+        "EventCode": "0x0009",
+        "EventName": "EXC_TAKEN",
+        "PublicDescription": "This event counts each exception taken."
+    },
+    {
+        "BriefDescription": "This event counts each executed exception return instruction.",
+        "EventCode": "0x000a",
+        "EventName": "EXC_RETURN",
+        "PublicDescription": "This event counts each executed exception return instruction."
+    },
+    {
+        "BriefDescription": "This event counts every write to CONTEXTIDR.",
+        "EventCode": "0x000b",
+        "EventName": "CID_WRITE_RETIRED",
+        "PublicDescription": "This event counts every write to CONTEXTIDR."
+    },
+    {
+        "BriefDescription": "This event counts each correction to the predicted program flow that occurs because of a misprediction from, or noprediction from, the branch prediction resources and that relates to instructions that the branch prediction resourcesare capable of predicting.",
+        "EventCode": "0x0010",
+        "EventName": "BR_MIS_PRED",
+        "PublicDescription": "This event counts each correction to the predicted program flow that occurs because of a misprediction from, or noprediction from, the branch prediction resources and that relates to instructions that the branch prediction resourcesare capable of predicting."
+    },
+    {
+        "BriefDescription": "This event counts every cycle.",
+        "EventCode": "0x0011",
+        "EventName": "CPU_CYCLES",
+        "PublicDescription": "This event counts every cycle."
+    },
+    {
+        "BriefDescription": "This event counts every branch or other change in the program flow that the branch prediction resources arecapable of predicting.",
+        "EventCode": "0x0012",
+        "EventName": "BR_PRED",
+        "PublicDescription": "This event counts every branch or other change in the program flow that the branch prediction resources arecapable of predicting."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a cache access to the L1I cache.See L1I_CACHE of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0014",
+        "EventName": "L1I_CACHE",
+        "PublicDescription": "This event counts operations that cause a cache access to the L1I cache.See L1I_CACHE of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts every write-back of data from the L1D cache.See L1D_CACHE_WB of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0015",
+        "EventName": "L1D_CACHE_WB",
+        "PublicDescription": "This event counts every write-back of data from the L1D cache.See L1D_CACHE_WB of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a cache access to the L2 cache.See L2D_CACHE of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0016",
+        "EventName": "L2D_CACHE",
+        "PublicDescription": "This event counts operations that cause a cache access to the L2 cache.See L2D_CACHE of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a refill of the L2 cache.See L2D_CACHE_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0017",
+        "EventName": "L2D_CACHE_REFILL",
+        "PublicDescription": "This event counts operations that cause a refill of the L2 cache.See L2D_CACHE_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts every write-back of data from the L2 cache.See L2D_CACHE_WB of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0018",
+        "EventName": "L2D_CACHE_WB",
+        "PublicDescription": "This event counts every write-back of data from the L2 cache.See L2D_CACHE_WB of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts every architecturally executed instruction.",
+        "EventCode": "0x001b",
+        "EventName": "INST_SPEC",
+        "PublicDescription": "This event counts every architecturally executed instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle counted by the CPU_CYCLES event on that no operation was issued because thereare no operations available to issue for this PE from the frontend.",
+        "EventCode": "0x0023",
+        "EventName": "STALL_FRONTEND",
+        "PublicDescription": "This event counts every cycle counted by the CPU_CYCLES event on that no operation was issued because thereare no operations available to issue for this PE from the frontend."
+    },
+    {
+        "BriefDescription": "This event counts every cycle counted by the CPU_CYCLES event on that no operation was issued because thebackend is unable to accept any operations.",
+        "EventCode": "0x0024",
+        "EventName": "STALL_BACKEND",
+        "PublicDescription": "This event counts every cycle counted by the CPU_CYCLES event on that no operation was issued because thebackend is unable to accept any operations."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB refill of the L2D TLB.See L2D_TLB_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x002d",
+        "EventName": "L2D_TLB_REFILL",
+        "PublicDescription": "This event counts operations that cause a TLB refill of the L2D TLB.See L2D_TLB_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB refill of the L2I TLB.See L2I_TLB_REFILL of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x002e",
+        "EventName": "L2I_TLB_REFILL",
+        "PublicDescription": "This event counts operations that cause a TLB refill of the L2I TLB.See L2I_TLB_REFILL of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB access to the L2D TLB.See L2D_TLB of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x002f",
+        "EventName": "L2D_TLB",
+        "PublicDescription": "This event counts operations that cause a TLB access to the L2D TLB.See L2D_TLB of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts operations that cause a TLB access to the L2I TLB.See L2I_TLB of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0030",
+        "EventName": "L2I_TLB",
+        "PublicDescription": "This event counts operations that cause a TLB access to the L2I TLB.See L2I_TLB of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts L1D_CACHE_REFILL caused by software or hardware prefetch.6",
+        "EventCode": "0x0049",
+        "EventName": "L1D_CACHE_REFILL_PRF",
+        "PublicDescription": "This event counts L1D_CACHE_REFILL caused by software or hardware prefetch.6"
+    },
+    {
+        "BriefDescription": "This event counts L2D_CACHE_REFILL caused by software or hardware prefetch.",
+        "EventCode": "0x0059",
+        "EventName": "L2D_CACHE_REFILL_PRF",
+        "PublicDescription": "This event counts L2D_CACHE_REFILL caused by software or hardware prefetch."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed load-exclusive instructions.",
+        "EventCode": "0x006c",
+        "EventName": "LDREX_SPEC",
+        "PublicDescription": "This event counts architecturally executed load-exclusive instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed store-exclusive instructions.",
+        "EventCode": "0x006f",
+        "EventName": "STREX_SPEC",
+        "PublicDescription": "This event counts architecturally executed store-exclusive instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed memory-reading instructions, as defined by the LD_RETIRED event.",
+        "EventCode": "0x0070",
+        "EventName": "LD_SPEC",
+        "PublicDescription": "This event counts architecturally executed memory-reading instructions, as defined by the LD_RETIRED event."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed memory-writing instructions, as defined by the ST_RETIRED event.This event counts DCZVA as a store operation.",
+        "EventCode": "0x0071",
+        "EventName": "ST_SPEC",
+        "PublicDescription": "This event counts architecturally executed memory-writing instructions, as defined by the ST_RETIRED event.This event counts DCZVA as a store operation."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed memory-reading instructions and memory-writing instructions, asdefined by the LD_RETIRED and ST_RETIRED events.",
+        "EventCode": "0x0072",
+        "EventName": "LDST_SPEC",
+        "PublicDescription": "This event counts architecturally executed memory-reading instructions and memory-writing instructions, asdefined by the LD_RETIRED and ST_RETIRED events."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed integer data-processing instructions.See DP_SPEC of ARMv8 Reference Manual for more information.",
+        "EventCode": "0x0073",
+        "EventName": "DP_SPEC",
+        "PublicDescription": "This event counts architecturally executed integer data-processing instructions.See DP_SPEC of ARMv8 Reference Manual for more information."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed Advanced SIMD data-processing instructions.",
+        "EventCode": "0x0074",
+        "EventName": "ASE_SPEC",
+        "PublicDescription": "This event counts architecturally executed Advanced SIMD data-processing instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed floating-point data-processing instructions.",
+        "EventCode": "0x0075",
+        "EventName": "VFP_SPEC",
+        "PublicDescription": "This event counts architecturally executed floating-point data-processing instructions."
+    },
+    {
+        "BriefDescription": "This event counts only software changes of the PC that defined by the instruction architecturally executed,condition code check pass, software change of the PC event.",
+        "EventCode": "0x0076",
+        "EventName": "PC_WRITE_SPEC",
+        "PublicDescription": "This event counts only software changes of the PC that defined by the instruction architecturally executed,condition code check pass, software change of the PC event."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed cryptographic instructions, except PMULL and VMULL.",
+        "EventCode": "0x0077",
+        "EventName": "CRYPTO_SPEC",
+        "PublicDescription": "This event counts architecturally executed cryptographic instructions, except PMULL and VMULL."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed immediate branch instructions.",
+        "EventCode": "0x0078",
+        "EventName": "BR_IMMED_SPEC",
+        "PublicDescription": "This event counts architecturally executed immediate branch instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed procedure return operations that defined by theBR_RETURN_RETIRED event.",
+        "EventCode": "0x0079",
+        "EventName": "BR_RETURN_SPEC",
+        "PublicDescription": "This event counts architecturally executed procedure return operations that defined by theBR_RETURN_RETIRED event."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed indirect branch instructions that includes software change of the PCother than exception-generating instructions and immediate branch instructions.",
+        "EventCode": "0x007a",
+        "EventName": "BR_INDIRECT_SPEC",
+        "PublicDescription": "This event counts architecturally executed indirect branch instructions that includes software change of the PCother than exception-generating instructions and immediate branch instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed Instruction Synchronization Barrier instructions.",
+        "EventCode": "0x007c",
+        "EventName": "ISB_SPEC",
+        "PublicDescription": "This event counts architecturally executed Instruction Synchronization Barrier instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed Data Synchronization Barrier instructions.",
+        "EventCode": "0x007d",
+        "EventName": "DSB_SPEC",
+        "PublicDescription": "This event counts architecturally executed Data Synchronization Barrier instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed Data Memory Barrier instructions, excluding the implied barrieroperations of load/store operations with release consistency semantics.",
+        "EventCode": "0x007e",
+        "EventName": "DMB_SPEC",
+        "PublicDescription": "This event counts architecturally executed Data Memory Barrier instructions, excluding the implied barrieroperations of load/store operations with release consistency semantics."
+    },
+    {
+        "BriefDescription": "This event counts only other synchronous exceptions that are taken locally.",
+        "EventCode": "0x0081",
+        "EventName": "EXC_UNDEF",
+        "PublicDescription": "This event counts only other synchronous exceptions that are taken locally."
+    },
+    {
+        "BriefDescription": "This event counts only Supervisor Call exceptions that are taken locally.",
+        "EventCode": "0x0082",
+        "EventName": "EXC_SVC",
+        "PublicDescription": "This event counts only Supervisor Call exceptions that are taken locally."
+    },
+    {
+        "BriefDescription": "This event counts only Instruction Abort exceptions that are taken locally.",
+        "EventCode": "0x0083",
+        "EventName": "EXC_PABORT",
+        "PublicDescription": "This event counts only Instruction Abort exceptions that are taken locally."
+    },
+    {
+        "BriefDescription": "This event counts only Data Abort or SError interrupt exceptions that are taken locally.",
+        "EventCode": "0x0084",
+        "EventName": "EXC_DABORT",
+        "PublicDescription": "This event counts only Data Abort or SError interrupt exceptions that are taken locally."
+    },
+    {
+        "BriefDescription": "This event counts only IRQ exceptions that are taken locally, including Virtual IRQ exceptions.",
+        "EventCode": "0x0086",
+        "EventName": "EXC_IRQ",
+        "PublicDescription": "This event counts only IRQ exceptions that are taken locally, including Virtual IRQ exceptions."
+    },
+    {
+        "BriefDescription": "This event counts only FIQ exceptions that are taken locally, including Virtual FIQ exceptions.",
+        "EventCode": "0x0087",
+        "EventName": "EXC_FIQ",
+        "PublicDescription": "This event counts only FIQ exceptions that are taken locally, including Virtual FIQ exceptions."
+    },
+    {
+        "BriefDescription": "This event counts only Secure Monitor Call exceptions.The counter does not increment on SMC instructions trapped as a Hyp Trap exception.",
+        "EventCode": "0x0088",
+        "EventName": "EXC_SMC",
+        "PublicDescription": "This event counts only Secure Monitor Call exceptions.The counter does not increment on SMC instructions trapped as a Hyp Trap exception."
+    },
+    {
+        "BriefDescription": "This event counts for both Hypervisor Call exceptions taken locally in the hypervisor and those taken as anexception from Non-secure EL1.",
+        "EventCode": "0x008a",
+        "EventName": "EXC_HVC",
+        "PublicDescription": "This event counts for both Hypervisor Call exceptions taken locally in the hypervisor and those taken as anexception from Non-secure EL1."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed zero blocking operations due to the \"DC ZVA\"instruction.",
+        "EventCode": "0x009f",
+        "EventName": "DCZVA_SPEC",
+        "PublicDescription": "This event counts architecturally executed zero blocking operations due to the \"DC ZVA\"instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed floating-point move operations.",
+        "EventCode": "0x0105",
+        "EventName": "FP_MV_SPEC",
+        "PublicDescription": "This event counts architecturally executed floating-point move operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that using predicate register.",
+        "EventCode": "0x0108",
+        "EventName": "PRD_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that using predicate register."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed inter-element manipulation operations.",
+        "EventCode": "0x0109",
+        "EventName": "IEL_SPEC",
+        "PublicDescription": "This event counts architecturally executed inter-element manipulation operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed inter-register manipulation operations.",
+        "EventCode": "0x010a",
+        "EventName": "IREG_SPEC",
+        "PublicDescription": "This event counts architecturally executed inter-register manipulation operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed NOSIMD load operations that using SIMD&FP registers.",
+        "EventCode": "0x0112",
+        "EventName": "FP_LD_SPEC",
+        "PublicDescription": "This event counts architecturally executed NOSIMD load operations that using SIMD&FP registers."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed NOSIMD store operations that using SIMD&FP registers.",
+        "EventCode": "0x0113",
+        "EventName": "FP_ST_SPEC",
+        "PublicDescription": "This event counts architecturally executed NOSIMD store operations that using SIMD&FP registers."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SIMD broadcast floating-point load operations.",
+        "EventCode": "0x011a",
+        "EventName": "BC_LD_SPEC",
+        "PublicDescription": "This event counts architecturally executed SIMD broadcast floating-point load operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed instructions, excluding the MOVPRFX instruction.",
+        "EventCode": "0x0121",
+        "EventName": "EFFECTIVE_INST_SPEC",
+        "PublicDescription": "This event counts architecturally executed instructions, excluding the MOVPRFX instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that uses \"pre-index\"as its addressing mode.",
+        "EventCode": "0x0123",
+        "EventName": "PRE_INDEX_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that uses \"pre-index\"as its addressing mode."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that uses \"post-index\"as its addressing mode.",
+        "EventCode": "0x0124",
+        "EventName": "POST_INDEX_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that uses \"post-index\"as its addressing mode."
+    },
+    {
+        "BriefDescription": "This event counts the occurrence count of the micro-operation split.",
+        "EventCode": "0x0139",
+        "EventName": "UOP_SPLIT",
+        "PublicDescription": "This event counts the occurrence count of the micro-operation split."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no operation was committed because the oldest and uncommittedload/store/prefetch operation waits for memory access.",
+        "EventCode": "0x0180",
+        "EventName": "LD_COMP_WAIT_L2_MISS",
+        "PublicDescription": "This event counts every cycle that no operation was committed because the oldest and uncommittedload/store/prefetch operation waits for memory access."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for memory access.",
+        "EventCode": "0x0181",
+        "EventName": "LD_COMP_WAIT_L2_MISS_EX",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for memory access."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommittedload/store/prefetch operation waits for L2 cache access.",
+        "EventCode": "0x0182",
+        "EventName": "LD_COMP_WAIT_L1_MISS",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommittedload/store/prefetch operation waits for L2 cache access."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for L2 cache access.A64FX PMU Events 1.2",
+        "EventCode": "0x0183",
+        "EventName": "LD_COMP_WAIT_L1_MISS_EX",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for L2 cache access.A64FX PMU Events 1.2"
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommittedload/store/prefetch operation waits for L1D cache, L2 cache and memory access.",
+        "EventCode": "0x0184",
+        "EventName": "LD_COMP_WAIT",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommittedload/store/prefetch operation waits for L1D cache, L2 cache and memory access."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for L1D cache, L2 cache and memory access.",
+        "EventCode": "0x0185",
+        "EventName": "LD_COMP_WAIT_EX",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the oldest and uncommitted integer loadoperation waits for L1D cache, L2 cache and memory access."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed due to the lack of an available prefetch port.",
+        "EventCode": "0x0186",
+        "EventName": "LD_COMP_WAIT_PFP_BUSY",
+        "PublicDescription": "This event counts every cycle that no instruction was committed due to the lack of an available prefetch port."
+    },
+    {
+        "BriefDescription": "This event counts the LD_COMP_WAIT_PFP_BUSY caused by an integer load operation.",
+        "EventCode": "0x0187",
+        "EventName": "LD_COMP_WAIT_PFP_BUSY_EX",
+        "PublicDescription": "This event counts the LD_COMP_WAIT_PFP_BUSY caused by an integer load operation."
+    },
+    {
+        "BriefDescription": "This event counts the LD_COMP_WAIT_PFP_BUSY caused by a software prefetch instruction.",
+        "EventCode": "0x0188",
+        "EventName": "LD_COMP_WAIT_PFP_BUSY_SWPF",
+        "PublicDescription": "This event counts the LD_COMP_WAIT_PFP_BUSY caused by a software prefetch instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is aninteger or floating-point/SIMD instruction.",
+        "EventCode": "0x0189",
+        "EventName": "EU_COMP_WAIT",
+        "PublicDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is aninteger or floating-point/SIMD instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is afloating-point/SIMD instruction.",
+        "EventCode": "0x018a",
+        "EventName": "FL_COMP_WAIT",
+        "PublicDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is afloating-point/SIMD instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is abranch instruction.",
+        "EventCode": "0x018b",
+        "EventName": "BR_COMP_WAIT",
+        "PublicDescription": "This event counts every cycle that no instruction was committed and the oldest and uncommitted instruction is abranch instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the CSE is empty.",
+        "EventCode": "0x018c",
+        "EventName": "ROB_EMPTY",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the CSE is empty."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed because the CSE is empty and the store port (SP)is full.",
+        "EventCode": "0x018d",
+        "EventName": "ROB_EMPTY_STQ_BUSY",
+        "PublicDescription": "This event counts every cycle that no instruction was committed because the CSE is empty and the store port (SP)is full."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that the instruction unit is halted by the WFE/WFI instruction.",
+        "EventCode": "0x018e",
+        "EventName": "WFE_WFI_CYCLE",
+        "PublicDescription": "This event counts every cycle that the instruction unit is halted by the WFE/WFI instruction."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that no instruction was committed, but counts at the time when commits MOVPRFXonly.",
+        "EventCode": "0x0190",
+        "EventName": "INST_COMMIT_0",
+        "PublicDescription": "This event counts every cycle that no instruction was committed, but counts at the time when commits MOVPRFXonly."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that one instruction is committed.",
+        "EventCode": "0x0191",
+        "EventName": "INST_COMMIT_1",
+        "PublicDescription": "This event counts every cycle that one instruction is committed."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that two instructions are committed.",
+        "EventCode": "0x0192",
+        "EventName": "INST_COMMIT_2",
+        "PublicDescription": "This event counts every cycle that two instructions are committed."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that three instructions are committed.10",
+        "EventCode": "0x0193",
+        "EventName": "INST_COMMIT_3",
+        "PublicDescription": "This event counts every cycle that three instructions are committed.10"
+    },
+    {
+        "BriefDescription": "This event counts every cycle that four instructions are committed.",
+        "EventCode": "0x0194",
+        "EventName": "INST_COMMIT_4",
+        "PublicDescription": "This event counts every cycle that four instructions are committed."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that only any micro-operations are committed.",
+        "EventCode": "0x0198",
+        "EventName": "UOP_ONLY_COMMIT",
+        "PublicDescription": "This event counts every cycle that only any micro-operations are committed."
+    },
+    {
+        "BriefDescription": "This event counts every cycle that only the MOVPRFX instruction is committed.",
+        "EventCode": "0x0199",
+        "EventName": "SINGLE_MOVPRFX_COMMIT",
+        "PublicDescription": "This event counts every cycle that only the MOVPRFX instruction is committed."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of EAGA pipeline.",
+        "EventCode": "0x01a0",
+        "EventName": "EAGA_VAL",
+        "PublicDescription": "This event counts valid cycles of EAGA pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of EAGB pipeline.",
+        "EventCode": "0x01a1",
+        "EventName": "EAGB_VAL",
+        "PublicDescription": "This event counts valid cycles of EAGB pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of EXA pipeline.",
+        "EventCode": "0x01a2",
+        "EventName": "EXA_VAL",
+        "PublicDescription": "This event counts valid cycles of EXA pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of EXB pipeline.",
+        "EventCode": "0x01a3",
+        "EventName": "EXB_VAL",
+        "PublicDescription": "This event counts valid cycles of EXB pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of FLA pipeline.",
+        "EventCode": "0x01a4",
+        "EventName": "FLA_VAL",
+        "PublicDescription": "This event counts valid cycles of FLA pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of FLB pipeline.",
+        "EventCode": "0x01a5",
+        "EventName": "FLB_VAL",
+        "PublicDescription": "This event counts valid cycles of FLB pipeline."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of PRX pipeline.",
+        "EventCode": "0x01a6",
+        "EventName": "PRX_VAL",
+        "PublicDescription": "This event counts valid cycles of PRX pipeline."
+    },
+    {
+        "BriefDescription": "This event counts the number of 1's in the predicate bits of request in FLA pipeline, where it is corrected so that itbecomes 16 when all bits are 1.",
+        "EventCode": "0x01b4",
+        "EventName": "FLA_VAL_PRD_CNT",
+        "PublicDescription": "This event counts the number of 1's in the predicate bits of request in FLA pipeline, where it is corrected so that itbecomes 16 when all bits are 1."
+    },
+    {
+        "BriefDescription": "This event counts the number of 1's in the predicate bits of request in FLB pipeline, where it is corrected so that itbecomes 16 when all bits are 1.",
+        "EventCode": "0x01b5",
+        "EventName": "FLB_VAL_PRD_CNT",
+        "PublicDescription": "This event counts the number of 1's in the predicate bits of request in FLB pipeline, where it is corrected so that itbecomes 16 when all bits are 1."
+    },
+    {
+        "BriefDescription": "This event counts energy consumption per cycle of core.",
+        "EventCode": "0x01e0",
+        "EventName": "EA_CORE",
+        "PublicDescription": "This event counts energy consumption per cycle of core."
+    },
+    {
+        "BriefDescription": "This event counts L1D_CACHE_REFILL caused by demand access.",
+        "EventCode": "0x0200",
+        "EventName": "L1D_CACHE_REFILL_DM",
+        "PublicDescription": "This event counts L1D_CACHE_REFILL caused by demand access."
+    },
+    {
+        "BriefDescription": "This event counts L1D_CACHE_REFILL caused by hardware prefetch.",
+        "EventCode": "0x0202",
+        "EventName": "L1D_CACHE_REFILL_HWPRF",
+        "PublicDescription": "This event counts L1D_CACHE_REFILL caused by hardware prefetch."
+    },
+    {
+        "BriefDescription": "This event counts outstanding L1D cache miss requests per cycle.",
+        "EventCode": "0x0208",
+        "EventName": "L1_MISS_WAIT",
+        "PublicDescription": "This event counts outstanding L1D cache miss requests per cycle."
+    },
+    {
+        "BriefDescription": "This event counts outstanding L1I cache miss requests per cycle.",
+        "EventCode": "0x0209",
+        "EventName": "L1I_MISS_WAIT",
+        "PublicDescription": "This event counts outstanding L1I cache miss requests per cycle."
+    },
+    {
+        "BriefDescription": "This event counts streaming prefetch requests to L1D cache generated by hardware prefetcher.",
+        "EventCode": "0x0230",
+        "EventName": "L1HWPF_STREAM_PF",
+        "PublicDescription": "This event counts streaming prefetch requests to L1D cache generated by hardware prefetcher."
+    },
+    {
+        "BriefDescription": "This event counts allocation type prefetch injection requests to L1D cache generated by hardware prefetcher.",
+        "EventCode": "0x0231",
+        "EventName": "L1HWPF_INJ_ALLOC_PF",
+        "PublicDescription": "This event counts allocation type prefetch injection requests to L1D cache generated by hardware prefetcher."
+    },
+    {
+        "BriefDescription": "This event counts non-allocation type prefetch injection requests to L1D cache generated by hardware prefetcher.",
+        "EventCode": "0x0232",
+        "EventName": "L1HWPF_INJ_NOALLOC_PF",
+        "PublicDescription": "This event counts non-allocation type prefetch injection requests to L1D cache generated by hardware prefetcher."
+    },
+    {
+        "BriefDescription": "This event counts streaming prefetch requests to L2 cache generated by hardware prefecher.",
+        "EventCode": "0x0233",
+        "EventName": "L2HWPF_STREAM_PF",
+        "PublicDescription": "This event counts streaming prefetch requests to L2 cache generated by hardware prefecher."
+    },
+    {
+        "BriefDescription": "This event counts allocation type prefetch injection requests to L2 cache generated by hardware prefetcher.",
+        "EventCode": "0x0234",
+        "EventName": "L2HWPF_INJ_ALLOC_PF",
+        "PublicDescription": "This event counts allocation type prefetch injection requests to L2 cache generated by hardware prefetcher."
+    },
+    {
+        "BriefDescription": "This event counts non-allocation type prefetch injection requests to L2 cache generated by hardware prefetcher.",
+        "EventCode": "0x0235",
+        "EventName": "L2HWPF_INJ_NOALLOC_PF",
+        "PublicDescription": "This event counts non-allocation type prefetch injection requests to L2 cache generated by hardware prefetcher."
+    },
+    {
+        "BriefDescription": "This event counts prefetch requests to L2 cache generated by the other causes.",
+        "EventCode": "0x0236",
+        "EventName": "L2HWPF_OTHER",
+        "PublicDescription": "This event counts prefetch requests to L2 cache generated by the other causes."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of L1D cache pipeline#0.",
+        "EventCode": "0x0240",
+        "EventName": "L1_PIPE0_VAL",
+        "PublicDescription": "This event counts valid cycles of L1D cache pipeline#0."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of L1D cache pipeline#1.",
+        "EventCode": "0x0241",
+        "EventName": "L1_PIPE1_VAL",
+        "PublicDescription": "This event counts valid cycles of L1D cache pipeline#1."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#0 that its sce bit of tagged address is 1.",
+        "EventCode": "0x0250",
+        "EventName": "L1_PIPE0_VAL_IU_TAG_ADRS_SCE",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#0 that its sce bit of tagged address is 1."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#0 that its pfe bit of tagged address is 1.",
+        "EventCode": "0x0251",
+        "EventName": "L1_PIPE0_VAL_IU_TAG_ADRS_PFE",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#0 that its pfe bit of tagged address is 1."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#1 that its sce bit of tagged address is 1.",
+        "EventCode": "0x0252",
+        "EventName": "L1_PIPE1_VAL_IU_TAG_ADRS_SCE",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#1 that its sce bit of tagged address is 1."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#1 that its pfe bit of tagged address is 1.",
+        "EventCode": "0x0253",
+        "EventName": "L1_PIPE1_VAL_IU_TAG_ADRS_PFE",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#1 that its pfe bit of tagged address is 1."
+    },
+    {
+        "BriefDescription": "This event counts completed requests in L1D cache pipeline#0.",
+        "EventCode": "0x0260",
+        "EventName": "L1_PIPE0_COMP",
+        "PublicDescription": "This event counts completed requests in L1D cache pipeline#0."
+    },
+    {
+        "BriefDescription": "This event counts completed requests in L1D cache pipeline#1.",
+        "EventCode": "0x0261",
+        "EventName": "L1_PIPE1_COMP",
+        "PublicDescription": "This event counts completed requests in L1D cache pipeline#1."
+    },
+    {
+        "BriefDescription": "This event counts completed requests in L1I cache pipeline.12",
+        "EventCode": "0x0268",
+        "EventName": "L1I_PIPE_COMP",
+        "PublicDescription": "This event counts completed requests in L1I cache pipeline.12"
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of L1I cache pipeline.",
+        "EventCode": "0x0269",
+        "EventName": "L1I_PIPE_VAL",
+        "PublicDescription": "This event counts valid cycles of L1I cache pipeline."
+    },
+    {
+        "BriefDescription": "This event counts aborted requests in L1D pipelines that due to store-load interlock.",
+        "EventCode": "0x0274",
+        "EventName": "L1_PIPE_ABORT_STLD_INTLK",
+        "PublicDescription": "This event counts aborted requests in L1D pipelines that due to store-load interlock."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#0 that its sector cache ID is not 0.",
+        "EventCode": "0x02a0",
+        "EventName": "L1_PIPE0_VAL_IU_NOT_SEC0",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#0 that its sector cache ID is not 0."
+    },
+    {
+        "BriefDescription": "This event counts requests in L1D cache pipeline#1 that its sector cache ID is not 0.",
+        "EventCode": "0x02a1",
+        "EventName": "L1_PIPE1_VAL_IU_NOT_SEC0",
+        "PublicDescription": "This event counts requests in L1D cache pipeline#1 that its sector cache ID is not 0."
+    },
+    {
+        "BriefDescription": "This event counts the number of times where 2 elements of the gather instructions became 2 flows because 2elements could not be combined.",
+        "EventCode": "0x02b0",
+        "EventName": "L1_PIPE_COMP_GATHER_2FLOW",
+        "PublicDescription": "This event counts the number of times where 2 elements of the gather instructions became 2 flows because 2elements could not be combined."
+    },
+    {
+        "BriefDescription": "This event counts the number of times where 2 elements of the gather instructions became 1 flow because 2elements could be combined.",
+        "EventCode": "0x02b1",
+        "EventName": "L1_PIPE_COMP_GATHER_1FLOW",
+        "PublicDescription": "This event counts the number of times where 2 elements of the gather instructions became 1 flow because 2elements could be combined."
+    },
+    {
+        "BriefDescription": "This event counts the number of times where 2 elements of the gather instructions became 0 flow because bothpredicate values are 0.",
+        "EventCode": "0x02b2",
+        "EventName": "L1_PIPE_COMP_GATHER_0FLOW",
+        "PublicDescription": "This event counts the number of times where 2 elements of the gather instructions became 0 flow because bothpredicate values are 0."
+    },
+    {
+        "BriefDescription": "This event counts the number of flows of the scatter instructions.",
+        "EventCode": "0x02b3",
+        "EventName": "L1_PIPE_COMP_SCATTER_1FLOW",
+        "PublicDescription": "This event counts the number of flows of the scatter instructions."
+    },
+    {
+        "BriefDescription": "This event counts the number of 1's in the predicate bits of request in L1D cache pipeline#0, where it is correctedso that it becomes 16 when all bits are 1.",
+        "EventCode": "0x02b8",
+        "EventName": "L1_PIPE0_COMP_PRD_CNT",
+        "PublicDescription": "This event counts the number of 1's in the predicate bits of request in L1D cache pipeline#0, where it is correctedso that it becomes 16 when all bits are 1."
+    },
+    {
+        "BriefDescription": "This event counts the number of 1's in the predicate bits of request in L1D cache pipeline#1, where it is correctedso that it becomes 16 when all bits are 1.",
+        "EventCode": "0x02b9",
+        "EventName": "L1_PIPE1_COMP_PRD_CNT",
+        "PublicDescription": "This event counts the number of 1's in the predicate bits of request in L1D cache pipeline#1, where it is correctedso that it becomes 16 when all bits are 1."
+    },
+    {
+        "BriefDescription": "This event counts L2D_CACHE_REFILL caused by demand access.",
+        "EventCode": "0x0300",
+        "EventName": "L2D_CACHE_REFILL_DM",
+        "PublicDescription": "This event counts L2D_CACHE_REFILL caused by demand access."
+    },
+    {
+        "BriefDescription": "This event counts L2D_CACHE_REFILL caused by hardware prefetch.",
+        "EventCode": "0x0302",
+        "EventName": "L2D_CACHE_REFILL_HWPRF",
+        "PublicDescription": "This event counts L2D_CACHE_REFILL caused by hardware prefetch."
+    },
+    {
+        "BriefDescription": "This event counts outstanding L2 cache miss requests per cycle.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0308",
+        "EventName": "L2_MISS_WAIT",
+        "PublicDescription": "This event counts outstanding L2 cache miss requests per cycle.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts the number of times of L2 cache miss.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0309",
+        "EventName": "L2_MISS_COUNT",
+        "PublicDescription": "This event counts the number of times of L2 cache miss.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts read transactions from tofu controller to measured CMG.It counts all events caused in measured CMG regardless of measured PE.A64FX PMU Events 1.2",
+        "EventCode": "0x0314",
+        "EventName": "BUS_READ_TOTAL_TOFU",
+        "PublicDescription": "This event counts read transactions from tofu controller to measured CMG.It counts all events caused in measured CMG regardless of measured PE.A64FX PMU Events 1.2"
+    },
+    {
+        "BriefDescription": "This event counts read transactions from PCI controller to measured CMG.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0315",
+        "EventName": "BUS_READ_TOTAL_PCI",
+        "PublicDescription": "This event counts read transactions from PCI controller to measured CMG.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts read transactions from measured CMG local memory to measured CMG.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0316",
+        "EventName": "BUS_READ_TOTAL_MEM",
+        "PublicDescription": "This event counts read transactions from measured CMG local memory to measured CMG.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to CMG0, if measured CMG is not CMG0.Otherwise, this event counts write transactions from measured CMG to CMG0 local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0318",
+        "EventName": "BUS_WRITE_TOTAL_CMG0",
+        "PublicDescription": "This event counts write transactions from measured CMG to CMG0, if measured CMG is not CMG0.Otherwise, this event counts write transactions from measured CMG to CMG0 local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to CMG1, if measured CMG is not CMG1.Otherwise, this event counts write transactions from measured CMG to CMG1 local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0319",
+        "EventName": "BUS_WRITE_TOTAL_CMG1",
+        "PublicDescription": "This event counts write transactions from measured CMG to CMG1, if measured CMG is not CMG1.Otherwise, this event counts write transactions from measured CMG to CMG1 local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to CMG2, if measured CMG is not CMG2.Otherwise, this event counts write transactions from measured CMG to CMG2 local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x031a",
+        "EventName": "BUS_WRITE_TOTAL_CMG2",
+        "PublicDescription": "This event counts write transactions from measured CMG to CMG2, if measured CMG is not CMG2.Otherwise, this event counts write transactions from measured CMG to CMG2 local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to CMG3, if measured CMG is not CMG3.Otherwise, this event counts write transactions from measured CMG to CMG3 local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x031b",
+        "EventName": "BUS_WRITE_TOTAL_CMG3",
+        "PublicDescription": "This event counts write transactions from measured CMG to CMG3, if measured CMG is not CMG3.Otherwise, this event counts write transactions from measured CMG to CMG3 local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to tofu controller.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x031c",
+        "EventName": "BUS_WRITE_TOTAL_TOFU",
+        "PublicDescription": "This event counts write transactions from measured CMG to tofu controller.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to PCI controller.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x031d",
+        "EventName": "BUS_WRITE_TOTAL_PCI",
+        "PublicDescription": "This event counts write transactions from measured CMG to PCI controller.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts write transactions from measured CMG to measured CMG local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x031e",
+        "EventName": "BUS_WRITE_TOTAL_MEM",
+        "PublicDescription": "This event counts write transactions from measured CMG to measured CMG local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts operations where demand access hits an L2 cache refill buffer allocated by software or hardwareprefetch.",
+        "EventCode": "0x0325",
+        "EventName": "L2D_SWAP_DM",
+        "PublicDescription": "This event counts operations where demand access hits an L2 cache refill buffer allocated by software or hardwareprefetch."
+    },
+    {
+        "BriefDescription": "This event counts operations where software or hardware prefetch hits an L2 cache refill buffer allocated bydemand access.",
+        "EventCode": "0x0326",
+        "EventName": "L2D_CACHE_MIBMCH_PRF",
+        "PublicDescription": "This event counts operations where software or hardware prefetch hits an L2 cache refill buffer allocated bydemand access."
+    },
+    {
+        "BriefDescription": "This event counts valid cycles of L2 cache pipeline.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0330",
+        "EventName": "L2_PIPE_VAL",
+        "PublicDescription": "This event counts valid cycles of L2 cache pipeline.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts completed requests in L2 cache pipeline.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0350",
+        "EventName": "L2_PIPE_COMP_ALL",
+        "PublicDescription": "This event counts completed requests in L2 cache pipeline.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts operations where software or hardware prefetch hits an L2 cache refill buffer allocated bydemand access.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0370",
+        "EventName": "L2_PIPE_COMP_PF_L2MIB_MCH",
+        "PublicDescription": "This event counts operations where software or hardware prefetch hits an L2 cache refill buffer allocated bydemand access.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts operations where demand access hits an L2 cache refill buffer allocated by software or hardwareprefetch.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x0396",
+        "EventName": "L2D_CACHE_SWAP_LOCAL",
+        "PublicDescription": "This event counts operations where demand access hits an L2 cache refill buffer allocated by software or hardwareprefetch.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts energy consumption per cycle of L2 cache.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x03e0",
+        "EventName": "EA_L2",
+        "PublicDescription": "This event counts energy consumption per cycle of L2 cache.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts energy consumption per cycle of CMG local memory.It counts all events caused in measured CMG regardless of measured PE.",
+        "EventCode": "0x03e8",
+        "EventName": "EA_MEMORY",
+        "PublicDescription": "This event counts energy consumption per cycle of CMG local memory.It counts all events caused in measured CMG regardless of measured PE."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SIMD instructions, excluding the Advanced SIMD scalar instructionsand the instructions listed in Non-SIMD SVE instructions section of SVE Reference Manual.",
+        "EventCode": "0x8000",
+        "EventName": "SIMD_INST_RETIRED",
+        "PublicDescription": "This event counts architecturally executed SIMD instructions, excluding the Advanced SIMD scalar instructionsand the instructions listed in Non-SIMD SVE instructions section of SVE Reference Manual."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SVE instructions, including the instructions listed in Non-SIMD SVEinstructions section of SVE Reference Manual.",
+        "EventCode": "0x8002",
+        "EventName": "SVE_INST_RETIRED",
+        "PublicDescription": "This event counts architecturally executed SVE instructions, including the instructions listed in Non-SIMD SVEinstructions section of SVE Reference Manual."
+    },
+    {
+        "BriefDescription": "This event counts all architecturally executed micro-operations.",
+        "EventCode": "0x8008",
+        "EventName": "UOP_SPEC",
+        "PublicDescription": "This event counts all architecturally executed micro-operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed math function operations due to the SVE FTSMUL, FTMAD, FTSSEL,and FEXPA instructions.",
+        "EventCode": "0x800e",
+        "EventName": "SVE_MATH_SPEC",
+        "PublicDescription": "This event counts architecturally executed math function operations due to the SVE FTSMUL, FTMAD, FTSSEL,and FEXPA instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations due to scalar, Advanced SIMD, and SVE instructions listedin Floating-point instructions section of SVE Reference Manual.",
+        "EventCode": "0x8010",
+        "EventName": "FP_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations due to scalar, Advanced SIMD, and SVE instructions listedin Floating-point instructions section of SVE Reference Manual."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed floating-point fused multiply-add and multiply-subtract operations.",
+        "EventCode": "0x8028",
+        "EventName": "FP_FMA_SPEC",
+        "PublicDescription": "This event counts architecturally executed floating-point fused multiply-add and multiply-subtract operations."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed floating-point reciprocal estimate operations due to the Advanced SIMDscalar, Advanced SIMD vector, and SVE FRECPE and FRSQRTE instructions.",
+        "EventCode": "0x8034",
+        "EventName": "FP_RECPE_SPEC",
+        "PublicDescription": "This event counts architecturally executed floating-point reciprocal estimate operations due to the Advanced SIMDscalar, Advanced SIMD vector, and SVE FRECPE and FRSQRTE instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed floating-point convert operations due to the scalar, Advanced SIMD,and SVE floating-point conversion instructions listed in Floating-point conversions section of SVE ReferenceManual.",
+        "EventCode": "0x8038",
+        "EventName": "FP_CVT_SPEC",
+        "PublicDescription": "This event counts architecturally executed floating-point convert operations due to the scalar, Advanced SIMD,and SVE floating-point conversion instructions listed in Floating-point conversions section of SVE ReferenceManual."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed integer arithmetic operations due to Advanced SIMD and SVE dataprocessing instructions listed in Integer instructions section of SVE Reference Manual.",
+        "EventCode": "0x8043",
+        "EventName": "ASE_SVE_INT_SPEC",
+        "PublicDescription": "This event counts architecturally executed integer arithmetic operations due to Advanced SIMD and SVE dataprocessing instructions listed in Integer instructions section of SVE Reference Manual."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SIMD data-processing and load/store operations due to SVEinstructions with a Governing predicate operand that determines the Active elements.",
+        "EventCode": "0x8074",
+        "EventName": "SVE_PRED_SPEC",
+        "PublicDescription": "This event counts architecturally executed SIMD data-processing and load/store operations due to SVEinstructions with a Governing predicate operand that determines the Active elements."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations due to MOVPRFX instructions, whether or not they werefused with the prefixed instruction.",
+        "EventCode": "0x807c",
+        "EventName": "SVE_MOVPRFX_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations due to MOVPRFX instructions, whether or not they werefused with the prefixed instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations due to MOVPRFX instructions that were not fused with theprefixed instruction.",
+        "EventCode": "0x807f",
+        "EventName": "SVE_MOVPRFX_U_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations due to MOVPRFX instructions that were not fused with theprefixed instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to SVE and Advanced SIMDload instructions.16",
+        "EventCode": "0x8085",
+        "EventName": "ASE_SVE_LD_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to SVE and Advanced SIMDload instructions.16"
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to SVE and Advanced SIMD storeinstructions.",
+        "EventCode": "0x8086",
+        "EventName": "ASE_SVE_ST_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to SVE and Advanced SIMD storeinstructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed prefetch operations due to scalar PRFM and SVE PRF instructions.",
+        "EventCode": "0x8087",
+        "EventName": "PRF_SPEC",
+        "PublicDescription": "This event counts architecturally executed prefetch operations due to scalar PRFM and SVE PRF instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to an instruction that loads ageneral-purpose register.",
+        "EventCode": "0x8089",
+        "EventName": "BASE_LD_REG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to an instruction that loads ageneral-purpose register."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to an instruction that stores ageneral-purpose register, excluding the \"DC ZVA\"instruction.",
+        "EventCode": "0x808a",
+        "EventName": "BASE_ST_REG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to an instruction that stores ageneral-purpose register, excluding the \"DC ZVA\"instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to an SVE LDR instruction.",
+        "EventCode": "0x8091",
+        "EventName": "SVE_LDR_REG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to an SVE LDR instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to an SVE STR instruction.",
+        "EventCode": "0x8092",
+        "EventName": "SVE_STR_REG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to an SVE STR instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to an SVE LDR (predicate)instruction.",
+        "EventCode": "0x8095",
+        "EventName": "SVE_LDR_PREG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to an SVE LDR (predicate)instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to an SVE STR (predicate)instruction.",
+        "EventCode": "0x8096",
+        "EventName": "SVE_STR_PREG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to an SVE STR (predicate)instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that prefetch memory due to an SVE predicated singlecontiguous element prefetch instruction.",
+        "EventCode": "0x809f",
+        "EventName": "SVE_PRF_CONTIG_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that prefetch memory due to an SVE predicated singlecontiguous element prefetch instruction."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to SVE and Advanced SIMDmultiple vector contiguous structure load instructions.",
+        "EventCode": "0x80a5",
+        "EventName": "ASE_SVE_LD_MULTI_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to SVE and Advanced SIMDmultiple vector contiguous structure load instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to SVE and Advanced SIMDmultiple vector contiguous structure store instructions.",
+        "EventCode": "0x80a6",
+        "EventName": "ASE_SVE_ST_MULTI_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to SVE and Advanced SIMDmultiple vector contiguous structure store instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that read from memory due to SVE non-contiguous gatherload instructions.",
+        "EventCode": "0x80ad",
+        "EventName": "SVE_LD_GATHER_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that read from memory due to SVE non-contiguous gatherload instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that write to memory due to SVE non-contiguous scatterstore instructions.",
+        "EventCode": "0x80ae",
+        "EventName": "SVE_ST_SCATTER_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that write to memory due to SVE non-contiguous scatterstore instructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed operations that prefetch memory due to SVE non-contiguous gatherprefetch instructions.A64FX PMU Events 1.2",
+        "EventCode": "0x80af",
+        "EventName": "SVE_PRF_GATHER_SPEC",
+        "PublicDescription": "This event counts architecturally executed operations that prefetch memory due to SVE non-contiguous gatherprefetch instructions.A64FX PMU Events 1.2"
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed memory read operations due to SVE First-fault and Non-fault loadinstructions.",
+        "EventCode": "0x80bc",
+        "EventName": "SVE_LDFF_SPEC",
+        "PublicDescription": "This event counts architecturally executed memory read operations due to SVE First-fault and Non-fault loadinstructions."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SVE arithmetic operations.See FP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by (128 / CSIZE) and by twice that amount for operations that would also becounted by SVE_FP_FMA_SPEC.",
+        "EventCode": "0x80c0",
+        "EventName": "FP_SCALE_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed SVE arithmetic operations.See FP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by (128 / CSIZE) and by twice that amount for operations that would also becounted by SVE_FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed v8SIMD&FP arithmetic operations.See FP_FIXED_OPS_SPEC of SVE Reference Manual for more information.The event counter is incremented by the specified number of elements for Advanced SIMD operations or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC.",
+        "EventCode": "0x80c1",
+        "EventName": "FP_FIXED_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed v8SIMD&FP arithmetic operations.See FP_FIXED_OPS_SPEC of SVE Reference Manual for more information.The event counter is incremented by the specified number of elements for Advanced SIMD operations or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SVE half-precision arithmetic operations.See FP_HP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 8, or by 16 for operations that would also be counted bySVE_FP_FMA_SPEC.",
+        "EventCode": "0x80c2",
+        "EventName": "FP_HP_SCALE_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed SVE half-precision arithmetic operations.See FP_HP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 8, or by 16 for operations that would also be counted bySVE_FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed v8SIMD&FP half-precision arithmetic operations.See FP_HP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by the number of 16-bit elements for Advanced SIMD operations, or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC.",
+        "EventCode": "0x80c3",
+        "EventName": "FP_HP_FIXED_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed v8SIMD&FP half-precision arithmetic operations.See FP_HP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by the number of 16-bit elements for Advanced SIMD operations, or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SVE single-precision arithmetic operations.See FP_SP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 4, or by 8 for operations that would also be counted bySVE_FP_FMA_SPEC.",
+        "EventCode": "0x80c4",
+        "EventName": "FP_SP_SCALE_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed SVE single-precision arithmetic operations.See FP_SP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 4, or by 8 for operations that would also be counted bySVE_FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed v8SIMD&FP single-precision arithmetic operations.See FP_SP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by the number of 32-bit elements for Advanced SIMD operations, or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC.",
+        "EventCode": "0x80c5",
+        "EventName": "FP_SP_FIXED_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed v8SIMD&FP single-precision arithmetic operations.See FP_SP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by the number of 32-bit elements for Advanced SIMD operations, or by 1 forscalar operations, and by twice those amounts for operations that would also be counted by FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed SVE double-precision arithmetic operations.See FP_DP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 2, or by 4 for operations that would also be counted bySVE_FP_FMA_SPEC.",
+        "EventCode": "0x80c6",
+        "EventName": "FP_DP_SCALE_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed SVE double-precision arithmetic operations.See FP_DP_SCALE_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 2, or by 4 for operations that would also be counted bySVE_FP_FMA_SPEC."
+    },
+    {
+        "BriefDescription": "This event counts architecturally executed v8SIMD&FP double-precision arithmetic operations.See FP_DP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 2 for Advanced SIMD operations, or by 1 for scalar operations, and by twicethose amounts for operations that would also be counted by FP_FMA_SPEC.",
+        "EventCode": "0x80c7",
+        "EventName": "FP_DP_FIXED_OPS_SPEC",
+        "PublicDescription": "This event counts architecturally executed v8SIMD&FP double-precision arithmetic operations.See FP_DP_FIXED_OPS_SPEC of SVE Reference Manual for more information.This event counter is incremented by 2 for Advanced SIMD operations, or by 1 for scalar operations, and by twicethose amounts for operations that would also be counted by FP_FMA_SPEC."
+    }
+]

@@ -1,0 +1,15 @@
+"""
+Script for gathering information about the current node.
+"""
+import sys
+import os
+
+if sys.version_info < (2, 7):
+    print("This script requires at least python2.7")
+    sys.exit(1)
+
+sys.path.append('{}/../map/metrics/pmu-events/'.format(
+    os.path.realpath(os.path.dirname(__file__))))
+from probe import main
+
+main()

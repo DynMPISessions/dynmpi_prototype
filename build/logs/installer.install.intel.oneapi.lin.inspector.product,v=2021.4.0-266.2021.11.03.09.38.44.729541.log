@@ -1,0 +1,60 @@
+11/03/2021 09:38:45:059 : 1489522 : MESSAGE : /home/dominik/intel/oneapi/installer/installer is run with arguments: --log-dir /tmp/dominik/intel_oneapi_installer/2021.11.03.09.38.26.188 --product-id intel.oneapi.lin.inspector.product --product-ver 2021.4.0-266 --package-path /home/dominik/Downloads/l_inspector_oneapi_p_2021.4.0.266/packages
+11/03/2021 09:38:45:059 : 1489522 : MESSAGE : Installer is started in GUI mode
+11/03/2021 09:38:45:059 : 1489522 : MESSAGE : Installer executable location is /home/dominik/intel/oneapi/installer/installer, version is 4.0.9.0-678
+11/03/2021 09:38:45:059 : 1489522 : MESSAGE : Package manager executable location is /home/dominik/intel/packagemanager/1.0/packagemanager, version is 4.0.5-231
+11/03/2021 09:38:45:059 : 1489522 : MESSAGE : Product is set to intel.oneapi.lin.inspector.product,v=2021.4.0-266. Mode is set to install.
+11/03/2021 09:38:45:236 : 1489532 : MESSAGE : PreRequisite for other install successfully checked
+11/03/2021 09:38:45:236 : 1489532 : MESSAGE : PreRequisite for other Intel install successfully checked
+11/03/2021 09:38:45:236 : 1489532 : MESSAGE : PreRequisite for check installer location successfully checked
+11/03/2021 09:38:45:240 : 1489532 : MESSAGE : All checks for preRequisite for supported operation system are passed
+11/03/2021 09:38:45:253 : 1489532 : MESSAGE : PreRequisite for temporary folder successfully checked
+11/03/2021 09:38:45:253 : 1489532 : MESSAGE : PreRequisite for host architecture successfully checked
+11/03/2021 09:40:07:447 : 1489527 : MESSAGE : Changed installation directory from '/home/dominik/intel/oneapi' to '/home/dominik/master-thesis/docker-cluster/build'.
+11/03/2021 09:40:10:251 : 1489527 : MESSAGE : PreRequisite for free disk space passed
+11/03/2021 09:40:10:252 : 1489527 : MESSAGE : PreRequisite for permissions passed
+11/03/2021 09:40:10:252 : 1489527 : MESSAGE : PreRequisite for other install successfully checked
+11/03/2021 09:40:10:252 : 1489527 : MESSAGE : PreRequisite for other Intel install successfully checked
+11/03/2021 09:40:10:368 : 1489522 : MESSAGE : ISIP consent status is 'Yes'
+11/03/2021 09:40:10:368 : 1489522 : MESSAGE : Product installation directory is /home/dominik/master-thesis/docker-cluster/build
+11/03/2021 09:40:10:368 : 1489522 : MESSAGE : Product download size required: 75842383 bytes
+11/03/2021 09:40:10:368 : 1489522 : MESSAGE : Product installation size required: 377619928 bytes
+11/03/2021 09:40:10:368 : 1489522 : MESSAGE : Product will be (un)integrated with the following IDEs:
+11/03/2021 09:40:10:369 : 1489522 : MESSAGE : End of IDE list.
+11/03/2021 09:40:10:370 : 1489527 : MESSAGE : Graph State Dump.
+----------------------------------------------------------------------------------------------------
+intel.oneapi.lin.inspector.product,v=2021.4.0-266, Enabled, Selected, Not Installed
+intel.oneapi.lin.inspector,v=2021.4.0-266, Enabled, Selected, Not Installed
+intel.oneapi.lin.oneapi-common.vars,v=2021.4.0-327, Enabled, Selected, Not Installed
+intel.oneapi.lin.oneapi-common.licensing,v=2021.4.0-327, Enabled, Selected, Not Installed
+----------------------------------------------------------------------------------------------------
+
+11/03/2021 09:40:10:370 : 1489527 : MESSAGE : Operations dump.
+----------------------------------------------------------------------------------------------------
+Updating package state...
+Preparing installation...
+Install intel.oneapi.lin.oneapi-common.vars,v=2021.4.0-327
+Install intel.oneapi.lin.oneapi-common.licensing,v=2021.4.0-327
+Install intel.oneapi.lin.inspector,v=2021.4.0-266
+Install intel.oneapi.lin.inspector.product,v=2021.4.0-266
+Finalizing. It may take up to 10 minutes or more to integrate with your system, please do not interrupt the install process...
+Updating package state...
+----------------------------------------------------------------------------------------------------
+
+11/03/2021 09:40:10:376 : 1489527 : MESSAGE : Start install/modify sequence execution.
+11/03/2021 09:40:10:377 : 1489527 : MESSAGE : Starting execution of operation 'update_state.operation.intel.sessionmanifest.1635928810370296'.
+11/03/2021 09:40:10:377 : 1489527 : MESSAGE : Operation 'update_state.operation.intel.sessionmanifest.1635928810370296' execution is finished with status Success.
+11/03/2021 09:40:10:377 : 1489527 : MESSAGE : Starting execution of operation 'prepare.operation.intel.sessionmanifest.1635928810370296'.
+11/03/2021 09:40:10:377 : 1489527 : MESSAGE : Operation 'prepare.operation.intel.sessionmanifest.1635928810370296' execution is finished with status Success.
+11/03/2021 09:40:10:786 : 1489527 : MESSAGE : Starting execution of operation 'intel.oneapi.lin.oneapi-common.vars,v=2021.4.0-327'.
+11/03/2021 09:40:10:892 : 1489527 : MESSAGE : Operation 'intel.oneapi.lin.oneapi-common.vars,v=2021.4.0-327' execution is finished with status Success.
+11/03/2021 09:40:10:926 : 1489527 : MESSAGE : Starting execution of operation 'intel.oneapi.lin.oneapi-common.licensing,v=2021.4.0-327'.
+11/03/2021 09:40:11:020 : 1489527 : MESSAGE : Operation 'intel.oneapi.lin.oneapi-common.licensing,v=2021.4.0-327' execution is finished with status Success.
+11/03/2021 09:40:23:746 : 1489527 : MESSAGE : Starting execution of operation 'intel.oneapi.lin.inspector,v=2021.4.0-266'.
+11/03/2021 09:40:35:531 : 1489527 : MESSAGE : Operation 'intel.oneapi.lin.inspector,v=2021.4.0-266' execution is finished with status Success.
+11/03/2021 09:40:35:531 : 1489527 : MESSAGE : Starting execution of operation 'intel.oneapi.lin.inspector.product,v=2021.4.0-266'.
+11/03/2021 09:40:35:664 : 1489527 : MESSAGE : Operation 'intel.oneapi.lin.inspector.product,v=2021.4.0-266' execution is finished with status Success.
+11/03/2021 09:40:35:664 : 1489527 : MESSAGE : Starting execution of operation 'complete.operation.intel.sessionmanifest.1635928810370296'.
+11/03/2021 09:40:35:696 : 1489527 : MESSAGE : Operation 'complete.operation.intel.sessionmanifest.1635928810370296' execution is finished with status Success.
+11/03/2021 09:40:35:696 : 1489527 : MESSAGE : Starting execution of operation 'update_state.operation.intel.sessionmanifest.1635928810370296'.
+11/03/2021 09:40:35:698 : 1489527 : MESSAGE : Operation 'update_state.operation.intel.sessionmanifest.1635928810370296' execution is finished with status Success.
+11/03/2021 09:40:35:698 : 1489527 : MESSAGE : Install sequence execution is completed successfully.

@@ -1,0 +1,39 @@
+<partialReport name="com.allinea.performancereports.papi"
+               xmlns="http://www.allinea.com/2016/AllineaReports">
+    <reportMetrics>
+
+        <reportMetric id="com.allinea.metrics.papi.flops" displayName="Double precision FLOPS" units="/s" colour="hsl(23, 83, 59)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.flops" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.cycles_per_instruction" displayName="Cycles per instruction" units="/s" colour="hsl(23, 83, 34)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.cycles_per_instruction" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+        <reportMetric id="com.allinea.metrics.papi.l2_data_cache_misses_o" displayName="L2 cache misses" units="/s" colour="hsl(23, 83, 27)" source="metric">
+                <sourceDetails metricRef="com.allinea.metrics.papi.l2_data_cache_misses_o" sampleValue="mean" aggregation="mean"/>
+        </reportMetric>
+
+    </reportMetrics>
+
+    <subsections>
+        <subsection id="PAPI"
+                    order="0"
+                    heading="PAPI Overview"
+                    colour="hsl(23, 83, 59)"
+                    requires="com.allinea.metrics.papi.flops"
+                    >
+            <text>PAPI FLOPS and CPI metrics (main thread only)</text>
+            
+            <entry  reportMetric="com.allinea.metrics.papi.flops"
+                    order="-100"
+                    group="flops"/>
+            <entry  reportMetric="com.allinea.metrics.papi.cycles_per_instruction"
+                    order="-90"
+                    group="cycles"/>
+            <entry  reportMetric="com.allinea.metrics.papi.l2_data_cache_misses_o"
+                    order="-80"
+                    group="cache"/>
+        </subsection>
+    </subsections>
+</partialReport>

@@ -1,0 +1,964 @@
+# See rules syntax in suppression_rules_format.sup file
+
+{
+    Ignore changing of return IP in Unwind scenario
+    Memchkr:Invalid0
+    fun:*mem*cpy*
+    fun:*
+    fun:*Unwind_RaiseException
+}
+{
+    Ignore changing of return IP in Unwind scenario
+    Memchkr:Invalid8
+    fun:*Unwind_RaiseException
+}
+{
+    Uninitialized read of tcgetattr space
+    Memchkr:Uninit4
+    fun:*
+    fun:*mempcpy
+    fun:*tcgetattr
+}
+{
+    Uninitialized read of tcgetattr space
+    Memchkr:Uninit8
+    fun:*
+    fun:*mempcpy
+    fun:*tcgetattr
+}
+{
+    Uninitialized read during exit sequence
+    Memchkr:Uninit4
+    fun:*unregister_atfork
+}
+{
+    Uninitialized read during exit sequence
+    Memchkr:Uninit8
+    fun:*unregister_atfork
+}
+{
+    Uninitialized read during sigaction use of fcntl (not modeled) syscall
+    Memchkr:Uninit4
+    fun:*sigsetjmp
+}
+{
+    Uninitialized read during sigaction use of fcntl (not modeled) syscall
+    Memchkr:Uninit8
+    fun:*sigsetjmp
+}
+{
+    Uninitialized read for the different variants of fcntl that take less params
+    Memchkr:Uninit8
+    fun:*fcntl
+}
+{
+    Uninitialized read for the different variants of fcntl that take less params
+    Memchkr:Uninit4
+    fun:*fcntl
+}
+{
+    Uninitialized read for pre-read of optional param
+    Memchkr:Uninit8
+    fun:*open_nocancel
+}
+{
+    Uninitialized read for pre-read of optional param
+    Memchkr:Uninit4
+    fun:*open_nocancel
+}
+{
+    Partial uninitialized read for structures
+    Memchkr:PartialUninit1
+    fun:*syscall
+}
+{
+    Uninitialized read for pre-read of optional param
+    Memchkr:Uninit4
+    fun:*syscall
+}
+{
+    Uninitialized read for pre-read of optional param
+    Memchkr:Uninit8
+    fun:*syscall
+}
+{
+    Uninitialized read - will be fixed when ioctl modelled properly
+    Memchkr:Uninit0
+    fun:*tcgetattr
+}
+{
+    Uninitialized read, until ioctl supported
+    Memchkr:Uninit0
+    fun:*mempcpy
+    fun:*tcgetattr
+}
+{
+    Uninitialized read (partial) std::ostream << (*), use of sete (byte op) into 4 byte stack space, and subsequent reads
+    Memchkr:PartialUninit4
+    fun:_ZNSolsE*
+}
+{
+    Uninitialized read (partial) std::M_insert, use of sete (byte op) into 4 byte stack space, and subsequent reads on Ubuntu 10 x64
+    Memchkr:PartialUninit4
+    fun:*9_M_insertI*
+}
+{
+    Uninitialized read (partial) std::ostream << (*), use of sete (byte op) into 4 byte stack space, and subsequent reads
+    Memchkr:PartialUninit8
+    fun:_ZNSolsE*
+}
+{
+    Uninitialized read (partial) std::num_put variants, see above
+    Memchkr:PartialUninit4
+    fun:_ZNKSt7num_put*
+}
+{
+    Uninitialized read (partial) std::num_put variants, see above
+    Memchkr:PartialUninit8
+    fun:_ZNKSt7num_put*
+}
+{
+    Uninitialized read in do_write when a certain path is executed
+    Memchkr:Uninit8
+    fun:*do_write*
+    fun:*file_xsputn_internal*
+}
+{
+    Uninitialized read when a certain path is executed (Uninit4 for Debian 4 32-bit and Uninit8 for Debian 4 64-bit)
+    Memchkr:Uninit0
+    fun:__gconv*
+    fun:*wctob*
+}
+{
+    Uninitialized read when sysctl used (unmodeled syscall) within pthread
+    Memchkr:Uninit1
+    fun:*strstr*
+    fun:*pthread*
+}
+{
+    Invalid read when futex syscall used on IPF within pthread call
+    Memchkr:Invalid16
+    fun:*pthread_rwlock_unlock_internal*
+}
+{
+    Partial uninit read with wordcopy_fwd_dest_aligned due to fancy algorithm
+    Memchkr:PartialUninit8
+    fun:*wordcopy_fwd_dest_aligned
+}
+{
+    Invalid read during catch/throw/unwind
+    Memchkr:Invalid0
+    fun:*Unwind_*
+}
+{
+    Invalid write during catch/throw/unwind
+    Memchkr:Invalid8
+    fun:*uw_update*
+}
+{
+    Invalid read/write during catch/throw/unwind
+    Memchkr:Invalid0
+    fun:*frame_state_for
+}
+{
+    Invalid read/write during catch/throw/unwind
+    Memchkr:Invalid4
+    fun:*memcpy*
+    fun:*frame_state_for
+}
+{
+    Uninit read on stack during catch/throw/unwind
+    Memchkr:Uninit4
+    fun:*Unwind_*
+}
+{
+    Uninitialized read when a certain path is executed, SLES9
+    Memchkr:Uninit0
+    fun:*gconv_transform_ascii_internal*
+}
+{
+    STL suppression for uninitialized functions
+    Memchkr:Uninit0
+    fun:*uninitialized*
+}
+{
+    STL suppression for uninitialized functions
+    Memchkr:Uninit0
+    fun2:*
+    fun:*uninitialized*
+}
+{
+    STL suppressions for uninitialized move and unchecked uninitialized move
+    Memchkr:PartialUninit4
+    fun:*
+    fun:*
+    fun:*Uninit_move*
+    fun:*Unchecked_uninitialized_move*
+}
+{
+    STL suppressions for uninitialized move and unchecked uninitialized move
+    Memchkr:PartialUninit8
+    fun:*
+    fun:*
+    fun:*Uninit_move*
+    fun:*Unchecked_uninitialized_move*
+}
+{
+    Masking of local variable bits in static libc tls setup
+    Memchkr:Uninit1
+    fun:__libc_setup_tls
+}
+{
+    VDSO-supporting systems, FORTRAN for_rtl_init benign partial uninit structure copy
+    Memchkr:PartialUninit1
+    fun:*
+    fun:*
+    fun:for_rtl_init_
+}
+{
+    Invalid write to return address when memcpy used to process throwing exceptions
+    Memchkr:Invalid1
+    fun:*memcpy*
+    fun:*
+    fun:*_Unwind_*
+}
+{
+    140 byte (or so) PartialUninit during libpthread initialization on 64-bit Debian 5
+    Memchkr:PartialUninit1
+    fun:*
+    fun:*pthread_init*
+}
+{
+    Uninit on stack in Intel Fortran function having to do with writing to a file
+    Memchkr:Uninit0
+    fun*:for_*
+    fun:for_write_seq*
+}
+{
+    Uninit4 on stack having to do with C++ exceptions in statically linked executables on some systems
+    Memchkr:Uninit4
+    fun:*memset*
+    fun2:*
+    fun:*_Unwind*
+}
+{
+    Uninit4 on stack having to do with C++ exceptions in statically linked executables on some systems
+    Memchkr:Uninit4
+    fun:*memcpy*
+    fun:*
+    fun:*
+    fun:*_Unwind*
+}
+{
+    Uninit4 on stack having to do with C++ exceptions in statically linked executables on some systems
+    Memchkr:Uninit4
+    fun:*memcpy*
+    fun:*_Unwind*
+}
+{
+    Uninit4 on stack in open on SLES 11 32-bit and Debian 32-bit--not related to file name input to open but may result in false negatives if file name is uninitialized
+    Memchkr:Uninit4
+    fun:open
+}
+{
+    Uninit1 having to do with GObject signals
+    Memchkr:Uninit1
+    fun:*memcpy*
+    fun*:g_*
+    fun:g_signal_connect_*
+}
+{
+    Partial uninit 8 having to do with GObject signals
+    Memchkr:PartialUninit8
+    fun:*memcpy*
+    fun*:g_signal*
+    fun:g_signal_connect_*
+}
+{
+    Partial uninit 4 having to do with GObject signals
+    Memchkr:PartialUninit4
+    fun:g_signal_override_class_closure
+}
+{
+    Partial uninit on stack having to do with GObject closures
+    Memchkr:PartialUninit0
+    fun:g_closure*
+}
+{
+    Partial uninit on stack having to do with GObject closures
+    Memchkr:PartialUninit0
+    fun:g_cclosure*
+}
+{
+    Partial uninit 8 having to do with GObject signals
+    Memchkr:PartialUninit8
+    fun:*memcpy*
+    fun*:g_signal*
+    fun:g_signal_connect_*
+}
+{
+    Partial uninit having to do with XSendEvent in some cases with GDK/GTK+
+    Memchkr:PartialUninit0
+    fun:XSendEvent
+    obj:libX*
+    fun:g?k_window_*
+}
+{
+    Uninit having to do with XSendEvent in some cases with GDK/GTK+
+    Memchkr:Uninit0
+    fun:XSendEvent
+    obj:libX*
+    fun:g?k_window_*
+}
+{
+    Partial uninit having to do with XSendEvent in some cases with GDK
+    Memchkr:PartialUninit0
+    fun:XSendEvent
+    fun:gdk_window_*
+}
+{
+    Partial uninit having to do with XSendEvent in some cases with GDK
+    Memchkr:PartialUninit0
+    fun:XSendEvent
+    fun:gdk_event_get*
+}
+{
+    Partial uninit having to do with XSendEvent in some cases with GDK
+    Memchkr:PartialUninit0
+    fun:XSendEvent
+    fun:gdk_add_client_message_filter
+}
+{
+    Uninit having to do with XSendEvent in some cases with GDK
+    Memchkr:Uninit0
+    fun:XSendEvent
+    obj:libX*
+    fun:gdk_window_*
+}
+{
+    Uninit4 having to do with X/GDK/GTK+ and creating new windows
+    Memchkr:Uninit4
+    fun*:XSetWM*Hints
+    fun*:gdk*_window_*
+    fun:g?k_window_new
+}
+{
+    Uninit4 having to do with X/GDK/GTK+ and windows
+    Memchkr:Uninit4
+    fun*:XSetWM*Hints
+    obj*:libg*
+    fun:gtk_window_get*
+}
+{
+    Uninit having to do with X/GDK/GTK+ and windows
+    Memchkr:Uninit0
+    obj*:libX*
+    obj*:libgdk*
+    fun:gtk_frame_realized_callback
+}
+{
+    Uninit having to do with X/GDK/GTK+ and windows
+    Memchkr:Uninit0
+    fun:*memcpy*
+    obj*:libX*
+    obj*:libgdk*
+    fun:gtk_frame_realized_callback
+}
+{
+    Partial uninit 4 in X having to do with XLC
+    Memchkr:PartialUninit4
+    obj*:*
+    obj:xlcUTF8*
+}
+{
+    Partial uninit 8 in Cairo
+    Memchkr:PartialUninit8
+    fun:cairo_path_destroy
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    fun:FcConfigFilename
+}
+{
+    Uninit 4 in fontconfig
+    Memchkr:Uninit4
+    fun:FcConfigFilename
+}
+{
+    Uninit 8 in fontconfig
+    Memchkr:Uninit0
+    obj:*
+    fun:FcConfigFilename
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    fun:FcConfigSubstituteWithPat
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    obj*:libfontconfig*
+    fun:FcFontList
+    obj:libpango*
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    obj*:libfontconfig*
+    obj*:*
+    fun:*pango*remove
+}
+{
+    Partial uninit 8 in fontconfig/Pango XFT
+    Memchkr:PartialUninit8
+    obj*:libfontconfig*
+    fun:*pango*xft*
+}
+{
+    Partial uninit 4 in X XFT/Pango XFT
+    Memchkr:PartialUninit4
+    obj*:libXft*
+    fun:*pango*xft*
+}
+{
+    Partial uninit 4 in X XFT/Pango XFT/Freetype
+    Memchkr:PartialUninit4
+    obj*:libfreetype*
+    obj*:*
+    fun:*pango*xft*
+}
+{
+    Uninit 4 in X XFT/Pango XFT
+    Memchkr:Uninit4
+    obj*:libfontconfig*
+    obj*:*
+    fun:*pango*xft*
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    obj:libfontconfig*
+    fun:FcFontRenderPrepare
+}
+{
+    Uninit4 in fontconfig
+    Memchkr:Uninit4
+    fun:FcFontRenderPrepare
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    fun:FcNameParse
+}
+{
+    Uninit 4 in fontconfig
+    Memchkr:Uninit4
+    fun:FcNameParse
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    obj:libfontconfig*
+    fun:FcDefaultSubstitute
+}
+{
+    Uninit in fontconfig/Pango FT
+    Memchkr:Uninit0
+    obj:libfontconfig*
+    fun:pango*font_get*
+}
+{
+    Uninit in fontconfig/Pango FT
+    Memchkr:Uninit0
+    obj:libfontconfig*
+    obj:*
+    fun:pango*font_get*
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    fun:FcPatternBuild
+    obj:libpango*
+}
+{
+    Partial uninit 8 in fontconfig
+    Memchkr:PartialUninit8
+    fun:FcValueSave
+}
+{
+    Uninit 4 in fontconfig
+    Memchkr:Uninit4
+    fun:FcValueSave
+}
+{
+    Partial uninit in freetype
+    Memchkr:PartialUninit0
+    obj:libfreetype*
+    fun:FT_Outline_Render
+}
+{
+    Uninit in freetype
+    Memchkr:Uninit0
+    obj:libfreetype*
+    fun:FT_Outline_Render
+}
+{
+    Partial uninit in GDK having to do with events
+    Memchkr:PartialUninit0
+    fun:gdk_event_copy
+}
+{
+    Partial uninit in GDK having to do with events
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    fun:gdk_event_copy
+}
+{
+    Uninit in GDK having to do with events
+    Memchkr:Uninit0
+    fun:gdk_event_copy
+}
+{
+    Uninit in GDK having to do with events
+    Memchkr:Uninit0
+    fun:*memcpy*
+    fun:gdk_event_copy
+}
+{
+    Partial uninit in GTK+
+    Memchkr:PartialUninit0
+    fun:gtk_container_propagate_expose
+}
+{
+    Uninit in GTK+
+    Memchkr:Uninit0
+    fun:gtk_container_propagate_expose
+}
+{
+    Uninit in GTK+
+    Memchkr:Uninit0
+    fun:gtk_gc_get
+#   fun:gtk_style_a*  or gtk_paint_hline
+# this might result in false-negatives
+}
+{
+    Uninit in GTK+
+    Memchkr:Uninit0
+    fun:*memcpy*
+    fun:gtk_gc_get
+#   fun:gtk_style_a*  or gtk_paint_hline
+# this might result in false-negatives
+}
+{
+    Partial Uninit in GTK+/bluecurve
+    Memchkr:PartialUninit0
+    fun:gtk_gc_get
+#   obj*:*
+#   obj:libbluecurve.so
+#  this might result in false-negatives
+#  only seen in bluecurve until now
+}
+{
+    Partial Uninit in GTK+
+    Memchkr:PartialUninit0
+    fun:gtk_*_add*
+    fun:gtk_*_get*
+}
+{
+    Uninit in GTK+
+    Memchkr:Uninit0
+    fun:gtk_*_add*
+    fun:gtk_*_get*
+}
+{
+    Uninit on stack in GTK+
+    Memchkr:Uninit0
+    fun:gtk_*_get_*
+}
+{
+    Partial uninit on stack in GTK+
+    Memchkr:PartialUninit0
+    fun:gtk_*_get_*
+}
+{
+    Uninit in GTK+/bluecurve
+    Memchkr:Uninit0
+    fun:*memcpy*
+    obj*:*
+    obj:libbluecurve.so
+}
+{
+    Partial Uninit 8 in GTK+
+    Memchkr:PartialUninit8
+    fun:gtk_gc_release
+}
+{
+    Uninit1 in GTK+
+    Memchkr:Uninit1
+    fun:gtk_widget_set_*
+}
+{
+    Uninit4 in GTK+
+    Memchkr:Uninit4
+    fun:gtk_text_mark_set_visible
+}
+{
+    Partial Uninit 4 in GDK/GTK+
+    Memchkr:PartialUninit4
+    fun:gdk_color_parse
+    obj*:libg*
+    fun:gtk_settings_get*
+}
+{
+    Uninit 4 in GDK/GTK+
+    Memchkr:Uninit4
+    fun:gdk_color_copy
+    obj*:libg*
+    fun:gtk_settings_get*
+}
+{
+    Partial Uninit 4 in GDK/GTK+
+    Memchkr:PartialUninit4
+    fun:gdk_color_copy
+    obj*:libg*
+    fun:gtk_settings_get*
+}
+{
+    Uninit in Pango
+    Memchkr:Uninit0
+    fun:pango_layout*_get*_extents
+}
+{
+    Uninit8 in Pango/GDK/GTK+
+    Memchkr:Uninit8
+    obj*:libpango*
+    fun:gdk_draw*
+}
+{
+    PartialUninit4 in GDK
+    Memchkr:PartialUninit4
+    obj*:*
+    fun:gdk_drag_get_selection
+}
+{
+    PartialUninit0 having to do with Pango
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    obj:libglib*
+    obj:libpango*
+    fun:script_engine_init
+}
+{
+    PartialUninit0 having to do with Pango FT
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    obj:libglib*
+    fun:pango_ot_ruleset_add_feature
+}
+{
+    PartialUninit0 having to do with Pango FT
+    Memchkr:PartialUninit0
+    fun:pango_ot_ruleset_description_copy
+}
+{
+    Uninit on stack during initialization
+    Memchkr:Uninit0
+    fun:*__*
+    fun:*global_?tors*
+}
+{
+    PartialUninit on stack during initialization
+    Memchkr:PartialUninit0
+    obj:libstdc*
+    obj*:*
+    fun:*global_?tors*
+}
+{
+    Uninit on stack in YP subsystem
+    Memchkr:Uninit0
+    fun:yp_*
+}
+{
+    Uninit on stack in YP subsystem
+    Memchkr:Uninit0
+    fun:__yp_*
+}
+{
+    Partial uninit on stack in XauReadAuth
+    Memchkr:PartialUninit0
+    fun:XauReadAuth
+}
+{
+    Partial uninit on stack in X XLC
+    Memchkr:PartialUninit0
+    fun:*Xlc*
+    obj:xlc*
+}
+{
+    Partial uninit on stack in X XLC
+    Memchkr:PartialUninit4
+    fun:_XlcResetConverter
+}
+{
+    Uninit on stack in X XFT
+    Memchkr:Uninit0
+    fun:XftInitFtLibrary
+}
+{
+    Partial uninit on stack in freetype
+    Memchkr:PartialUninit0
+    fun:FT_Stream_OpenLZW
+}
+{
+    Partial uninit on stack having to do with components that register new types (may result in false negatives)
+    Memchkr:PartialUninit0
+    fun:g_type_module_register_type
+}
+{
+    Uninit on stack in libselinux
+    Memchkr:Uninit4
+    fun:set_selinuxmnt
+}
+{
+    Uninit on stack in Qt (QLocalePrivate/QVariant)
+    Memchkr:Uninit0
+    fun:*QVariant*
+    fun:*QLocalePrivate*updateSystemPrivate*
+}
+{
+    Uninit on stack in Qt (QLocalePrivate/Q)
+    Memchkr:Uninit0
+    fun:*QVariant*
+    fun:*QLocalePrivate*updateSystemPrivate*
+}
+{
+    Qt uninit in private classes (may result in some false negatives)
+    Memchkr:Uninit0
+    obj*:libQt*
+    fun:_ZN*Q*Private*
+    obj:libQt*
+}
+{
+    Qt partial uninit in private classes (may result in some false negatives)
+    Memchkr:PartialUninit0
+    obj*:libQt*
+    fun:_ZN*Q*Private*
+    obj:libQt*
+}
+{
+    Qt uninit in private classes (may result in some false negatives)
+    Memchkr:Uninit0
+    fun:*memcpy*
+    obj*:*
+    fun:_ZN*Q*Private*
+    obj:libQt*
+}
+{
+    Qt partial uninit in private classes (may result in some false negatives)
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    obj*:*
+    fun:_ZN*Q*Private*
+    obj:libQt*
+}
+{
+    Uninit read in fontconfig/Qt class QFontDatabase
+    Memchkr:Uninit0
+    obj*:libfontconfig*
+    fun:_ZN*QFontDatabase*
+}
+{
+    Uninit read in fontconfig/Qt class QFontDatabase
+    Memchkr:Uninit0
+    obj*:libfontconfig*
+    obj*:libQt*
+    fun:_ZN*QFontDatabase*
+}
+{
+    Partial uninit having to do with X and Qt
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    obj*:libX*
+    fun:_ZN*Q*resizeEvent*
+}
+{
+    Partial uninit in qt_metacall
+    Memchkr:PartialUninit0
+    fun:*qt_metacall*
+}
+{
+    Uninit in __gconv_transform_utf8_internal initiated from mbsnrtowcs and __mbsrtowcs_l
+    Memchkr:Uninit0
+    fun:*gconv_*
+    fun:*mb*rtowc*
+}
+{
+    Uninit in __gconv_transform_utf8_internal initiated from wcsrtombs, *wctob*, wcrtomb
+    Memchkr:Uninit0
+    fun:*gconv_*
+    fun:*wc*to*b*
+}
+{
+    Uninit in gtk_tree_iter_copy, only suppress the case initiated from g_boxed_type_init
+    Memchkr:Uninit0
+    fun:gtk_tree_iter_copy
+    fun:g_boxed_type_init
+}
+{
+    Uninit in MPI function mca_oob_tcp_peer_recv_handler
+    Memchkr:Uninit0
+    fun:mca_oob_tcp_peer_recv_handler
+}
+{
+    Uninit in MPI function param_register
+    Memchkr:PartialUninit0
+    fun:param_register
+}
+{
+    Uninit in MPI function param_register
+    Memchkr:PartialUninit0
+    fun:*memcpy*
+    fun:param_register
+}
+{
+    Uninit under MPI_Send
+    Memchkr:Uninit0
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI*_Send
+}
+{
+    Uninit under MPI_Send
+    Memchkr:Uninit0
+    obj:libmpi*
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI*_Send
+}
+{
+    PartialUninit under MPI_Send
+    Memchkr:PartialUninit0
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI*_Send
+}
+{
+    PartialUninit under MPI_Send
+    Memchkr:PartialUninit0
+    obj:libmpi*
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI*_Send
+}
+{
+    Uninit under MPI_Sendrecv
+    Memchkr:Uninit0
+    fun:*_sendv_header*
+    fun:*_iSendv*
+    obj*:libmpi*
+    fun:*MPI*_Sendrecv
+}
+{
+    Uninit under MPI_Sendrecv
+    Memchkr:Uninit0
+    fun:*_iSendv*
+    obj*:libmpi*
+    fun:*MPI*_Sendrecv
+}
+{
+    PartialUninit under MPI_Sendrecv
+    Memchkr:PartialUninit0
+    fun:*_sendv_header*
+    fun:*_iSendv*
+    obj*:libmpi*
+    fun:*MPI*_Sendrecv
+}
+{
+    Uninit under MPI_Recv
+    Memchkr:Uninit0
+    fun:*MPI*_Recv
+}
+{
+    PartialUninit under MPI_Sendrecv
+    Memchkr:PartialUninit0
+    fun:*_iSendv*
+    obj*:libmpi*
+    fun:*MPI*_Sendrecv
+}
+{
+    Uninit under MPI_Finalize
+    Memchkr:Uninit0
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI_Finalize
+}
+{
+    PartialUninit under MPI_Finalize
+    Memchkr:PartialUninit0
+    fun:*iStartMsg*
+    obj*:libmpi*
+    fun:*MPI_Finalize
+}
+{
+    Uninit under MPI_Finalize
+    Memchkr:Uninit0
+    fun:*iSend*
+    obj*:libmpi*
+    fun:*MPI_Finalize
+}
+{
+    PartialUninit under MPI_Finalize
+    Memchkr:PartialUninit0
+    fun:*iSend*
+    obj*:libmpi*
+    fun:*MPI_Finalize
+}
+{
+    Uninit in _itt_*
+    Memchkr:Uninit0
+    fun:*_itt_heap_*
+}
+{
+    PartialUninit on stack in constructor for __mutex in libstdc++
+    Memchkr:PartialUninit0
+    fun:*__mutex*
+}
+{
+    PartialUninit on stack in ostreambuf_iterator::__write in some versions of libstdc++ (occurs under cout)
+    Memchkr:PartialUninit4
+    fun:*__write*ostreambuf_iterator*
+    obj*:*
+    fun:_ZNSolsE*
+}
+{
+    PartialUninit on stack in std::binder2nd (may result in false negatives, since the arguments to binder2nd are passed by reference and therefore accessed in binder2nd, but because the suppression is only for partial uninits on the stack, the chance is lessened)
+    Memchkr:PartialUninit0
+    fun:*binder2nd*
+}
+{
+    Uninit read on the stack having to do with *printf and OpenMP library that ships with icc 12.1 (Fortran)
+    Memchkr:Uninit0
+    obj*:libc*
+    func:__kmp_str_buf_vprint
+}
+{
+    Uninit read on the stack under libdl.so!dlerror
+    Memchkr:Uninit0
+    obj:libc.*
+    func:dlerror
+}
+{
+    Uninit reads under libc.so!sysconf()
+    Memchkr:Uninit0
+    obj*:libc.*
+    func:sysconf
+}
+{
+    Uninit reads under libstdc++.so called by std::ostream
+    Memchkr:Uninit0
+    obj*:libc.*
+    func:vsnprintf
+    obj:libstdc++.*
+}
