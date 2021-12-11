@@ -1,0 +1,1 @@
+res_change_id, res_change_type, res_change_size, rc_start, jdata_start, jdata_end, pset_start, rc_publish_start, apply_start, rc_end1, rc_deregistered, rc_finalized, rc_end2;

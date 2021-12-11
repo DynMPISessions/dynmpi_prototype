@@ -1,0 +1,288 @@
+example/timings/bricks3.o: example/timings/bricks3.c \
+ /usr/include/stdc-predef.h src/p4est_to_p8est.h src/p4est_base.h \
+ config/p4est_config.h sc/config/sc_config.h sc/src/sc_containers.h \
+ sc/src/sc.h \
+ /dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/include/mpi.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stddef.h \
+ /dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/include/mpi_portable_platform.h \
+ /usr/include/math.h /usr/include/bits/libc-header-start.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/floatn.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
+ /usr/include/ctype.h /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/byteswap.h /usr/include/bits/byteswap-16.h \
+ /usr/include/bits/uintn-identity.h /usr/include/bits/types/locale_t.h \
+ /usr/include/bits/types/__locale_t.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/float.h \
+ /usr/include/libgen.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed/limits.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stdarg.h \
+ /dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/stdio.h /usr/include/bits/types/__FILE.h \
+ /usr/include/bits/types/FILE.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/bits/types/__mbstate_t.h \
+ /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+ /usr/include/bits/stdio.h /usr/include/stdlib.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
+ /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
+ /usr/include/bits/types/timer_t.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
+ /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/struct_timespec.h /usr/include/sys/sysmacros.h \
+ /usr/include/bits/sysmacros.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+ /usr/include/bits/getopt_core.h sc/src/sc_mpi.h \
+ example/timings/bricks2.c src/p8est_bits.h src/p8est.h \
+ src/p8est_connectivity.h sc/src/sc_io.h sc/src/sc_random.h \
+ src/p8est_extended.h src/p8est_mesh.h src/p8est_ghost.h \
+ src/p8est_iterate.h src/p8est_lnodes.h sc/src/sc_uint128.h \
+ src/p8est_vtk.h src/p8est_geometry.h sc/src/sc_options.h \
+ sc/src/sc_keyvalue.h
+
+/usr/include/stdc-predef.h:
+
+src/p4est_to_p8est.h:
+
+src/p4est_base.h:
+
+config/p4est_config.h:
+
+sc/config/sc_config.h:
+
+sc/src/sc_containers.h:
+
+sc/src/sc.h:
+
+/dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/include/mpi.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stddef.h:
+
+/dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/include/mpi_portable_platform.h:
+
+/usr/include/math.h:
+
+/usr/include/bits/libc-header-start.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/huge_valf.h:
+
+/usr/include/bits/huge_vall.h:
+
+/usr/include/bits/inf.h:
+
+/usr/include/bits/nan.h:
+
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathinline.h:
+
+/usr/include/ctype.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/bits/byteswap-16.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/bits/types/__locale_t.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/float.h:
+
+/usr/include/libgen.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed/limits.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stdarg.h:
+
+/dss/dsshome1/lrz/sys/spack/release/21.1.1/opt/x86_64/gcc/8.4.0-gcc-656wch7/lib/gcc/x86_64-pc-linux-gnu/8.4.0/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/bits/stdint-intn.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/stdio.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/types/time_t.h:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/bits/types/struct_timeval.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib-bsearch.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/string.h:
+
+/usr/include/strings.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/bits/getopt_posix.h:
+
+/usr/include/bits/getopt_core.h:
+
+sc/src/sc_mpi.h:
+
+example/timings/bricks2.c:
+
+src/p8est_bits.h:
+
+src/p8est.h:
+
+src/p8est_connectivity.h:
+
+sc/src/sc_io.h:
+
+sc/src/sc_random.h:
+
+src/p8est_extended.h:
+
+src/p8est_mesh.h:
+
+src/p8est_ghost.h:
+
+src/p8est_iterate.h:
+
+src/p8est_lnodes.h:
+
+sc/src/sc_uint128.h:
+
+src/p8est_vtk.h:
+
+src/p8est_geometry.h:
+
+sc/src/sc_options.h:
+
+sc/src/sc_keyvalue.h:
