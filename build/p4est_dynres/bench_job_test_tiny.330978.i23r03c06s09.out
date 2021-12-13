@@ -1,2 +1,0 @@
-running test nr. 1 with parameters: -np 28 -c 120 -l 56 -m i+ -n 28 -f 10 -b 1
-slurmstepd: error: *** JOB 330978 ON i23r03c06s09 CANCELLED AT 2021-11-24T12:16:12 DUE TO TIME LIMIT ***

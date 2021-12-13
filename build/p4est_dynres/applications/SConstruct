@@ -80,14 +80,13 @@ env.Append(CPPPATH=[project_root + '/../p4est/src/'])
 env.Append(CPPPATH=[project_root + '/../p4est/local/include/'])
 env.Append(CPPPATH=[project_root + '/../libmpidynres/build/include/'])
 env.Append(CPPPATH=[project_root + '/../libmpidynres/src/'])
-env.Append(CPPPATH=['/dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/include'])
-
+env.Append(CPPPATH=[os.environ['OMPI_ROOT'] + '/include'])
 
 
 env.Append(LIBPATH=['.'])
 env.Append(LIBPATH=['include'])
 env.Append(LIBPATH=['/opt/hpc/build/lib/lib'])
-env.Append(LIBPATH=['/dss/dssfs02/lwp-dss-0001/pr63qi/pr63qi-dss-0000/ga84kaf2/shared-folder/install/ompi/lib'])
+env.Append(LIBPATH=[os.environ['OMPI_ROOT'] + '/lib'])
 env.Append(LIBPATH=[project_root + '/../p4est/local/lib/'])
 env.Append(LIBPATH=[project_root + '/../libmpidynres/build/lib/'])
 

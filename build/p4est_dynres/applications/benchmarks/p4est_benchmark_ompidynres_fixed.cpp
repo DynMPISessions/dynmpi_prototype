@@ -812,7 +812,6 @@ int check_resource_change(simulation_state *state) {
 
         /* replace with MPI_COMM_NULL */
         if(incl_flag){
-		printf("Rank %d: inclflag replace_ext\n", mpirank);
             state->p4est = p4est_dynres_replace_ext(state->p4est, MPI_COMM_NULL,
                         -1, -1, -1, -1, (void *) state->scenario, NULL);
             //state->mpicomm = MPI_COMM_NULL;
@@ -1143,13 +1142,13 @@ int simulate(simulation_state *state){
 
         int status;
         if(state->current_phase != 1 && !state->is_new && check_rc){
-            if(rank == 0)
-                printf("start of check_resource change\n");
+            //if(rank == 0)
+            //    printf("start of check_resource change\n");
             make_timestamp_root(&cur_p4est_timing_frame->rc_start);
             status = check_resource_change(state);
             make_timestamp_root(&cur_p4est_timing_frame->rc_end);
-            if(rank == 0)
-                printf("end of check_resource change: %d\n", status);
+            //if(rank == 0)
+            //    printf("end of check_resource change: %d\n", status);
 
             changed = status == MPI_SUCCESS;
 
@@ -1175,8 +1174,6 @@ int simulate(simulation_state *state){
             eval_mode(state->p4est->mpisize, mode_num);
         }
 
-        if(rank == 0)
-            printf("partition\n");
         make_timestamp_root(&cur_p4est_timing_frame->partition_start);
         p4est_partition(state->p4est, 0, NULL);
 
