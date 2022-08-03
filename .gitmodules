@@ -1,0 +1,16 @@
+[submodule "build/ompi"]
+	path = build/ompi
+	url = https://github.com/HawkmoonEternal/ompi.git
+	branch = time-x
+[submodule "build/openpmix"]
+	path = build/openpmix
+	url = https://github.com/HawkmoonEternal/openpmix.git
+	branch = time-x
+[submodule "build/prrte"]
+	path = build/prrte
+	url = https://github.com/HawkmoonEternal/prrte.git
+	branch = time-x
+[submodule "build/p4est_dynres"]
+	path = build/p4est_dynres
+	url = https://github.com/HawkmoonEternal/p4est_dynres.git
+	branch = time-x
